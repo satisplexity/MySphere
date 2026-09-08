@@ -1,1 +1,8 @@
-<Solution />
+<Solution>
+  <Project Path="MySphere.Application/MySphere.Application.csproj" Id="cc09f519-943e-45df-b84a-6aee14f584c5" />
+  <Project Path="MySphere.Controls/MySphere.Controls.csproj" Id="586fbd4d-7c2c-4536-ae29-7469fd887bef" />
+  <Project Path="MySphere.Domain/MySphere.Domain.csproj" Id="8f785fd7-4598-454c-8fe3-76b11b878acf" />
+  <Project Path="MySphere.Framework/MySphere.Framework.csproj" Id="f90a1e42-b9c6-4d3c-bab6-0af26b2377ec" />
+  <Project Path="MySphere.Infrastructure/MySphere.Infrastructure.csproj" Id="39829988-e50c-4206-a056-38b58cc718b9" />
+  <Project Path="MySphere.Presentation/MySphere.Presentation.csproj" Id="f3ffa1f2-1487-42f8-ae70-be6589c84613" />
+</Solution>

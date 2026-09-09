@@ -5,31 +5,65 @@
         Title="MainWindow"
         Height="450" 
         Width="800"
-        xmlns:controls="clr-namespace:MySphere.Presentation.Controls">
+        xmlns:controls="clr-namespace:MySphere.Presentation.Controls"
+        xmlns:effect="clr-namespace:MySphere.Presentation.Effects"
+        WindowState="Maximized"
+        WindowStyle="None">
 
     <Grid Background="#191919">
 
-        <Grid.ColumnDefinitions>
+        <Grid Background="#191919">
+            <Grid.Effect>
 
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition/>
+                <effect:NoiseEffect Scale="10"
+                                    Intensity="0.005"/>
 
-        </Grid.ColumnDefinitions>
+            </Grid.Effect>
 
-        <StackPanel VerticalAlignment="Center">
 
-            <controls:NavigationButton IconData="{StaticResource HomeIcon}"
+        </Grid>
+
+        <Grid VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Path Data="{StaticResource Heading}"
+                  Fill="#252525"
+                  Grid.Column="1"
+                  Stretch="Uniform"
+                  Width="400"
+                  Margin="0, -40"/>
+
+        </Grid>
+        
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <StackPanel VerticalAlignment="Center">
+
+                <controls:NavigationButton IconData="{StaticResource HomeIcon}"
                                        Foreground="#7642C3"
                                        IsChecked="True"/>
-            <controls:NavigationButton IconData="{StaticResource StorageIcon}"
+                <controls:NavigationButton IconData="{StaticResource StorageIcon}"
                                        Foreground="#C34276"/>
-            <controls:NavigationButton IconData="{StaticResource TokenIcon}"
+                <controls:NavigationButton IconData="{StaticResource TokenIcon}"
                                        Foreground="#F48F44"/>
-            <controls:NavigationButton IconData="{StaticResource SettingIcon}"
+                <controls:NavigationButton IconData="{StaticResource SettingIcon}"
                                        Foreground="#44A4CF"/>
 
-        </StackPanel>
-        
+            </StackPanel>
+
+        </Grid>
+
     </Grid>
 
 </Window>

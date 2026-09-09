@@ -4,11 +4,31 @@
         xmlns:local="clr-namespace:MySphere.Presentation.Views.Windows"
         Title="MainWindow"
         Height="450" 
-        Width="800">
+        Width="800"
+        xmlns:controls="clr-namespace:MySphere.Presentation.Controls">
 
-    <Grid>
+    <Grid Background="#191919">
 
-        
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <StackPanel VerticalAlignment="Center">
+
+            <controls:NavigationButton IconData="{StaticResource HomeIcon}"
+                                       Foreground="#7642C3"
+                                       IsChecked="True"/>
+            <controls:NavigationButton IconData="{StaticResource StorageIcon}"
+                                       Foreground="#C34276"/>
+            <controls:NavigationButton IconData="{StaticResource TokenIcon}"
+                                       Foreground="#F48F44"/>
+            <controls:NavigationButton IconData="{StaticResource SettingIcon}"
+                                       Foreground="#44A4CF"/>
+
+        </StackPanel>
         
     </Grid>
 

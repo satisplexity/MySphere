@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="MySphere.Presentation.Spaces.Hub.HubView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:local="clr-namespace:MySphere.Presentation.Spaces.Hub"
+             xmlns:controls="clr-namespace:MySphere.Presentation.Controls">
+
+    <UserControl.Resources>
+
+        <ResourceDictionary Source="/Spaces/Hub/HubViewModelTemplates.xaml"/>
+
+    </UserControl.Resources>
+    
+    <Grid Background="#111">
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <StackPanel VerticalAlignment="Center">
+
+            <controls:NavigationButton IconData="{StaticResource HomeIcon}"
+                                       Foreground="#C88"
+                                       IsChecked="{Binding IsHomeSelected, Mode=OneWay}"
+                                       Command="{Binding ShowHomeCommand}"/>
+
+            <controls:NavigationButton IconData="{StaticResource Spaces}"
+                                       Foreground="#88C"
+                                       IsChecked="{Binding IsSpacesSelected, Mode=OneWay}"
+                                       Command="{Binding ShowSpacesCommand}"/>
+
+            <controls:NavigationButton IconData="{StaticResource AccoutIcon}"
+                                       Foreground="#47C"
+                                       IsChecked="{Binding IsAccoutSelected, Mode=OneWay}"
+                                       Command="{Binding ShowAccountCommand}"/>
+
+            <controls:NavigationButton IconData="{StaticResource SettingIcon}"
+                                       Foreground="#9AC"
+                                       IsChecked="{Binding IsSettingsSelected, Mode=OneWay}"
+                                       Command="{Binding ShowSettingsCommand}"/>
+
+        </StackPanel>
+
+        <Border Width="3"
+                Margin="5, 10"
+                CornerRadius="2.5"
+                Background="#191919"
+                Grid.Column="1"/>
+
+        <ContentControl Grid.Column="2" 
+                        Content="{Binding Navigation.CurrentViewModel}"/>
+
+    </Grid>
+    
+</UserControl>

@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:hub="clr-namespace:MySphere.Presentation.Spaces.Hub"
+                    xmlns:semigraph="clr-namespace:MySphere.Presentation.Spaces.Semigraph"
+                    xmlns:pathLab="clr-namespace:MySphere.Presentation.Spaces.PathLab"
+                    xmlns:sortLab="clr-namespace:MySphere.Presentation.Spaces.SortLab">
+
+    <DataTemplate DataType="{x:Type hub:HubViewModel}">
+
+        <hub:HubView/>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type semigraph:SemigraphViewModel}">
+
+        <semigraph:SemigraphView/>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type pathLab:PathLabViewModel}">
+
+        <pathLab:PathLabView/>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type sortLab:SortLabViewModel}">
+
+        <sortLab:SortLabView/>
+
+    </DataTemplate>
+    
+</ResourceDictionary>

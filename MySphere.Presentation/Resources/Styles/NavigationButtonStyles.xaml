@@ -62,7 +62,7 @@
                         
                         <Border CornerRadius="15"
                                 Background="#212122"
-                                BorderThickness="1">
+                                BorderThickness="1.5">
                             
                             <Border.BorderBrush>
                                 

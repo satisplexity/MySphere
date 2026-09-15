@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="MySphere.Presentation.Spaces.PathLab.PathLabView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MySphere.Presentation.Spaces.PathLab">
+
+    <Grid Background="#151515">
+
+        <TextBlock Text="PathLab"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Foreground="#C88"
+                   FontSize="70"
+                   FontWeight="DemiBold"
+                   FontFamily="Ebrima"/>
+
+    </Grid>
+
+</UserControl>

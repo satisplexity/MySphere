@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="MySphere.Presentation.Spaces.Hub.Sections.Spaces.SpacesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MySphere.Presentation.Spaces.Hub.Sections.Spaces">
+
+    <Grid>
+
+        <TextBlock Text="Spaces"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Foreground="#CCC"
+                   FontSize="70"
+                   FontWeight="Medium"
+                   FontFamily="Tahoma"/>
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+            <Button Content="Semigraph"
+                    FontSize="20"
+                    Margin="10"
+                    Padding="10"
+                    Command="{Binding OpenSemigraphCommand}"/>
+
+            <Button Content="PathLab"
+                    FontSize="20"
+                    Margin="10"
+                    Padding="10"
+                    Command="{Binding OpenPathLabCommand}"/>
+
+            <Button Content="SortLab"
+                    FontSize="20"
+                    Margin="10"
+                    Padding="10"
+                    Command="{Binding OpenSortLabCommand}"/>
+
+
+        </StackPanel>
+        
+    </Grid>
+
+</UserControl>

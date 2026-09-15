@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="MySphere.Presentation.Spaces.SortLab.SortLabView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MySphere.Presentation.Spaces.SortLab">
+
+    <Grid Background="#151515">
+
+        <TextBlock Text="SortLab"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Foreground="#C8C"
+                   FontSize="70"
+                   FontWeight="DemiBold"
+                   FontFamily="Cascadia Code"/>
+
+    </Grid>
+
+</UserControl>

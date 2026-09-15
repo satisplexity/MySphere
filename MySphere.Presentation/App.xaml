@@ -9,8 +9,15 @@
 
             <ResourceDictionary.MergedDictionaries>
 
+
+                <ResourceDictionary Source="/Resources/Styles/Colors.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/SolidColorBrushes.xaml"/>
                 <ResourceDictionary Source="/Resources/Icons/TestIcons.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/NavigationButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/WindowStyles.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/SpacePreviewButton.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/SpaceContainerStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/SwitcherButtonStyle.xaml"/>
 
             </ResourceDictionary.MergedDictionaries>
             

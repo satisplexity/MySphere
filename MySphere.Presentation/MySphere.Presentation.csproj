@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\Comfortaa.ttf" />
+    <None Remove="Resources\Fonts\Fredoka.ttf" />
+    <None Remove="Resources\Fonts\Lexend.ttf" />
+    <None Remove="Resources\Fonts\Manrope.ttf" />
+    <None Remove="Resources\Fonts\Montserrat.ttf" />
+    <None Remove="Resources\Fonts\Outfit.ttf" />
+    <None Remove="Resources\Fonts\Quicksand.ttf" />
     <None Remove="Resources\Shaders\Noise.ps" />
   </ItemGroup>
 
@@ -18,6 +25,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Fonts\Comfortaa.ttf" />
+    <Resource Include="Resources\Fonts\Fredoka.ttf" />
+    <Resource Include="Resources\Fonts\Lexend.ttf" />
+    <Resource Include="Resources\Fonts\Manrope.ttf" />
+    <Resource Include="Resources\Fonts\Montserrat.ttf" />
+    <Resource Include="Resources\Fonts\Outfit.ttf" />
+    <Resource Include="Resources\Fonts\Quicksand.ttf" />
     <Resource Include="Resources\Shaders\Noise.ps" />
   </ItemGroup>
 

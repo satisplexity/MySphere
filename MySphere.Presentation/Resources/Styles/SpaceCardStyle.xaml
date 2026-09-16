@@ -29,6 +29,7 @@
 
                             <TextBlock Text="{TemplateBinding Title}"
                                        FontSize="20"
+                                       FontFamily="{StaticResource Comfortaa}"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Bottom"
                                        Foreground="{TemplateBinding Foreground}"/>

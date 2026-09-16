@@ -29,7 +29,7 @@
 
                             <TextBlock Text="{TemplateBinding Title}"
                                        FontSize="20"
-                                       FontFamily="{StaticResource Comfortaa}"
+                                       FontFamily="{StaticResource Manrope}"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Bottom"
                                        Foreground="{TemplateBinding Foreground}"/>

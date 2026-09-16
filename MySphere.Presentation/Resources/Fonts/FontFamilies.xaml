@@ -4,5 +4,29 @@
     <FontFamily x:Key="Comfortaa">
         /Resources/Fonts/#Comfortaa
     </FontFamily>
+
+    <FontFamily x:Key="Fredoka">
+        /Resources/Fonts/#Fredoka
+    </FontFamily>
+
+    <FontFamily x:Key="Lexend">
+        /Resources/Fonts/#Lexend
+    </FontFamily>
+
+    <FontFamily x:Key="Manrope">
+        /Resources/Fonts/#Manrope
+    </FontFamily>
+
+    <FontFamily x:Key="Montseratt">
+        /Resources/Fonts/#Montseratt
+    </FontFamily>
+
+    <FontFamily x:Key="Outfit">
+        /Resources/Fonts/#Outfit
+    </FontFamily>
+
+    <FontFamily x:Key="Quicksand">
+        /Resources/Fonts/#Quicksand
+    </FontFamily>
     
 </ResourceDictionary>

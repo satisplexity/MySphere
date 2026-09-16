@@ -1,7 +1,10 @@
 ﻿<UserControl x:Class="MySphere.Presentation.Spaces.Hub.Sections.Spaces.SpacesView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MySphere.Presentation.Spaces.Hub.Sections.Spaces">
+             xmlns:local="clr-namespace:MySphere.Presentation.Spaces.Hub.Sections.Spaces"
+             Width="1500"
+             Height="600"
+             xmlns:controls="clr-namespace:MySphere.Presentation.Controls">
 
     <Grid>
 
@@ -13,29 +16,86 @@
                    FontWeight="Medium"
                    FontFamily="Tahoma"/>
 
+        <ScrollViewer VerticalScrollBarVisibility="Disabled">
+
+            <StackPanel Orientation="Horizontal">
+                
+                <controls:SpaceCard Title="Semigraph"
+                                Icon="{StaticResource CodeScopeIcon}"
+                                Foreground="#C8C"
+                                Width="200"
+                                Height="300"/>
+
+            <controls:SpaceCard Title="PathLab"
+                                Icon="{StaticResource PathLabIcon}"
+                                Foreground="#C88"
+                                Width="200"
+                                Height="300"/>
+
+            <controls:SpaceCard Title="SortLab"
+                                Icon="{StaticResource SortLabIcon}"
+                                Foreground="#88C"
+                                Width="200"
+                                Height="300"/>
+
+                <controls:SpaceCard Title="Mergery"
+                                Icon="{StaticResource MergeryIcon}"
+                                Width="200"
+                                Height="300">
+
+                    <controls:SpaceCard.Foreground>
+
+                        <LinearGradientBrush StartPoint="0.4, 0"
+                                             EndPoint="0.7, 1">
+
+                            <GradientStop Color="#5C8"
+                                          Offset="0"/>
+
+                            <GradientStop Color="#384"
+                                          Offset="1"/>
+
+                        </LinearGradientBrush>
+                        
+                    </controls:SpaceCard.Foreground>
+                    
+                </controls:SpaceCard>
+
+                <controls:SpaceCard Title="Weatherly"
+                                Icon="{StaticResource WeatherlyIcon}"
+                                Width="200"
+                                Height="300">
+                    <controls:SpaceCard.Foreground>
+
+                        <LinearGradientBrush StartPoint="0.4, 0"
+                                             EndPoint="0.7, 1">
+
+                            <GradientStop Color="#59C"
+                                          Offset="0"/>
+
+                            <GradientStop Color="#42C"
+                                          Offset="1"/>
+
+                        </LinearGradientBrush>
+                        
+                    </controls:SpaceCard.Foreground>
+                </controls:SpaceCard>
+
+            <controls:SpaceCard Title="FractalLab"
+                                Icon="{StaticResource FractalLabIcon}"
+                                Foreground="#C83"
+                                Width="200"
+                                Height="300"/>
+
+                
+            </StackPanel>
+            
+        </ScrollViewer>
+
         <StackPanel Orientation="Horizontal"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
 
-            <Button Content="Semigraph"
-                    FontSize="20"
-                    Margin="10"
-                    Padding="10"
-                    Command="{Binding OpenSemigraphCommand}"/>
-
-            <Button Content="PathLab"
-                    FontSize="20"
-                    Margin="10"
-                    Padding="10"
-                    Command="{Binding OpenPathLabCommand}"/>
-
-            <Button Content="SortLab"
-                    FontSize="20"
-                    Margin="10"
-                    Padding="10"
-                    Command="{Binding OpenSortLabCommand}"/>
-
-
+            
         </StackPanel>
         
     </Grid>

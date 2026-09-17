@@ -146,11 +146,6 @@
                  Duration="0:0:0.2"
                  EasingFunction="{StaticResource CardHoverEase}"/>
 
-                            <ThicknessAnimation Storyboard.TargetProperty="Margin"
-                                                To="15, 0, 15, 15"
-                                                Duration="0:0:0.2"
-                                                EasingFunction="{StaticResource CardHoverEase}"/>
-
                         </Storyboard>
 
                     </BeginStoryboard>
@@ -173,10 +168,6 @@
                  Duration="0:0:0.3"
                  EasingFunction="{StaticResource CardOverEase}"/>
 
-                            <ThicknessAnimation Storyboard.TargetProperty="Margin"
-                    To="15, 15, 15, 15"
-                    Duration="0:0:0.3"
-                    EasingFunction="{StaticResource CardHoverEase}"/>
                             
                         </Storyboard>
                         

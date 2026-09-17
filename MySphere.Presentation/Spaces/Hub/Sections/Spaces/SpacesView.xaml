@@ -16,153 +16,252 @@
         <TextBlock Text="Spaces"
                    Style="{StaticResource PageHeader}"/>
 
-        <ScrollViewer VerticalScrollBarVisibility="Disabled"
-                      Grid.Row="1">
+        <UniformGrid Columns="6"
+                     Grid.Row="1"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
 
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center">
+            <controls:SpaceCard Title="Semigraph"
+                Icon="{StaticResource SemigraphIcon}">
 
-                <controls:SpaceCard Title="Semigraph"
-                                Icon="{StaticResource SemigraphIcon}">
+                <controls:SpaceCard.Foreground>
 
-                    <controls:SpaceCard.Foreground>
+                    <LinearGradientBrush StartPoint="0.4, 0"
+                             EndPoint="0.7, 1">
 
-                        <LinearGradientBrush StartPoint="0.4, 0"
-                                             EndPoint="0.7, 1">
+                        <GradientStop Color="#C7D"
+                          Offset="0"/>
 
-                            <GradientStop Color="#B8C"
-                                          Offset="0"/>
+                        <GradientStop Color="#A4A"
+                          Offset="1"/>
 
-                            <GradientStop Color="#A5A"
-                                          Offset="1"/>
+                    </LinearGradientBrush>
 
-                        </LinearGradientBrush>
-                        
-                    </controls:SpaceCard.Foreground>
-                    
-                </controls:SpaceCard>
+                </controls:SpaceCard.Foreground>
 
-                <controls:SpaceCard Title="PathLab"
-                                Icon="{StaticResource PathLabIcon}">
+            </controls:SpaceCard>
 
-                    <controls:SpaceCard.Foreground>
+            <controls:SpaceCard Title="PathLab"
+                Icon="{StaticResource PathLabIcon}">
 
-                        <LinearGradientBrush StartPoint="0.4, 0"
-                                             EndPoint="0.7, 1">
+                <controls:SpaceCard.Foreground>
 
-                            <GradientStop Color="#C88"
-                                          Offset="0"/>
+                    <LinearGradientBrush StartPoint="0.4, 0"
+                             EndPoint="0.7, 1">
 
-                            <GradientStop Color="#A67"
-                                          Offset="1"/>
+                        <GradientStop Color="#C88"
+                          Offset="0"/>
 
-                        </LinearGradientBrush>
+                        <GradientStop Color="#A67"
+                          Offset="1"/>
 
-                    </controls:SpaceCard.Foreground>
+                    </LinearGradientBrush>
 
-                </controls:SpaceCard>
+                </controls:SpaceCard.Foreground>
 
-                <controls:SpaceCard Title="SortLab"
-                                Icon="{StaticResource SortLabIcon}">
+            </controls:SpaceCard>
 
-                    <controls:SpaceCard.Foreground>
+            <controls:SpaceCard Title="SortLab"
+                Icon="{StaticResource SortLabIcon}">
 
-                        <LinearGradientBrush StartPoint="0.4, 0"
-                                             EndPoint="0.7, 1">
+                <controls:SpaceCard.Foreground>
 
-                            <GradientStop Color="#78C"
-                                          Offset="0"/>
+                    <LinearGradientBrush StartPoint="0.4, 0"
+                             EndPoint="0.7, 1">
 
-                            <GradientStop Color="#87A"
-                                          Offset="1"/>
+                        <GradientStop Color="#78C"
+                          Offset="0"/>
 
-                        </LinearGradientBrush>
+                        <GradientStop Color="#87A"
+                          Offset="1"/>
 
-                    </controls:SpaceCard.Foreground>
+                    </LinearGradientBrush>
 
-                </controls:SpaceCard>
+                </controls:SpaceCard.Foreground>
 
-                <controls:SpaceCard Title="Mergery"
-                                Icon="{StaticResource MergeryIcon}">
+            </controls:SpaceCard>
 
-                    <controls:SpaceCard.Foreground>
+            <controls:SpaceCard Title="Mergery"
+                Icon="{StaticResource MergeryIcon}">
 
-                        <LinearGradientBrush StartPoint="0.4, 0"
-                                             EndPoint="0.7, 1">
+                <controls:SpaceCard.Foreground>
 
-                            <GradientStop Color="#694"
-                                          Offset="0"/>
+                    <LinearGradientBrush StartPoint="0.4, 0"
+                             EndPoint="0.7, 1">
 
-                            <GradientStop Color="#5A7"
-                                          Offset="1"/>
+                        <GradientStop Color="#694"
+                          Offset="0"/>
 
-                        </LinearGradientBrush>
+                        <GradientStop Color="#5A7"
+                          Offset="1"/>
 
-                    </controls:SpaceCard.Foreground>
+                    </LinearGradientBrush>
 
-                </controls:SpaceCard>
+                </controls:SpaceCard.Foreground>
 
-                <controls:SpaceCard Title="Weatherly"
-                                Icon="{StaticResource WeatherlyIcon}">
-                    <controls:SpaceCard.Foreground>
+            </controls:SpaceCard>
 
-                        <LinearGradientBrush StartPoint="0.3, 0"
-                                             EndPoint="0.7, 1">
+            <controls:SpaceCard Title="Weatherly"
+                Icon="{StaticResource WeatherlyIcon}">
+                <controls:SpaceCard.Foreground>
 
-                            <GradientStop Color="#59C"
-                                          Offset="0.1"/>
+                    <LinearGradientBrush StartPoint="0.3, 0"
+                             EndPoint="0.7, 1">
 
-                            <GradientStop Color="#42C"
-                                          Offset="1"/>
+                        <GradientStop Color="#59C"
+                          Offset="0.1"/>
 
-                        </LinearGradientBrush>
+                        <GradientStop Color="#42C"
+                          Offset="1"/>
 
-                    </controls:SpaceCard.Foreground>
-                </controls:SpaceCard>
+                    </LinearGradientBrush>
 
-                <controls:SpaceCard Title="FractalLab"
-                                Icon="{StaticResource FractalLabIcon}">
+                </controls:SpaceCard.Foreground>
+            </controls:SpaceCard>
 
-                    <controls:SpaceCard.Foreground>
+            <controls:SpaceCard Title="FractalLab"
+                Icon="{StaticResource FractalLabIcon}">
 
-                        <LinearGradientBrush StartPoint="0.2, 0"
-                                             EndPoint="0.5, 1">
+                <controls:SpaceCard.Foreground>
 
-                            <GradientStop Color="#B83"
-                                          Offset="0"/>
+                    <LinearGradientBrush StartPoint="0.2, 0"
+                             EndPoint="0.5, 1">
 
-                            <GradientStop Color="#E73"
-                                          Offset="1"/>
+                        <GradientStop Color="#B83"
+                          Offset="0"/>
 
-                        </LinearGradientBrush>
+                        <GradientStop Color="#E73"
+                          Offset="1"/>
 
-                    </controls:SpaceCard.Foreground>
+                    </LinearGradientBrush>
 
-                </controls:SpaceCard>
+                </controls:SpaceCard.Foreground>
 
-                <controls:SpaceCard Title="CodeScope"
-                                Icon="{StaticResource CodeScopeIcon}">
+            </controls:SpaceCard>
 
-                    <controls:SpaceCard.Foreground>
+            <controls:SpaceCard Title="CodeScope"
+                Icon="{StaticResource CodeScopeIcon}">
 
-                        <LinearGradientBrush StartPoint="0.2, 0"
-                                             EndPoint="0.5, 1">
+                <controls:SpaceCard.Foreground>
 
-                            <GradientStop Color="#59C"
-                                          Offset="0"/>
+                    <LinearGradientBrush StartPoint="0.2, 0"
+                             EndPoint="0.5, 1">
 
-                            <GradientStop Color="#529"
-                                          Offset="1"/>
+                        <GradientStop Color="#59C"
+                          Offset="0"/>
 
-                        </LinearGradientBrush>
+                        <GradientStop Color="#5A30AB"
+                          Offset="1"/>
 
-                    </controls:SpaceCard.Foreground>
+                    </LinearGradientBrush>
 
-                </controls:SpaceCard>
+                </controls:SpaceCard.Foreground>
 
-            </StackPanel>
+            </controls:SpaceCard>
 
-        </ScrollViewer>
+            <controls:SpaceCard Title="Mazio"
+    Icon="{StaticResource MazioIcon}">
+
+                <controls:SpaceCard.Foreground>
+
+                    <LinearGradientBrush StartPoint="0.2, 0"
+   EndPoint="0.5, 1">
+
+                        <GradientStop Color="#Df6e4f"
+Offset="0"/>
+
+                        <GradientStop Color="#DeA46b"
+Offset="1"/>
+
+                    </LinearGradientBrush>
+
+                   
+
+                </controls:SpaceCard.Foreground>
+
+            </controls:SpaceCard>
+
+            <controls:SpaceCard Title="BoidLab"
+Icon="{StaticResource BoidLabIcon}">
+
+                <controls:SpaceCard.Foreground>
+
+                    <LinearGradientBrush StartPoint="0.2, 0"
+   EndPoint="0.5, 1">
+
+                        <GradientStop Color="#45A7D7"
+Offset="0"/>
+
+                        <GradientStop Color="#1052A4"
+Offset="1"/>
+
+                    </LinearGradientBrush>
+                </controls:SpaceCard.Foreground>
+
+            </controls:SpaceCard>
+
+            <controls:SpaceCard Title="Chess#"
+Icon="{StaticResource ChessSharpIcon}">
+
+                <controls:SpaceCard.Foreground>
+
+                    <LinearGradientBrush StartPoint="0.2, 0"
+             EndPoint="0.5, 1">
+
+                        <GradientStop Color="#9750EF"
+          Offset="0"/>
+
+                        <GradientStop Color="#CF6BF3"
+          Offset="1"/>
+
+                    </LinearGradientBrush>
+
+                </controls:SpaceCard.Foreground>
+
+            </controls:SpaceCard>
+
+            <controls:SpaceCard Title="KittyCatch"
+Icon="{StaticResource KittyCatchIcon}">
+
+                <controls:SpaceCard.Foreground>
+
+                    <LinearGradientBrush StartPoint="0.2, 0"
+             EndPoint="0.5, 1">
+
+                        <GradientStop Color="#B494B3"
+          Offset="0"/>
+
+                        <GradientStop Color="#Bc57Ba"
+          Offset="1"/>
+
+                    </LinearGradientBrush>
+
+                </controls:SpaceCard.Foreground>
+
+            </controls:SpaceCard>
+
+            <controls:SpaceCard Title="4 in row"
+Icon="{StaticResource FourInRowIcon}">
+
+                <controls:SpaceCard.Foreground>
+
+                    <LinearGradientBrush StartPoint="0.2, 0"
+   EndPoint="0.5, 1">
+
+                        <GradientStop Color="#11B87E"
+Offset="0"/>
+
+                        <GradientStop Color="#2f4453"
+Offset="1"/>
+
+                    </LinearGradientBrush>
+
+                </controls:SpaceCard.Foreground>
+
+            </controls:SpaceCard>
+
+        </UniformGrid>
+        
 
     </Grid>
 

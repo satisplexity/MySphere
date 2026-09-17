@@ -7,7 +7,8 @@
         xmlns:controls="clr-namespace:MySphere.Presentation.Controls"
         Style="{StaticResource FullScreenWindowStyle}"
         WindowState="Maximized"
-        KeyDown="Grid_KeyDown">
+        KeyDown="Grid_KeyDown"
+        xmlns:helpers="clr-namespace:MySphere.Presentation.Helpers">
 
     <Window.Resources>
 
@@ -49,19 +50,13 @@
                     Margin="15"
                     x:Name="PART_Container"
                     Background="#151515"
-                    RenderTransformOrigin="0.5, 0.8">
+                    RenderTransformOrigin="0.5, 0.8"
+                    helpers:BorderClipHelper.Enable="True">
                 <Border.RenderTransform>
                     <ScaleTransform x:Name="PART_ContainerScale"/>
                 </Border.RenderTransform>
 
                 <Grid x:Name="SpaceContent">
-                    <Grid.Clip>
-                         <RectangleGeometry RadiusX="15"
-                                       RadiusY="15"
-                                       Rect="0, 0, 1900, 1000">
-                        
-                    </RectangleGeometry>
-                    </Grid.Clip>
 
                     <Rectangle Fill="#151516">
 

@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:MySphere.Presentation.Controls"
-                    xmlns:effects="clr-namespace:MySphere.Presentation.Effects">
+                    xmlns:effects="clr-namespace:MySphere.Presentation.Effects"
+                    xmlns:helpers="clr-namespace:MySphere.Presentation.Helpers">
 
     <BackEase x:Key="Back"
               EasingMode="EaseOut"
@@ -50,15 +51,10 @@
 
                     </ControlTemplate.Resources>
 
-                    <Grid>
+                    <Border helpers:BorderClipHelper.Enable="True"
+                            CornerRadius="15">
+                        <Grid>
                         
-                        <Grid.Clip>
-
-                            <RectangleGeometry RadiusX="15"
-                                               RadiusY="15"
-                                               Rect="0, 0, 70, 70"/>
-                            
-                        </Grid.Clip>
                         
                         <Border CornerRadius="15"
                                 Background="#212122"
@@ -129,6 +125,9 @@
                         </Grid>
                         
                     </Grid>
+                    </Border>
+                    
+                    
                     
                     <ControlTemplate.Triggers>
 
@@ -240,7 +239,7 @@
             </Setter.Value>
             
         </Setter>
-        
+
     </Style>
 
 </ResourceDictionary>

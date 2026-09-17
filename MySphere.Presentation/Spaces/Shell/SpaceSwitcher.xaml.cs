@@ -1,13 +1,12 @@
-﻿using MySphere.Presentation.Controls;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media;
+﻿using MySphere.Presentation.Framework.Foundation;
+using MySphere.Presentation.Controls;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-using System.Windows.Input;
 using System.Windows.Threading;
-using MySphere.Presentation.Framework.Foundation;
-using MySphere.Presentation.Spaces.Shell.Navigation;
+using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Input;
+using System.Windows;
 
 namespace MySphere.Presentation.Spaces.Shell;
 
@@ -81,7 +80,7 @@ public partial class SpaceSwitcher : UserControl
 
             _cards.Insert(0, card);
             PART_SpacesContainer.Children.Add(card);
-PART_PreviewImage.Source = preview;
+            PART_PreviewImage.Source = preview;
             UpdateCards();
             return;
         }

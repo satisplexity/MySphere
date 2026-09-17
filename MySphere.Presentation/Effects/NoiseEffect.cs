@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Windows.Media.Effects;
 using System.Windows.Media;
-using System.Windows.Media.Effects;
+using System.Windows;
 
 namespace MySphere.Presentation.Effects;
 
 public class NoiseEffect : ShaderEffect
 {
-
     public NoiseEffect()
     {
         PixelShader = new PixelShader()

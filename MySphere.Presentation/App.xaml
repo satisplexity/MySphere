@@ -19,7 +19,6 @@
                 <ResourceDictionary Source="/Resources/Styles/NavigationButtonStyles.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/WindowStyles.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/SpacePreviewButton.xaml"/>
-                <ResourceDictionary Source="/Resources/Styles/SpaceContainerStyle.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/SwitcherButtonStyle.xaml"/>
                 
                 <ResourceDictionary Source="/Resources/Styles/SpaceCardStyle.xaml"/>

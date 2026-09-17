@@ -1,8 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    
-    
     <Style x:Key="SwitcherButton"
            TargetType="{x:Type Button}">
 
@@ -61,18 +59,16 @@
                                              EasingFunction="{StaticResource ShowEase}"/>
 
                             <DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)"
-                 To="1.2"
-                 Duration="0:0:0.2"
-                 EasingFunction="{StaticResource ShowEase}"/>
+                                             To="1.2"
+                                             Duration="0:0:0.2"
+                                             EasingFunction="{StaticResource ShowEase}"/>
 
                         </Storyboard>
-                        
+
                     </BeginStoryboard>
-                    
+
                 </Trigger.EnterActions>
 
-                
-                
                 <Trigger.ExitActions>
 
                     <BeginStoryboard>
@@ -80,14 +76,14 @@
                         <Storyboard>
 
                             <DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleX)"
-                            To="1"
-                            Duration="0:0:0.15"
-                            EasingFunction="{StaticResource ShowEase}"/>
+                                             To="1"
+                                             Duration="0:0:0.15"
+                                             EasingFunction="{StaticResource ShowEase}"/>
 
                             <DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)"
-To="1"
-Duration="0:0:0.15"
-EasingFunction="{StaticResource ShowEase}"/>
+                                             To="1"
+                                             Duration="0:0:0.15"
+                                             EasingFunction="{StaticResource ShowEase}"/>
 
                         </Storyboard>
                         

@@ -88,7 +88,7 @@
                             
                         </Border>
                         
-                        <Path Data="{TemplateBinding IconData}"
+                        <Path Data="{TemplateBinding Icon}"
                               Fill="#313133"
                               Stretch="Uniform"
                               Margin="{TemplateBinding Padding}"/>
@@ -104,7 +104,7 @@
                                     
                                 </Grid.Effect>
                                 
-                                <Path Data="{TemplateBinding IconData}"
+                                <Path Data="{TemplateBinding Icon}"
                                       Fill="{TemplateBinding Foreground}"
                                       Margin="{TemplateBinding Padding}"
                                       Stretch="Uniform"/>
@@ -117,7 +117,7 @@
                                 
                             </Grid>
                             
-                            <Path Data="{TemplateBinding IconData}"
+                            <Path Data="{TemplateBinding Icon}"
                                   Fill="{TemplateBinding Foreground}"
                                   Margin="{TemplateBinding Padding}"
                                   Stretch="Uniform"/>

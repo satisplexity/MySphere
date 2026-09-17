@@ -1,11 +1,10 @@
-﻿using MySphere.Presentation.Controls;
-using MySphere.Presentation.Framework.Foundation;
-using System.Windows;
-using System.Windows.Input;
-using System.Windows.Media;
+﻿using MySphere.Presentation.Framework.Foundation;
 using System.Windows.Media.Animation;
+using System.Windows.Media;
+using System.Windows.Input;
+using System.Windows;
+
 using System.Windows.Media.Imaging;
-using System.Windows.Threading;
 
 namespace MySphere.Presentation.Spaces.Shell;
 
@@ -87,16 +86,21 @@ public partial class ShellWindow : Window
         return bitmap;
     }
 
-    private void ToogleSwitcher(object sender, RoutedEventArgs e)
+    private async void ToogleSwitcher(object sender, RoutedEventArgs e)
+    {
+        await ShowSwitcher();
+    }
+
+    private async Task ShowSwitcher()
     {
         PART_SpaceSwitcher.Toogle(RenderElement(SpaceContent), (ViewModelBase)PART_Content.Content);
     }
 
-    private void Grid_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+    private async void Grid_KeyDown(object sender, KeyEventArgs e)
     {
         if(Keyboard.IsKeyDown(Key.LeftCtrl) && e.Key == Key.Space)
         {
-            PART_SpaceSwitcher.Toogle(RenderElement(SpaceContent), (ViewModelBase)PART_Content.Content);
+            await ShowSwitcher();
         }
     }
 }

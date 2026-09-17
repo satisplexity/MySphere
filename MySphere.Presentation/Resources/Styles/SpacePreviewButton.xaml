@@ -2,6 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls ="clr-namespace:MySphere.Presentation.Controls">
 
+    <CubicEase x:Key="ShowEase"
+           EasingMode="EaseInOut"/>
+    
     <Style TargetType="{x:Type controls:SpacePreviewCard}">
 
         <Setter Property="RenderTransformOrigin"

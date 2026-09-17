@@ -22,22 +22,22 @@
 
         <StackPanel VerticalAlignment="Center">
 
-            <controls:NavigationButton IconData="{StaticResource HomeIcon}"
+            <controls:NavigationButton Icon="{StaticResource HomeIcon}"
                                        Foreground="#C88"
                                        IsChecked="{Binding IsHomeSelected, Mode=OneWay}"
                                        Command="{Binding ShowHomeCommand}"/>
 
-            <controls:NavigationButton IconData="{StaticResource Spaces}"
+            <controls:NavigationButton Icon="{StaticResource Spaces}"
                                        Foreground="#88C"
                                        IsChecked="{Binding IsSpacesSelected, Mode=OneWay}"
                                        Command="{Binding ShowSpacesCommand}"/>
 
-            <controls:NavigationButton IconData="{StaticResource AccoutIcon}"
+            <controls:NavigationButton Icon="{StaticResource AccoutIcon}"
                                        Foreground="#47C"
                                        IsChecked="{Binding IsAccoutSelected, Mode=OneWay}"
                                        Command="{Binding ShowAccountCommand}"/>
 
-            <controls:NavigationButton IconData="{StaticResource SettingIcon}"
+            <controls:NavigationButton Icon="{StaticResource SettingIcon}"
                                        Foreground="#9AC"
                                        IsChecked="{Binding IsSettingsSelected, Mode=OneWay}"
                                        Command="{Binding ShowSettingsCommand}"/>

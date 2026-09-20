@@ -16,6 +16,7 @@
     <None Remove="Resources\Fonts\Montserrat.ttf" />
     <None Remove="Resources\Fonts\Outfit.ttf" />
     <None Remove="Resources\Fonts\Quicksand.ttf" />
+    <None Remove="Resources\Shaders\Mandelbrot.ps" />
     <None Remove="Resources\Shaders\Noise.ps" />
   </ItemGroup>
 
@@ -32,6 +33,7 @@
     <Resource Include="Resources\Fonts\Montserrat.ttf" />
     <Resource Include="Resources\Fonts\Outfit.ttf" />
     <Resource Include="Resources\Fonts\Quicksand.ttf" />
+    <Resource Include="Resources\Shaders\Mandelbrot.ps" />
     <Resource Include="Resources\Shaders\Noise.ps" />
   </ItemGroup>
 

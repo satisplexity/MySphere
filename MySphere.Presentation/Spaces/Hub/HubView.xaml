@@ -9,50 +9,53 @@
         <ResourceDictionary Source="/Spaces/Hub/HubViewModelTemplates.xaml"/>
 
     </UserControl.Resources>
-    
-    <Grid Background="#111">
 
-        <Grid.ColumnDefinitions>
+    <Grid Background="#121213">
 
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition/>
+        <Grid>
 
-        </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
 
-        <StackPanel VerticalAlignment="Center">
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
 
-            <controls:NavigationButton Icon="{StaticResource HomeIcon}"
+            </Grid.ColumnDefinitions>
+
+            <StackPanel VerticalAlignment="Center">
+
+                <controls:NavigationButton Icon="{StaticResource HomeIcon}"
                                        Foreground="#C88"
                                        IsChecked="{Binding IsHomeSelected, Mode=OneWay}"
                                        Command="{Binding ShowHomeCommand}"/>
 
-            <controls:NavigationButton Icon="{StaticResource Spaces}"
+                <controls:NavigationButton Icon="{StaticResource Spaces}"
                                        Foreground="#88C"
                                        IsChecked="{Binding IsSpacesSelected, Mode=OneWay}"
                                        Command="{Binding ShowSpacesCommand}"/>
 
-            <controls:NavigationButton Icon="{StaticResource AccoutIcon}"
+                <controls:NavigationButton Icon="{StaticResource AccoutIcon}"
                                        Foreground="#47C"
                                        IsChecked="{Binding IsAccoutSelected, Mode=OneWay}"
                                        Command="{Binding ShowAccountCommand}"/>
 
-            <controls:NavigationButton Icon="{StaticResource SettingIcon}"
+                <controls:NavigationButton Icon="{StaticResource SettingIcon}"
                                        Foreground="#9AC"
                                        IsChecked="{Binding IsSettingsSelected, Mode=OneWay}"
                                        Command="{Binding ShowSettingsCommand}"/>
 
-        </StackPanel>
+            </StackPanel>
 
-        <Border Width="3"
+            <Border Width="3"
                 Margin="5, 10"
                 CornerRadius="2.5"
                 Background="#191919"
                 Grid.Column="1"/>
 
-        <ContentControl Grid.Column="2" 
+            <ContentControl Grid.Column="2" 
                         Content="{Binding Navigation.CurrentViewModel}"/>
 
+        </Grid>
     </Grid>
-    
+
 </UserControl>

@@ -104,15 +104,13 @@
                                              Margin="0, 0, 0, -40"/>
 
                                 </Grid>
-                                
+
                                 <Path Data="{TemplateBinding Icon}"
                                       Fill="{TemplateBinding Foreground}"
                                       Stretch="Uniform"
                                       Grid.Row="1"
                                       Margin="40"/>
 
-                                
-                                
                             </Grid>
                             
                         </Grid>

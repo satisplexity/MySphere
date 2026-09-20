@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="MySphere.Presentation.Spaces.FractalLab.FractalLabView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MySphere.Presentation.Spaces.FractalLab"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:effects="clr-namespace:MySphere.Presentation.Effects">
+    <Grid>
+        <Border x:Name="Fractal"
+        Background="Black"
+        MouseWheel="Fractal_OnMouseWheel"
+        SizeChanged="Fractal_OnSizeChanged">
+            <Border.Effect>
+                <effects:MandelbrotEffect x:Name="Mandelbrot"
+                                         BackgroundColor="#191919"
+                                          EscapeColor="#1254Af"
+                                          SetColor="#5853AF"/>
+            </Border.Effect>
+        </Border>
+        <TextBlock x:Name="ZoomText"
+                   Style="{StaticResource CardHeader}"
+                   Text="Zoom x"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Margin="10"/>
+    </Grid>
+</UserControl>

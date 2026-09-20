@@ -11,6 +11,7 @@ using MySphere.Presentation.Spaces.Semigraph;
 using MySphere.Presentation.Spaces.PathLab;
 using MySphere.Presentation.Spaces.SortLab;
 using MySphere.Presentation.Spaces.Hub.Navigation;
+using MySphere.Presentation.Spaces.FractalLab;
 
 namespace MySphere.Presentation;
 
@@ -59,6 +60,8 @@ public partial class App : Application
         services.AddTransient<SemigraphViewModel>();
         services.AddTransient<PathLabViewModel>();
         services.AddTransient<SortLabViewModel>();
+
+        services.AddTransient<FractalLabViewModel>();
     }
 
     private void ConfigureHub(IServiceCollection services)

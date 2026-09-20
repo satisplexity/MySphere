@@ -3,7 +3,8 @@
                     xmlns:hub="clr-namespace:MySphere.Presentation.Spaces.Hub"
                     xmlns:semigraph="clr-namespace:MySphere.Presentation.Spaces.Semigraph"
                     xmlns:pathLab="clr-namespace:MySphere.Presentation.Spaces.PathLab"
-                    xmlns:sortLab="clr-namespace:MySphere.Presentation.Spaces.SortLab">
+                    xmlns:sortLab="clr-namespace:MySphere.Presentation.Spaces.SortLab"
+                    xmlns:fractalLab="clr-namespace:MySphere.Presentation.Spaces.FractalLab">
 
     <DataTemplate DataType="{x:Type hub:HubViewModel}">
 
@@ -26,6 +27,12 @@
     <DataTemplate DataType="{x:Type sortLab:SortLabViewModel}">
 
         <sortLab:SortLabView/>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type fractalLab:FractalLabViewModel}">
+
+        <fractalLab:FractalLabView/>
 
     </DataTemplate>
     

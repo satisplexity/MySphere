@@ -303,8 +303,4 @@ public partial class SpaceSwitcher : UserControl
 
         timer.Start();
     }
-
-    private void Grid_PreviewKeyDown(object sender, KeyEventArgs e)
-    {
-    }
 }

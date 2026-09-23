@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:MySphere.Presentation.Spaces.Shell"
              xmlns:effects="clr-namespace:MySphere.Presentation.Effects">
 
-    <Grid MouseWheel="SlideSpaces" PreviewKeyDown="Grid_PreviewKeyDown">
+    <Grid MouseWheel="SlideSpaces">
 
         <Rectangle Fill="{StaticResource WindowBackgroundSolidColorBrush}">
 

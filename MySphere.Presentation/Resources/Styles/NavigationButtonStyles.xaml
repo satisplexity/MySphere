@@ -54,81 +54,79 @@
                     <Border helpers:BorderClipHelper.Enable="True"
                             CornerRadius="15">
                         <Grid>
-                        
-                        
-                        <Border CornerRadius="15"
+
+
+                            <Border CornerRadius="15"
                                 Background="#212122"
                                 BorderThickness="1.5">
-                            
-                            <Border.BorderBrush>
-                                
-                                <LinearGradientBrush StartPoint="0.2, 0"
+
+                                <Border.BorderBrush>
+
+                                    <LinearGradientBrush StartPoint="0.2, 0"
                                                      EndPoint="0.8, 1">
-                                    
-                                    <LinearGradientBrush.GradientStops>
-                                        
-                                        <GradientStop Offset="0"
+
+                                        <LinearGradientBrush.GradientStops>
+
+                                            <GradientStop Offset="0"
                                                       Color="#303032"/>
-                                        
-                                        <GradientStop Offset="1"
+
+                                            <GradientStop Offset="1"
                                                       Color="#222224"/>
-                                        
-                                    </LinearGradientBrush.GradientStops>
-                                
-                                </LinearGradientBrush>
-                            
-                            </Border.BorderBrush>
 
-                            <Border.Effect>
+                                        </LinearGradientBrush.GradientStops>
 
-                                <effects:NoiseEffect Scale="100"
+                                    </LinearGradientBrush>
+
+                                </Border.BorderBrush>
+
+                                <Border.Effect>
+
+                                    <effects:NoiseEffect Scale="100"
                                                      Intensity="0.005"/>
 
-                            </Border.Effect>
-                            
-                        </Border>
-                        
-                        <Path Data="{TemplateBinding Icon}"
+                                </Border.Effect>
+
+                            </Border>
+
+                            <Path Data="{TemplateBinding Icon}"
                               Fill="#313133"
                               Stretch="Uniform"
                               Margin="{TemplateBinding Padding}"/>
 
-                        <Grid x:Name="Glow"
+                            <Grid x:Name="Glow"
                               Opacity="0">
 
-                            <Grid>
-                                
-                                <Grid.Effect>
-                                    
-                                    <BlurEffect Radius="20"/>
-                                    
-                                </Grid.Effect>
-                                
-                                <Path Data="{TemplateBinding Icon}"
+                                <Grid>
+
+                                    <Grid.Effect>
+
+                                        <BlurEffect Radius="20"/>
+
+                                    </Grid.Effect>
+
+                                    <Path Data="{TemplateBinding Icon}"
                                       Fill="{TemplateBinding Foreground}"
                                       Margin="{TemplateBinding Padding}"
                                       Stretch="Uniform"/>
-                                
-                                <Ellipse Fill="{TemplateBinding Foreground}"
+
+                                    <Ellipse Fill="{TemplateBinding Foreground}"
                                          Width="40"
                                          Height="15"
                                          VerticalAlignment="Bottom"
                                          Margin="0, 0, 0, -10"/>
-                                
-                            </Grid>
-                            
-                            <Path Data="{TemplateBinding Icon}"
+
+                                </Grid>
+
+                                <Path Data="{TemplateBinding Icon}"
                                   Fill="{TemplateBinding Foreground}"
                                   Margin="{TemplateBinding Padding}"
                                   Stretch="Uniform"/>
-                            
+
+                            </Grid>
+
                         </Grid>
-                        
-                    </Grid>
                     </Border>
-                    
-                    
-                    
+
                     <ControlTemplate.Triggers>
 
                         <Trigger Property="IsChecked"

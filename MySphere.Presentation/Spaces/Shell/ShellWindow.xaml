@@ -21,6 +21,7 @@
         <Rectangle Fill="{StaticResource WindowBackgroundSolidColorBrush}">
 
             <Rectangle.Effect>
+                
                 <effects:NoiseEffect Scale="100"
                                      Intensity="0.005"/>
 
@@ -28,32 +29,71 @@
 
         </Rectangle>
 
+        <!-- Core grid -->
         <Grid>
 
             <Grid.RowDefinitions>
 
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition/>
 
             </Grid.RowDefinitions>
 
-            <Button 
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center"
-                Panel.ZIndex="10"
-                Height="60"
-                    Style="{StaticResource SwitcherButton}"
-                    Click="ToogleSwitcher"/>
+            <Grid.ColumnDefinitions>
 
-            <Border Grid.Row="1"
-                    CornerRadius="15"
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <!-- Title container (icon and space name) -->
+            <Grid>
+
+                <!-- Icon -->
+
+                <!-- Space title -->
+
+            </Grid>
+
+            <Button Style="{StaticResource SwitcherButton}"
+                    Click="ToogleSwitcher"
+                    Grid.Column="1"/>
+
+            <!-- Window control buttons -->
+            <Grid Grid.Column="2"
+                  HorizontalAlignment="Right"
+                  Margin="0, 15, 15, 0">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+
+                </Grid.ColumnDefinitions>
+
+                <controls:RoundButton Icon="{StaticResource CollapseIcon}"
+                                      Command="{Binding CollapseCommand}"/>
+
+                <controls:RoundButton Icon="{StaticResource PowerIcon}"
+                                      Command="{Binding ShutdownCommand}"
+                                      Grid.Column="1"/>
+
+            </Grid>
+            
+            <Border x:Name="PART_Container"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3"
                     Margin="15"
-                    x:Name="PART_Container"
                     Background="#151515"
                     RenderTransformOrigin="0.5, 0.8"
                     helpers:BorderClipHelper.Enable="True">
+
                 <Border.RenderTransform>
+
                     <ScaleTransform x:Name="PART_ContainerScale"/>
+
                 </Border.RenderTransform>
 
                 <Grid x:Name="SpaceContent">
@@ -62,23 +102,24 @@
 
                         <Rectangle.Effect>
 
-                            <effects:NoiseEffect Scale="100"
-                                                 Intensity="0.005"/>
+                            <effects:NoiseEffect Scale="200"
+                                             Intensity="0.005"/>
 
                         </Rectangle.Effect>
 
                     </Rectangle>
 
-                    <ContentControl x:Name="PART_Content" Content="{Binding Navigation.CurrentViewModel}"/>
+                    <ContentControl x:Name="PART_Content"
+                                    Content="{Binding Navigation.CurrentViewModel}"/>
 
                     <local:SpaceSwitcher x:Name="PART_SpaceSwitcher"/>
-                    
+
                 </Grid>
-
+                
             </Border>
-
+            
         </Grid>
 
     </Grid>
-
+        
 </Window>

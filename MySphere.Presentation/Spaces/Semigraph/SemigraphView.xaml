@@ -3,6 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:MySphere.Presentation.Spaces.Semigraph">
 
+    <UserControl.Resources>
+
+        <ResourceDictionary Source="/Spaces/Semigraph/DataTemplates.xaml"/>
+
+    </UserControl.Resources>
+    
     <Grid Background="#151515">
 
         <TextBlock Text="Semigraph"

@@ -2,7 +2,6 @@
 using MySphere.Presentation.Controls;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-using System.Windows.Threading;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Input;
@@ -130,16 +129,11 @@ public partial class SpaceSwitcher : UserControl
         _animationDuration.TotalSeconds);
     }
 
-    private SpacePreviewCard Contain(ViewModelBase viewModel)
+    private SpacePreviewCard? Contain(ViewModelBase viewModel)
     {
-
         foreach(SpacePreviewCard card in _cards)
-        {
             if(card.Space == viewModel)
-            {
                 return card;
-            }
-        }
 
         return null;
     }
@@ -179,28 +173,25 @@ public partial class SpaceSwitcher : UserControl
             _cards[index].Margin = new Thickness(-index * width, 0, 0, 0);
             _cards[index].SetValue(Panel.ZIndexProperty, _cards.Count - index);
 
-            _cards[index].RenderTransform.BeginAnimation(ScaleTransform.ScaleXProperty, new DoubleAnimation()
-            {
-                To = 0.8,
-                Duration = TimeSpan.Zero,
-            });
+            if (index == _currentCardIndex) continue;
 
-            _cards[index].RenderTransform.BeginAnimation(ScaleTransform.ScaleYProperty, new DoubleAnimation()
-            {
-                To = 0.8,
-                Duration = TimeSpan.Zero,
-            });
+            UpdateCardsVisual(_cards[index], 0.8);
         }
 
-        _cards[_currentCardIndex].RenderTransform.BeginAnimation(ScaleTransform.ScaleXProperty, new DoubleAnimation()
+        UpdateCardsVisual(_cards[_currentCardIndex], 1);
+    }
+
+    private void UpdateCardsVisual(SpacePreviewCard card, double scale)
+    {
+        card.RenderTransform.BeginAnimation(ScaleTransform.ScaleXProperty, new DoubleAnimation()
         {
-            To = 1,
+            To = scale,
             Duration = TimeSpan.Zero,
         });
 
-        _cards[_currentCardIndex].RenderTransform.BeginAnimation(ScaleTransform.ScaleYProperty, new DoubleAnimation()
+        card.RenderTransform.BeginAnimation(ScaleTransform.ScaleYProperty, new DoubleAnimation()
         {
-            To = 1,
+            To = scale,
             Duration = TimeSpan.Zero,
         });
     }
@@ -212,25 +203,13 @@ public partial class SpaceSwitcher : UserControl
 
         State = SwitcherState.Sliding;
 
-        _cards[_currentCardIndex].Scale.BeginAnimation(ScaleTransform.ScaleXProperty, new DoubleAnimation()
+        CircleEase ease = new CircleEase()
         {
-            To = 0.8,
-            Duration = TimeSpan.FromSeconds(0.4),
-            EasingFunction = new CircleEase()
-            {
-                EasingMode = EasingMode.EaseInOut
-            }
-        });
+            EasingMode = EasingMode.EaseInOut
+        };
 
-        _cards[_currentCardIndex].Scale.BeginAnimation(ScaleTransform.ScaleYProperty, new DoubleAnimation()
-        {
-            To = 0.8,
-            Duration = TimeSpan.FromSeconds(0.4),
-            EasingFunction = new CircleEase()
-            {
-                EasingMode = EasingMode.EaseInOut
-            }
-        });
+        AnimateScale(_cards[_currentCardIndex].Scale, 0.8, 0.4, ease);
+        AnimateScale(_cards[_currentCardIndex].Scale, 0.8, 0.4, ease);
 
         _currentCardIndex += mouse.Delta > 0 ? 1 : -1;
 
@@ -244,25 +223,8 @@ public partial class SpaceSwitcher : UserControl
             _currentCardIndex = _cards.Count - 1;
         }
 
-        _cards[_currentCardIndex].RenderTransform.BeginAnimation(ScaleTransform.ScaleXProperty, new DoubleAnimation()
-        {
-            To = 1,
-            Duration = TimeSpan.FromSeconds(0.4),
-            EasingFunction = new CircleEase()
-            {
-                EasingMode = EasingMode.EaseInOut
-            }
-        });
-
-        _cards[_currentCardIndex].RenderTransform.BeginAnimation(ScaleTransform.ScaleYProperty, new DoubleAnimation()
-        {
-            To = 1,
-            Duration = TimeSpan.FromSeconds(0.4),
-            EasingFunction = new CircleEase()
-            {
-                EasingMode = EasingMode.EaseInOut
-            }
-        });
+        AnimateScale(_cards[_currentCardIndex].Scale, 1, 0.4, ease);
+        AnimateScale(_cards[_currentCardIndex].Scale, 1, 0.4, ease);
 
         PART_TranslateTransform.BeginAnimation(TranslateTransform.XProperty, new DoubleAnimation()
         {
@@ -276,4 +238,21 @@ public partial class SpaceSwitcher : UserControl
 
         TimerFactory.Run(() => State = SwitcherState.Showed, 0.4);
     }
+
+    private void AnimateScale(ScaleTransform transform, double to, double duration, EasingFunctionBase easing)
+    {
+        transform.BeginAnimation(ScaleTransform.ScaleXProperty, new DoubleAnimation()
+        {
+            To = to,
+            Duration = TimeSpan.FromSeconds(duration),
+            EasingFunction = easing
+        });
+
+        transform.BeginAnimation(ScaleTransform.ScaleYProperty, new DoubleAnimation()
+        {
+            To = to,
+            Duration = TimeSpan.FromSeconds(duration),
+            EasingFunction = easing
+        });
+    }  
 }

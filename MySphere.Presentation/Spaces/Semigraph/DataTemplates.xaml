@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:home="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Home"
+                    xmlns:create="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Create"
+                    xmlns:storage="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Storage"
+                    xmlns:analysis="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Analysis"
+                    xmlns:settings="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Settings">
+
+    <DataTemplate DataType="{x:Type home:HomeViewModel}">
+
+        <home:HomeView/>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type create:CreateViewModel}">
+
+        <create:CreateView/>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type storage:StorageViewModel}">
+
+        <storage:StorageView/>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type analysis:AnalysisViewModel}">
+
+        <analysis:AnalysisView/>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type settings:SettingsViewModel}">
+
+        <settings:SettingsView/>
+
+    </DataTemplate>
+    
+</ResourceDictionary>

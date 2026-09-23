@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Input;
 using System.Windows;
+using MySphere.Presentation.Utilities;
 
 namespace MySphere.Presentation.Spaces.Shell;
 
@@ -104,12 +105,12 @@ public partial class SpaceSwitcher : UserControl
 
     private void Show(BitmapSource preview, ViewModelBase space)
     {
-        
         PART_TranslateTransform.BeginAnimation(TranslateTransform.XProperty, new DoubleAnimation()
         {
             To = 0,
             Duration = TimeSpan.Zero,
         });
+
         _currentCardIndex = 0;
         Capture(preview, space);
         State = SwitcherState.Showing;
@@ -121,20 +122,12 @@ public partial class SpaceSwitcher : UserControl
         PART_ScaleTrasform.BeginAnimation(ScaleTransform.ScaleXProperty, _scaleAnimationIn);
         PART_ScaleTrasform.BeginAnimation(ScaleTransform.ScaleYProperty, _scaleAnimationIn);
 
-        DispatcherTimer timer = new()
-        {
-            Interval = _animationDuration
-        };
-
-        timer.Tick += new EventHandler((sender, args) =>
+        TimerFactory.Run(() =>
         {
             PART_PreviewImage.Visibility = Visibility.Collapsed;
             State = SwitcherState.Showed;
-
-            timer.Stop();
-        });
-
-        timer.Start();
+        }, 
+        _animationDuration.TotalSeconds);
     }
 
     private SpacePreviewCard Contain(ViewModelBase viewModel)
@@ -164,20 +157,12 @@ public partial class SpaceSwitcher : UserControl
         PART_ScaleTrasform.BeginAnimation(ScaleTransform.ScaleXProperty, _scaleAnimationOut);
         PART_ScaleTrasform.BeginAnimation(ScaleTransform.ScaleYProperty, _scaleAnimationOut);
 
-        DispatcherTimer timer = new()
-        {
-            Interval = _animationDuration / 2
-        };
-
-        timer.Tick += new((sender, args) =>
+        TimerFactory.Run(() =>
         {
             this.Visibility = Visibility.Hidden;
             State = SwitcherState.Hidden;
-
-            timer.Stop();
-        });
-
-        timer.Start();
+        },
+        _animationDuration.TotalSeconds / 2);
 
         SpacePreviewCard card = _cards[_currentCardIndex];
 
@@ -247,7 +232,6 @@ public partial class SpaceSwitcher : UserControl
             }
         });
 
-
         _currentCardIndex += mouse.Delta > 0 ? 1 : -1;
 
         if(_currentCardIndex < 0)
@@ -290,17 +274,6 @@ public partial class SpaceSwitcher : UserControl
             }
         });
 
-        DispatcherTimer timer = new()
-        {
-            Interval = TimeSpan.FromSeconds(0.4)
-        };
-
-        timer.Tick += new EventHandler((sender, args) =>
-        {
-            State = SwitcherState.Showed;
-            timer.Stop();
-        });
-
-        timer.Start();
+        TimerFactory.Run(() => State = SwitcherState.Showed, 0.4);
     }
 }

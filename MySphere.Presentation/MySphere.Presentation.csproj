@@ -6,9 +6,13 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <ApplicationIcon>Resources\Application\MySphereIcon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Application\MySphereIcon.ico" />
     <None Remove="Resources\Fonts\Comfortaa.ttf" />
     <None Remove="Resources\Fonts\Fredoka.ttf" />
     <None Remove="Resources\Fonts\Lexend.ttf" />
@@ -21,11 +25,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\Application\MySphereIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.12" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Application\MySphereIcon.ico" />
     <Resource Include="Resources\Fonts\Comfortaa.ttf" />
     <Resource Include="Resources\Fonts\Fredoka.ttf" />
     <Resource Include="Resources\Fonts\Lexend.ttf" />

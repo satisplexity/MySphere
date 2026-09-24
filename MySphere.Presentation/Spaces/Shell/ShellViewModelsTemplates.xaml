@@ -1,20 +1,15 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:hub="clr-namespace:MySphere.Presentation.Spaces.Hub"
-                    xmlns:semigraph="clr-namespace:MySphere.Presentation.Spaces.Semigraph"
                     xmlns:pathLab="clr-namespace:MySphere.Presentation.Spaces.PathLab"
                     xmlns:sortLab="clr-namespace:MySphere.Presentation.Spaces.SortLab"
+                    xmlns:semigraph="clr-namespace:MySphere.Presentation.Spaces.Semigraph"
+                    xmlns:codeScope="clr-namespace:MySphere.Presentation.Spaces.CodeScope"
                     xmlns:fractalLab="clr-namespace:MySphere.Presentation.Spaces.FractalLab">
 
     <DataTemplate DataType="{x:Type hub:HubViewModel}">
 
         <hub:HubView/>
-
-    </DataTemplate>
-
-    <DataTemplate DataType="{x:Type semigraph:SemigraphViewModel}">
-
-        <semigraph:SemigraphView/>
 
     </DataTemplate>
 
@@ -29,7 +24,19 @@
         <sortLab:SortLabView/>
 
     </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type semigraph:SemigraphViewModel}">
 
+        <semigraph:SemigraphView/>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type codeScope:CodeScopeViewModel}">
+
+        <codeScope:CodeScopeView/>
+
+    </DataTemplate>
+    
     <DataTemplate DataType="{x:Type fractalLab:FractalLabViewModel}">
 
         <fractalLab:FractalLabView/>

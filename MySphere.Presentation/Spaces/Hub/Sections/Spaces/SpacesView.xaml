@@ -143,7 +143,8 @@
             </controls:SpaceCard>
 
             <controls:SpaceCard Title="CodeScope"
-                Icon="{StaticResource CodeScopeIcon}">
+                Icon="{StaticResource CodeScopeIcon}"
+                                Command="{Binding OpenCodeScopeCommand}">
 
                 <controls:SpaceCard.Foreground>
 

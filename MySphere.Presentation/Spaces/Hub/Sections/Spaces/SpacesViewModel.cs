@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MySphere.Presentation.Framework.Foundation;
+using MySphere.Presentation.Spaces.CodeScope;
 using MySphere.Presentation.Spaces.FractalLab;
 using MySphere.Presentation.Spaces.Hub.Navigation;
-using MySphere.Presentation.Spaces.Hub.Sections.Home;
 using MySphere.Presentation.Spaces.PathLab;
 using MySphere.Presentation.Spaces.Semigraph;
 using MySphere.Presentation.Spaces.Shell;
@@ -19,6 +19,7 @@ public class SpacesViewModel : ViewModelBase
     public RelayCommand OpenSortLabCommand { get; }
 
     public RelayCommand OpenFractalLabCommand { get; }
+    public RelayCommand OpenCodeScopeCommand { get; }
     public SpacesViewModel(IServiceProvider services)
     {
         IShellNavigationService shellNavigationService = services.GetRequiredService<IShellNavigationService>();
@@ -50,6 +51,13 @@ public class SpacesViewModel : ViewModelBase
         {
             shellWindow.CaptureCurrentSpace();
             shellNavigationService.ReplaceWith<FractalLabViewModel>();
+            hubNavigation.NavigateTo<SpacesViewModel>();
+        });
+
+        OpenCodeScopeCommand = new(_ =>
+        {
+            shellWindow.CaptureCurrentSpace();
+            shellNavigationService.ReplaceWith<CodeScopeViewModel>();
             hubNavigation.NavigateTo<SpacesViewModel>();
         });
     }

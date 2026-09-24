@@ -9,6 +9,7 @@ using MySphere.Presentation.Spaces.SortLab;
 using MySphere.Presentation.Spaces.Hub.Navigation;
 using MySphere.Presentation.Spaces.FractalLab;
 using MySphere.Presentation.Spaces.Semigraph.Navigation;
+using MySphere.Presentation.Spaces.CodeScope;
 
 namespace MySphere.Presentation;
 
@@ -56,7 +57,7 @@ public partial class App : Application
         ConfigureSemigraph(services);
         services.AddTransient<PathLabViewModel>();
         services.AddTransient<SortLabViewModel>();
-
+        services.AddTransient<CodeScopeViewModel>();
         services.AddTransient<FractalLabViewModel>();
     }
 

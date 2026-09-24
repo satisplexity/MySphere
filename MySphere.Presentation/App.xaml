@@ -22,6 +22,8 @@
                 <ResourceDictionary Source="/Resources/Styles/SpacePreviewButton.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/SwitcherButtonStyle.xaml"/>
 
+                <ResourceDictionary Source="/Resources/Styles/BorderStyles.xaml"/>
+
                 <ResourceDictionary Source="/Resources/Styles/RoundButtonStyle.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/SpaceCardStyle.xaml"/>
 

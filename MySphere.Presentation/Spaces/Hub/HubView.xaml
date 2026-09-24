@@ -46,14 +46,10 @@
 
             </StackPanel>
 
-            <Border Width="3"
-                Margin="5, 10"
-                CornerRadius="2.5"
-                Background="#191919"
-                Grid.Column="1"/>
+            <Border Style="{StaticResource VerticalSpliter}"/>
 
             <ContentControl Grid.Column="2" 
-                        Content="{Binding Navigation.CurrentViewModel}"/>
+                            Content="{Binding Navigation.CurrentViewModel}"/>
 
         </Grid>
     </Grid>

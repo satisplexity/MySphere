@@ -24,7 +24,8 @@
 
             <controls:SpaceCard Title="Semigraph"
                 Icon="{StaticResource SemigraphIcon}"
-                                Command="{Binding OpenSemigraphCommand}">
+                                Command="{Binding OpenSemigraphCommand}" 
+                                IsWIP="False">
 
                 <controls:SpaceCard.Foreground>
 
@@ -44,7 +45,8 @@
             </controls:SpaceCard>
 
             <controls:SpaceCard Title="PathLab"
-                Icon="{StaticResource PathLabIcon}">
+                Icon="{StaticResource PathLabIcon}"
+                                IsWIP="True">
 
                 <controls:SpaceCard.Foreground>
 
@@ -64,7 +66,8 @@
             </controls:SpaceCard>
 
             <controls:SpaceCard Title="SortLab"
-                Icon="{StaticResource SortLabIcon}">
+                Icon="{StaticResource SortLabIcon}"
+                                IsWIP="True">
 
                 <controls:SpaceCard.Foreground>
 
@@ -84,7 +87,8 @@
             </controls:SpaceCard>
 
             <controls:SpaceCard Title="Mergery"
-                Icon="{StaticResource MergeryIcon}">
+                Icon="{StaticResource MergeryIcon}"
+                                IsWIP="True">
 
                 <controls:SpaceCard.Foreground>
 
@@ -104,7 +108,8 @@
             </controls:SpaceCard>
 
             <controls:SpaceCard Title="Weatherly"
-                Icon="{StaticResource WeatherlyIcon}">
+                Icon="{StaticResource WeatherlyIcon}"
+                                IsWIP="True">
                 <controls:SpaceCard.Foreground>
 
                     <LinearGradientBrush StartPoint="0.3, 0"
@@ -123,7 +128,8 @@
 
             <controls:SpaceCard Title="FractalLab"
                 Icon="{StaticResource FractalLabIcon}"
-                                Command="{Binding OpenFractalLabCommand}">
+                                Command="{Binding OpenFractalLabCommand}"
+                                IsWIP="False">
 
                 <controls:SpaceCard.Foreground>
 
@@ -144,7 +150,8 @@
 
             <controls:SpaceCard Title="CodeScope"
                 Icon="{StaticResource CodeScopeIcon}"
-                                Command="{Binding OpenCodeScopeCommand}">
+                                Command="{Binding OpenCodeScopeCommand}"
+                                IsWIP="False">
 
                 <controls:SpaceCard.Foreground>
 
@@ -164,7 +171,8 @@
             </controls:SpaceCard>
 
             <controls:SpaceCard Title="Mazio"
-    Icon="{StaticResource MazioIcon}">
+    Icon="{StaticResource MazioIcon}"
+                                IsWIP="True">
 
                 <controls:SpaceCard.Foreground>
 
@@ -186,7 +194,8 @@ Offset="1"/>
             </controls:SpaceCard>
 
             <controls:SpaceCard Title="BoidLab"
-Icon="{StaticResource BoidLabIcon}">
+Icon="{StaticResource BoidLabIcon}"
+                                IsWIP="True">
 
                 <controls:SpaceCard.Foreground>
 
@@ -205,7 +214,8 @@ Offset="1"/>
             </controls:SpaceCard>
 
             <controls:SpaceCard Title="Chess#"
-Icon="{StaticResource ChessSharpIcon}">
+Icon="{StaticResource ChessSharpIcon}"
+                                IsWIP="True">
 
                 <controls:SpaceCard.Foreground>
 
@@ -225,7 +235,8 @@ Icon="{StaticResource ChessSharpIcon}">
             </controls:SpaceCard>
 
             <controls:SpaceCard Title="KittyCatch"
-Icon="{StaticResource KittyCatchIcon}">
+Icon="{StaticResource KittyCatchIcon}"
+                                IsWIP="True">
 
                 <controls:SpaceCard.Foreground>
 
@@ -245,7 +256,8 @@ Icon="{StaticResource KittyCatchIcon}">
             </controls:SpaceCard>
 
             <controls:SpaceCard Title="4 in row"
-Icon="{StaticResource FourInRowIcon}">
+Icon="{StaticResource FourInRowIcon}"
+                                IsWIP="True">
 
                 <controls:SpaceCard.Foreground>
 
@@ -266,7 +278,6 @@ Offset="1"/>
 
         </UniformGrid>
         
-
     </Grid>
 
 </UserControl>

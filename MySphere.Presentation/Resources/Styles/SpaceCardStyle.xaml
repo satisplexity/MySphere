@@ -111,11 +111,40 @@
                                       Grid.Row="1"
                                       Margin="40"/>
 
+                                <Border x:Name="PART_WIPLabel"
+                                        CornerRadius="9"
+                                        VerticalAlignment="Top"
+                                        HorizontalAlignment="Right"
+                                        Grid.Row="0"
+                                        Margin="0, 10, 10, 0"
+                                        Background="#E97"
+                                        Visibility="Hidden">
+
+                                    <TextBlock Text="WIP"
+                                               Margin="5"
+                                               Foreground="#212121"
+                                               FontSize="10"
+                                               FontWeight="Bold"
+                                               FontFamily="{StaticResource Quicksand}"/>
+
+                                </Border>
+
                             </Grid>
                             
                         </Grid>
                         
                     </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsWIP"
+                                 Value="True">
+                            <Setter TargetName="PART_WIPLabel"
+                                    Property="Visibility"
+                                    Value="Visible"/>
+                        </Trigger>
+                        
+                    </ControlTemplate.Triggers>
                     
                 </ControlTemplate>
                 

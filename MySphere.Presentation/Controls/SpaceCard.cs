@@ -29,4 +29,16 @@ public class SpaceCard : Button
         get => (Geometry)GetValue(IconProperty);
         set => SetValue(IconProperty, value);
     }
+
+    public static readonly DependencyProperty IsWIPProperty =
+        DependencyProperty.Register(
+            nameof(IsWIP),
+            typeof(bool),
+            typeof(SpaceCard));
+
+    public bool IsWIP
+    {
+        get => (bool)GetValue(IsWIPProperty);
+        set => SetValue(IsWIPProperty, value);
+    }
 }

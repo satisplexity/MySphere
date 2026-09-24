@@ -23,7 +23,8 @@
                      VerticalAlignment="Center">
 
             <controls:SpaceCard Title="Semigraph"
-                Icon="{StaticResource SemigraphIcon}">
+                Icon="{StaticResource SemigraphIcon}"
+                                Command="{Binding OpenSemigraphCommand}">
 
                 <controls:SpaceCard.Foreground>
 

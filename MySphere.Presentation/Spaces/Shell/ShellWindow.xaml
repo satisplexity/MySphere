@@ -73,7 +73,7 @@
 
                 </Grid.ColumnDefinitions>
 
-                <controls:RoundButton Icon="{StaticResource CollapseIcon}"
+                <controls:RoundButton Icon="{StaticResource MinimizeIcon}"
                                       Command="{Binding CollapseCommand}"/>
 
                 <controls:RoundButton Icon="{StaticResource PowerIcon}"

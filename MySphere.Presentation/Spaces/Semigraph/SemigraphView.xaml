@@ -1,21 +1,72 @@
 ﻿<UserControl x:Class="MySphere.Presentation.Spaces.Semigraph.SemigraphView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MySphere.Presentation.Spaces.Semigraph">
+             xmlns:local="clr-namespace:MySphere.Presentation.Spaces.Semigraph"
+             xmlns:controls="clr-namespace:MySphere.Presentation.Controls">
 
     <UserControl.Resources>
 
         <ResourceDictionary Source="/Spaces/Semigraph/DataTemplates.xaml"/>
 
     </UserControl.Resources>
-    
+
     <Grid Background="#151515">
 
-        <TextBlock Text="Semigraph"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Foreground="#88C"
-                   FontSize="70"/>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <StackPanel VerticalAlignment="Center">
+
+            <controls:NavigationButton Icon="{StaticResource HomeIcon}"
+                                       Foreground="LightCoral"
+                                       IsChecked="{Binding IsHomeSelected, Mode=OneWay}"
+                                       Command="{Binding NavigateToHomeCommand}"/>
+
+            <controls:NavigationButton Icon="{StaticResource AddBoxIcon}"
+                                       Foreground="LightGreen"
+                                       IsChecked="{Binding IsCreateSelected, Mode=OneWay}"
+                                       Command="{Binding NavigateToCreateCommand}"/>
+
+            <controls:NavigationButton Icon="{StaticResource Learn}"
+                                       Foreground="LightYellow"
+                                       IsChecked="{Binding IsLearnSelected, Mode=OneWay}"
+                                       Command="{Binding NavigateToLearnCommand}"/>
+
+            <controls:NavigationButton Icon="{StaticResource StorageIcon}"
+                                       Foreground="LightBlue"
+                                       IsChecked="{Binding IsStorageSelected, Mode=OneWay}"
+                                       Command="{Binding NavigateToStorageCommand}"/>
+
+            <controls:NavigationButton Icon="{StaticResource GraphIcon}"
+                                       Foreground="BlueViolet"
+                                       IsChecked="{Binding IsGraphSelected, Mode=OneWay}"
+                                       Command="{Binding NavigateToGraphCommand}"/>
+
+            <controls:NavigationButton Icon="{StaticResource ChartIcon}"
+                                       Foreground="Moccasin"
+                                       IsChecked="{Binding IsAnalysisSelected, Mode=OneWay}"
+                                       Command="{Binding NavigateToAnalysisCommand}"/>
+
+            <controls:NavigationButton Icon="{StaticResource SettingsIcon}"
+                                       Foreground="LightCyan"
+                                       IsChecked="{Binding IsSettingsSelected, Mode=OneWay}"
+                                       Command="{Binding NavigateToSettingsCommand}"/>
+
+        </StackPanel>
+
+        <Border Width="3"
+    Margin="5, 10"
+    CornerRadius="2.5"
+    Background="#191919"
+    Grid.Column="1"/>
+        
+        <ContentControl Content="{Binding Navigation.CurrentViewModel}"
+                        Grid.Column="2"/>
 
     </Grid>
 

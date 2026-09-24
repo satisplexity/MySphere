@@ -23,12 +23,12 @@
 
                     <Grid>
 
-                        <Path Data="{StaticResource Heading}"
+                        <Path Data="{StaticResource SwitcherButtonIcon}"
                               Stretch="Uniform"
                               Fill="#1C1C1F">
                             
                         </Path>
-                        <Path Data="{StaticResource Heading}"
+                        <Path Data="{StaticResource SwitcherButtonIcon}"
                               Margin="5, 0, 5, 2"
                               Stretch="Uniform"
                               Fill="#232324">

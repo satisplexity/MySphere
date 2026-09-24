@@ -1,6 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:home="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Home"
+                    xmlns:learn="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Learn"
+                    xmlns:graph="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Graph"
                     xmlns:create="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Create"
                     xmlns:storage="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Storage"
                     xmlns:analysis="clr-namespace:MySphere.Presentation.Spaces.Semigraph.Sections.Analysis"
@@ -12,6 +14,18 @@
 
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type learn:LearnViewModel}">
+
+        <learn:LearnView/>
+
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type graph:GraphViewModel}">
+
+        <graph:GraphView/>
+
+    </DataTemplate>
+    
     <DataTemplate DataType="{x:Type create:CreateViewModel}">
 
         <create:CreateView/>

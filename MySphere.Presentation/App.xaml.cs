@@ -3,15 +3,12 @@ using System.Windows;
 using MySphere.Presentation.Spaces.Hub;
 using MySphere.Presentation.Spaces.Shell;
 using MySphere.Presentation.Spaces.Shell.Navigation;
-using MySphere.Presentation.Spaces.Hub.Sections.Home;
-using MySphere.Presentation.Spaces.Hub.Sections.Spaces;
-using MySphere.Presentation.Spaces.Hub.Sections.Account;
-using MySphere.Presentation.Spaces.Hub.Sections.Settings;
 using MySphere.Presentation.Spaces.Semigraph;
 using MySphere.Presentation.Spaces.PathLab;
 using MySphere.Presentation.Spaces.SortLab;
 using MySphere.Presentation.Spaces.Hub.Navigation;
 using MySphere.Presentation.Spaces.FractalLab;
+using MySphere.Presentation.Spaces.Semigraph.Navigation;
 
 namespace MySphere.Presentation;
 
@@ -56,8 +53,7 @@ public partial class App : Application
             });
 
         ConfigureHub(services);
-
-        services.AddTransient<SemigraphViewModel>();
+        ConfigureSemigraph(services);
         services.AddTransient<PathLabViewModel>();
         services.AddTransient<SortLabViewModel>();
 
@@ -71,9 +67,25 @@ public partial class App : Application
 
         services.AddTransient<HubViewModel>();
 
-        services.AddTransient<HomeViewModel>();
-        services.AddTransient<SpacesViewModel>();
-        services.AddTransient<AccountViewModel>();
-        services.AddTransient<SettingsViewModel>();
+        services.AddTransient<Spaces.Hub.Sections.Home.HomeViewModel>();
+        services.AddTransient<Spaces.Hub.Sections.Spaces.SpacesViewModel>();
+        services.AddTransient<Spaces.Hub.Sections.Account.AccountViewModel>();
+        services.AddTransient<Spaces.Hub.Sections.Settings.SettingsViewModel>();
+    }
+
+    private void ConfigureSemigraph(IServiceCollection services)
+    {
+        services.AddTransient<SemigraphNavigationStore>();
+        services.AddTransient<ISemigraphNavigationService, SemigraphNavigationService>();
+
+        services.AddTransient<SemigraphViewModel>();
+
+        services.AddTransient<Spaces.Semigraph.Sections.Home.HomeViewModel>();
+        services.AddTransient<Spaces.Semigraph.Sections.Learn.LearnViewModel>();
+        services.AddTransient<Spaces.Semigraph.Sections.Graph.GraphViewModel>();
+        services.AddTransient<Spaces.Semigraph.Sections.Create.CreateViewModel>();
+        services.AddTransient<Spaces.Semigraph.Sections.Storage.StorageViewModel>();
+        services.AddTransient<Spaces.Semigraph.Sections.Analysis.AnalysisViewModel>();
+        services.AddTransient<Spaces.Semigraph.Sections.Settings.SettingsViewModel>();
     }
 }

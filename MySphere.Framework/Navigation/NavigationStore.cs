@@ -1,8 +1,8 @@
-﻿using MySphere.Presentation.Framework.Foundation;
+﻿using MySphere.Framework.Foundation.ViewModel;
 
-namespace MySphere.Presentation.Framework.Navigation;
+namespace MySphere.Framework.Navigation;
 
-public abstract class NavigationStore : ObservableObject
+public class NavigationStore : ObservableObject
 {
     private ViewModelBase? _currentViewModel;
 

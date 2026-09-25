@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using System.ComponentModel;
 
-namespace MySphere.Presentation.Framework.Foundation;
+namespace MySphere.Framework.Foundation.ViewModel;
 
 public abstract class ObservableObject : INotifyPropertyChanged
 {

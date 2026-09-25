@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace MySphere.Presentation.Framework.Foundation;
+namespace MySphere.Framework.Foundation.Command;
 
 public abstract class CommandBase : ICommand
 {
@@ -10,6 +10,5 @@ public abstract class CommandBase : ICommand
 
     public abstract void Execute(object? parameter);
 
-    public void RaiseCanExecuteChanged() =>
-        CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+    public void RaiseCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
 }

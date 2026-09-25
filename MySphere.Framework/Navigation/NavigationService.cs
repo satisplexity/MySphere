@@ -1,12 +1,14 @@
-﻿using MySphere.Presentation.Framework.Foundation;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using MySphere.Framework.Foundation.ViewModel;
 
-namespace MySphere.Presentation.Framework.Navigation;
+namespace MySphere.Framework.Navigation;
 
 public abstract class NavigationService : ObservableObject, INavigationService
 {
     private readonly NavigationStore _store;
+
     private readonly IServiceProvider _services;
+
     private readonly Stack<ViewModelBase> _history = new();
 
     public ViewModelBase? CurrentViewModel => _store.CurrentViewModel;

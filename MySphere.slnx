@@ -1,1 +1,3 @@
-<Solution />
+<Solution>
+  <Project Path="MySphere.Framework/MySphere.Framework.csproj" />
+</Solution>

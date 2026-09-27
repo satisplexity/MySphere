@@ -8,5 +8,11 @@
         <ResourceDictionary Source="/Main/DataTemplates.xaml"/>
 
     </UserControl.Resources>
+
+    <Grid>
+
+        <ContentControl Content="{Binding Navigation.CurrentViewModel}"/>
+
+    </Grid>
     
 </UserControl>

@@ -3,10 +3,10 @@
                     xmlns:controls="clr-namespace:MySphere.Framework.Controls.Navigation">
 
     <BackEase xaml:Key="ScaleEase"
-              Amplitude="1.5"
+              Amplitude="1.2"
               EasingMode="EaseOut"/>
 
-    <CubicEase xaml:Key="HoverEase"
+    <ExponentialEase xaml:Key="HoverEase"
                EasingMode="EaseOut"/>
 
     <Style TargetType="{xaml:Type controls:NavigationMenuButton}">
@@ -24,7 +24,7 @@
                 Value="10, 5"/>
 
         <Setter Property="Padding"
-                Value="16"/>
+                Value="17"/>
 
         <Setter Property="RenderTransform">
 
@@ -53,28 +53,54 @@
                                   Fill="#444"
                                   Margin="{TemplateBinding Padding}"/>
 
-                            <Grid xaml:Name="PART_VisualSelecting">
+                            <Grid xaml:Name="PART_VisualSelecting"
+                                  Opacity="0">
 
-                                <Grid.Effect>
+                                <Grid Opacity="0.4">
 
-                                    <BlurEffect Radius="20"/>
+                                    <Grid.Effect>
 
-                                </Grid.Effect>
-                                
+                                        <BlurEffect Radius="20"/>
+
+                                    </Grid.Effect>
+
+                                    <Path Data="{TemplateBinding Icon}"
+                                          Stretch="Uniform"
+                                          Fill="{TemplateBinding Foreground}"
+                                          Margin="{TemplateBinding Padding}">
+
+                                        <Path.RenderTransform>
+
+                                            <ScaleTransform ScaleX="1.1"
+                                                            ScaleY="1.1"/>
+
+                                        </Path.RenderTransform>
+                                        
+                                    </Path>
+
+                                    <Ellipse Width="50"
+                                             VerticalAlignment="Bottom"
+                                             Fill="{TemplateBinding Foreground}"
+                                             Height="30"
+                                             Margin="0, 0, 0, -15">
+
+                                        <Ellipse.Clip>
+
+                                            <RectangleGeometry Rect="0, 0, 50, 15"/>
+
+                                        </Ellipse.Clip>
+                                        
+                                    </Ellipse>
+                                    
+                                </Grid>
+
                                 <Path Data="{TemplateBinding Icon}"
                                       Stretch="Uniform"
                                       Fill="{TemplateBinding Foreground}"
                                       Margin="{TemplateBinding Padding}"/>
 
-                                <Ellipse Width="{TemplateBinding Width}"/>
-
                             </Grid>
-
-                            <Path Data="{TemplateBinding Icon}"
-                                  Stretch="Uniform"
-                                  Fill="{TemplateBinding Foreground}"
-                                  Margin="{TemplateBinding Padding}"/>
-
+                            
                         </Grid>
                         
                     </Border>
@@ -130,9 +156,9 @@
                                     <Storyboard>
 
                                         <ThicknessAnimation Storyboard.TargetProperty="Padding"
-                                                            To="12"
-                                                            Duration="0:0:0.2"
-                                                            EasingFunction="{StaticResource HoverEase}"/>
+                                                            To="15"
+                                                            Duration="0:0:0.3"
+                                                            EasingFunction="{StaticResource ScaleEase}"/>
 
                                     </Storyboard>
 
@@ -147,8 +173,8 @@
                                     <Storyboard>
 
                                         <ThicknessAnimation Storyboard.TargetProperty="Padding"
-                                                            To="16"
-                                                            Duration="0:0:0.15"
+                                                            To="17"
+                                                            Duration="0:0:0.2"
                                                             EasingFunction="{StaticResource HoverEase}"/>
 
                                     </Storyboard>
@@ -166,15 +192,15 @@
                                 <Storyboard>
 
                                     <DoubleAnimation Storyboard.TargetProperty="(RadioButton.RenderTransform).(ScaleTransform.ScaleX)"
-                                                     To="0.9"
-                                                     Duration="0:0:0.15"
-                                                     EasingFunction="{StaticResource ScaleEase}"
+                                                     To="0.8"
+                                                     Duration="0:0:0.12"
+                                                     EasingFunction="{StaticResource HoverEase}"
                                                      AutoReverse="True"/>
 
                                     <DoubleAnimation Storyboard.TargetProperty="(RadioButton.RenderTransform).(ScaleTransform.ScaleY)"
-                                                     To="0.9"
-                                                     Duration="0:0:0.15"
-                                                     EasingFunction="{StaticResource ScaleEase}"
+                                                     To="0.8"
+                                                     Duration="0:0:0.12"
+                                                     EasingFunction="{StaticResource HoverEase}"
                                                      AutoReverse="True"/>
 
                                 </Storyboard>

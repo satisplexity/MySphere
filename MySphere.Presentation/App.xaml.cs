@@ -8,6 +8,10 @@ using MySphere.Presentation.Hub;
 using MySphere.Presentation.Shell.Navigation;
 using MySphere.Presentation.Main.Navigation;
 using MySphere.Presentation.Hub.Navigation;
+using MySphere.Presentation.Hub.Sections.Home;
+using MySphere.Presentation.Hub.Sections.Spaces;
+using MySphere.Presentation.Hub.Sections.Account;
+using MySphere.Presentation.Hub.Sections.Settings;
 
 namespace MySphere.Presentation;
 
@@ -75,5 +79,17 @@ public partial class App : Application
         services.AddSingleton<HubViewModel>();
 
         services.AddTransient<HubView>();
+
+        services.AddSingleton<HomeViewModel>();
+        services.AddTransient<HomeView>();
+
+        services.AddSingleton<SpacesViewModel>();
+        services.AddTransient<HomeView>();
+
+        services.AddSingleton<AccoutViewModel>();
+        services.AddTransient<AccoutView>();
+
+        services.AddSingleton<SettingsViewModel>();
+        services.AddTransient<SettingsView>();
     }
 }

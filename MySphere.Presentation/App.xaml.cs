@@ -1,7 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using MySphere.Presentation.Shell;
-using MySphere.Presentation.Shell.Navigation;
 using System.Windows;
+
+using MySphere.Presentation.Shell;
+using MySphere.Presentation.Main;
+
+using MySphere.Presentation.Shell.Navigation;
+using MySphere.Presentation.Main.Navigation;
 
 namespace MySphere.Presentation;
 
@@ -42,5 +46,12 @@ public partial class App : Application
             {
                 DataContext = serviceProvider.GetRequiredService<ShellViewModel>()
             });
+
+        services.AddSingleton<MainNavigationStore>();
+        services.AddSingleton<IMainNavigationService, MainNavigationService>();
+
+        services.AddSingleton<MainViewModel>();
+
+        services.AddTransient<MainView>();
     }
 }

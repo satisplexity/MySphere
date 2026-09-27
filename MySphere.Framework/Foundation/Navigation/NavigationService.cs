@@ -7,7 +7,7 @@ public abstract class NavigationService : ObservableObject, INavigationService
 {
     private readonly NavigationStore _store;
 
-    private readonly IServiceProvider _services;
+    private readonly IServiceProvider _serviceProvider;
 
     private readonly Stack<ViewModelBase> _history = new();
 
@@ -15,10 +15,10 @@ public abstract class NavigationService : ObservableObject, INavigationService
 
     public bool CanGoBack => _history.Count > 0;
 
-    public NavigationService(NavigationStore store, IServiceProvider services)
+    public NavigationService(NavigationStore store, IServiceProvider serviceProvider)
     {
         _store = store;
-        _services = services;
+        _serviceProvider = serviceProvider;
 
         _store.PropertyChanged += (_, args) =>
         {
@@ -67,8 +67,8 @@ public abstract class NavigationService : ObservableObject, INavigationService
             _history.Push(_store.CurrentViewModel);
 
         _store.CurrentViewModel = parameter is null
-            ? (ViewModelBase)_services.GetRequiredService(viewModelType)
-            : (ViewModelBase)ActivatorUtilities.CreateInstance(_services, viewModelType, parameter);
+            ? (ViewModelBase)_serviceProvider.GetRequiredService(viewModelType)
+            : (ViewModelBase)ActivatorUtilities.CreateInstance(_serviceProvider, viewModelType, parameter);
 
         OnPropertyChanged(nameof(CanGoBack));
 

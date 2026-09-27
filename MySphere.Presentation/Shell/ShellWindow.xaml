@@ -3,4 +3,12 @@
         xmlns:xaml="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:MySphere.Presentation.Shell"
         Height="450"
-        Width="800"/>
+        Width="800">
+
+    <Window.Resources>
+
+        <ResourceDictionary Source="/Shell/DataTemplates.xaml"/>
+
+    </Window.Resources>
+    
+</Window>

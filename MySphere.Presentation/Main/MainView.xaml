@@ -1,4 +1,12 @@
 ﻿<UserControl xaml:Class="MySphere.Presentation.Main.MainView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:xaml="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MySphere.Presentation.Main"/>
+             xmlns:local="clr-namespace:MySphere.Presentation.Main">
+
+    <UserControl.Resources>
+
+        <ResourceDictionary Source="/Main/DataTemplates.xaml"/>
+
+    </UserControl.Resources>
+    
+</UserControl>

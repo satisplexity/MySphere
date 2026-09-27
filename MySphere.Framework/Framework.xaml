@@ -5,6 +5,8 @@
 
         <ResourceDictionary Source="/MySphere.Framework;component/Resources/Icons/InterfaceIcons.xaml"/>
 
+        <ResourceDictionary Source="/MySphere.Framework;component/Resources/Fonts/FontFamilies.xaml"/>
+
         <ResourceDictionary Source="/MySphere.Framework;component/Resources/Styles/NavigationMenuButtonStyle.xaml"/>
 
     </ResourceDictionary.MergedDictionaries>

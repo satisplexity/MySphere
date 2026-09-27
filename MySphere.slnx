@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="MySphere.Framework/MySphere.Framework.csproj" />
   <Project Path="MySphere.Presentation/MySphere.Presentation.csproj" />
+  <Project Path="MySphere.Semigraph.Presentation/MySphere.Semigraph.Presentation.csproj" Id="2d3eb84b-a337-4e4d-aa8a-7333b4a584eb" />
 </Solution>

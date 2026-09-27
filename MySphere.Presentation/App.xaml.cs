@@ -3,9 +3,11 @@ using System.Windows;
 
 using MySphere.Presentation.Shell;
 using MySphere.Presentation.Main;
+using MySphere.Presentation.Hub;
 
 using MySphere.Presentation.Shell.Navigation;
 using MySphere.Presentation.Main.Navigation;
+using MySphere.Presentation.Hub.Navigation;
 
 namespace MySphere.Presentation;
 
@@ -36,6 +38,13 @@ public partial class App : Application
 
     private void Configure(ServiceCollection services)
     {
+        ConfigureShell(services);
+        ConfigureMain(services);
+        ConfigureHub(services);
+    }
+
+    private void ConfigureShell(ServiceCollection services)
+    {
         services.AddSingleton<ShellNavigationStore>();
         services.AddSingleton<IShellNavigationService, ShellNavigationService>();
 
@@ -46,12 +55,25 @@ public partial class App : Application
             {
                 DataContext = serviceProvider.GetRequiredService<ShellViewModel>()
             });
+    }
 
+    private void ConfigureMain(ServiceCollection services)
+    {
         services.AddSingleton<MainNavigationStore>();
         services.AddSingleton<IMainNavigationService, MainNavigationService>();
 
         services.AddSingleton<MainViewModel>();
 
         services.AddTransient<MainView>();
+    }
+
+    private void ConfigureHub(ServiceCollection services)
+    {
+        services.AddSingleton<HubNavigationStore>();
+        services.AddSingleton<IHubNavigationService, HubNavigationService>();
+
+        services.AddSingleton<HubViewModel>();
+
+        services.AddTransient<HubView>();
     }
 }

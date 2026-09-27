@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MySphere.Presentation.Shell;
+using MySphere.Presentation.Shell.Navigation;
 using System.Windows;
 
 namespace MySphere.Presentation;
@@ -31,6 +32,15 @@ public partial class App : Application
 
     private void Configure(ServiceCollection services)
     {
-        services.AddSingleton<ShellWindow>();
+        services.AddSingleton<ShellNavigationStore>();
+        services.AddSingleton<IShellNavigationService, ShellNavigationService>();
+
+        services.AddSingleton<ShellViewModel>();
+
+        services.AddSingleton<ShellWindow>(serviceProvider =>
+            new ShellWindow()
+            {
+                DataContext = serviceProvider.GetRequiredService<ShellViewModel>()
+            });
     }
 }

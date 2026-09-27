@@ -11,7 +11,7 @@ public abstract class NavigationService : ObservableObject, INavigationService
 
     private readonly Stack<ViewModelBase> _history = new();
 
-    public ViewModelBase? CurrentViewModel => _store.CurrentViewModel;
+    public ViewModelBase CurrentViewModel => _store.CurrentViewModel;
 
     public bool CanGoBack => _history.Count > 0;
 

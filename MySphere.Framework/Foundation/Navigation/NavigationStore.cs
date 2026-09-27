@@ -4,9 +4,9 @@ namespace MySphere.Framework.Foundation.Navigation;
 
 public class NavigationStore : ObservableObject
 {
-    private ViewModelBase? _currentViewModel;
+    private ViewModelBase _currentViewModel = null!;
 
-    public ViewModelBase? CurrentViewModel
+    public ViewModelBase CurrentViewModel
     {
         get => _currentViewModel;
         set => SetProperty(ref _currentViewModel, value);

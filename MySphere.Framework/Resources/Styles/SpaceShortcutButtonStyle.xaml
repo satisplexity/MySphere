@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:controls="clr-namespace:MySphere.Framework.Controls.Navigation">
+                    xmlns:controls="clr-namespace:MySphere.Framework.Controls.Navigation"
+                    xmlns:helpers="clr-namespace:MySphere.Framework.VisualHelpers">
 
     <ResourceDictionary.MergedDictionaries>
 
@@ -29,14 +30,15 @@
                 <ControlTemplate TargetType="{x:Type controls:SpaceShortcutButton}">
 
                     <Border CornerRadius="20"
-                            Background="#29292B">
+                            Background="#29292B"
+                            helpers:ClipHelper.Enable="True">
 
                         <Grid>
 
                             <Grid.RowDefinitions>
 
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="3*"/>
 
                             </Grid.RowDefinitions>
 
@@ -61,16 +63,8 @@
                                          Width="150"
                                          Height="100"
                                          Margin="0, 0, 0, -50"
-                                         VerticalAlignment="Bottom">
+                                         VerticalAlignment="Bottom"/>
 
-                                    <Ellipse.Clip>
-
-                                        <RectangleGeometry Rect="0, 0, 150, 50"/>
-
-                                    </Ellipse.Clip>
-                                    
-                                </Ellipse>
-                                
                             </Grid>
 
                             <Path Data="{TemplateBinding Icon}"

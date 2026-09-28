@@ -8,7 +8,17 @@
         <ResourceDictionary Source="/MySphere.Framework;component/Resources/Styles/TextBlockStyles.xaml"/>
 
     </ResourceDictionary.MergedDictionaries>
-    
+
+    <CubicEase x:Key="HoverInEasing"
+               EasingMode="EaseOut"/>
+
+    <BackEase x:Key="HoverOutEasing"
+              EasingMode="EaseOut"
+              Amplitude="1.1"/>
+
+    <SineEase x:Key="ClickEase"
+              EasingMode="EaseOut"/>
+
     <Style TargetType="{x:Type controls:SpaceShortcutButton}">
 
         <Setter Property="Width"
@@ -21,7 +31,20 @@
                 Value="40"/>
 
         <Setter Property="Margin"
-                Value="15"/>
+                Value="20"/>
+
+        <Setter Property="RenderTransformOrigin"
+                Value="0.5, 0.5"/>
+
+        <Setter Property="RenderTransform">
+
+            <Setter.Value>
+
+                <ScaleTransform/>
+
+            </Setter.Value>
+            
+        </Setter>
 
         <Setter Property="Template">
 
@@ -32,8 +55,15 @@
                     <Border CornerRadius="20"
                             Background="#272728"
                             BorderThickness="2"
-                            helpers:ClipHelper.Enable="True">
+                            helpers:ClipHelper.Enable="True"
+                            RenderTransformOrigin="0.5, 0.7">
 
+                        <Border.RenderTransform>
+
+                            <ScaleTransform x:Name="PART_Scale"/>
+
+                        </Border.RenderTransform>
+                        
                         <Border.BorderBrush>
 
                             <LinearGradientBrush StartPoint="0.3, 0"
@@ -92,6 +122,87 @@
                         </Grid>
                         
                     </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+
+                            <Trigger.EnterActions>
+
+                                <BeginStoryboard>
+
+                                    <Storyboard>
+
+                                        <DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleX)"
+                                                         To="1.1"
+                                                         Duration="0:0:0.3"
+                                                         EasingFunction="{StaticResource HoverOutEasing}"/>
+
+                                        <DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)"
+                                                         To="1.1"
+                                                         Duration="0:0:0.3"
+                                                         EasingFunction="{StaticResource HoverOutEasing}"/>
+
+                                    </Storyboard>
+                                    
+                                </BeginStoryboard>
+                                
+                            </Trigger.EnterActions>
+
+                            <Trigger.ExitActions>
+
+                                <BeginStoryboard>
+
+                                    <Storyboard>
+
+                                        <DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleX)"
+                                                         To="1"
+                                                         Duration="0:0:0.4"
+                                                         EasingFunction="{StaticResource HoverInEasing}"/>
+
+                                        <DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)"
+                                                         To="1"
+                                                         Duration="0:0:0.4"
+                                                         EasingFunction="{StaticResource HoverInEasing}"/>
+
+                                    </Storyboard>
+                                    
+                                </BeginStoryboard>
+                                
+                            </Trigger.ExitActions>
+                            
+                        </Trigger>
+
+                        <EventTrigger RoutedEvent="Click">
+
+                            <BeginStoryboard>
+
+                                <Storyboard>
+
+                                    <DoubleAnimation Storyboard.TargetName="PART_Scale"
+                                                     Storyboard.TargetProperty="ScaleX"
+                                                     To="0.9"
+                                                     From="1"
+                                                     Duration="0:0:0.15"
+                                                     EasingFunction="{StaticResource ClickEase}"
+                                                     AutoReverse="True"/>
+
+                                    <DoubleAnimation Storyboard.TargetName="PART_Scale"
+                                                     Storyboard.TargetProperty="ScaleY"
+                                                     To="0.9"
+                                                     From="1"
+                                                     Duration="0:0:0.15"
+                                                     EasingFunction="{StaticResource ClickEase}"
+                                                     AutoReverse="True"/>
+
+                                </Storyboard>
+                                
+                            </BeginStoryboard>
+                            
+                        </EventTrigger>
+                        
+                    </ControlTemplate.Triggers>
                     
                 </ControlTemplate>
                 

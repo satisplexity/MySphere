@@ -9,6 +9,8 @@
 
         <ResourceDictionary Source="/MySphere.Framework;component/Resources/Styles/NavigationMenuButtonStyle.xaml"/>
 
+        <ResourceDictionary Source="/MySphere.Framework;component/Resources/Styles/SpaceShortcutButtonStyle.xaml"/>
+
     </ResourceDictionary.MergedDictionaries>
     
 </ResourceDictionary>

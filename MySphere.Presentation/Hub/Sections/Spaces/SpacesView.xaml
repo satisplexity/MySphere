@@ -1,7 +1,8 @@
 ﻿<UserControl x:Class="MySphere.Presentation.Hub.Sections.Spaces.SpacesView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MySphere.Presentation.Hub.Sections.Spaces">
+             xmlns:local="clr-namespace:MySphere.Presentation.Hub.Sections.Spaces"
+             xmlns:controls="clr-namespace:MySphere.Framework.Controls.Navigation;assembly=MySphere.Framework">
 
     <Grid Margin="20">
 
@@ -15,6 +16,14 @@
         <TextBlock Text="Spaces"
                    Style="{StaticResource PageHeader}"/>
 
+        <Grid Grid.Row="1">
+
+            <controls:SpaceShortcutButton Icon="{StaticResource InterfaceIcon.Account}"
+                                          Title="Semigraph"
+                                          Foreground="#95A"/>
+
+        </Grid>
+        
     </Grid>
     
 </UserControl>

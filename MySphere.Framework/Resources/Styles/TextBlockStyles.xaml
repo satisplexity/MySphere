@@ -52,5 +52,26 @@
         </Setter>
 
     </Style>
+
+    <Style x:Key="SpaceShortcutTitle"
+           TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource TextBlockBase}">
+
+        <Setter Property="Foreground"
+                Value="#CCD"/>
+
+        <Setter Property="FontSize"
+                Value="20"/>
+
+        <Setter Property="Margin"
+                Value="0, 15, 0, 0"/>
+
+        <Setter Property="VerticalAlignment"
+                Value="Bottom"/>
+
+        <Setter Property="HorizontalAlignment"
+               Value="Center"/>
+
+    </Style>
     
 </ResourceDictionary>

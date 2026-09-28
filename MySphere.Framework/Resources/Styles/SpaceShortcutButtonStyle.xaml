@@ -30,9 +30,25 @@
                 <ControlTemplate TargetType="{x:Type controls:SpaceShortcutButton}">
 
                     <Border CornerRadius="20"
-                            Background="#29292B"
+                            Background="#272728"
+                            BorderThickness="2"
                             helpers:ClipHelper.Enable="True">
 
+                        <Border.BorderBrush>
+
+                            <LinearGradientBrush StartPoint="0.3, 0"
+                                                 EndPoint="0.7, 1">
+
+                                <GradientStop Color="#3C3C3C"
+                                              Offset="0"/>
+
+                                <GradientStop Color="#323234"
+                                              Offset="1"/>
+
+                            </LinearGradientBrush>
+                            
+                        </Border.BorderBrush>
+                        
                         <Grid>
 
                             <Grid.RowDefinitions>

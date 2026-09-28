@@ -44,10 +44,25 @@
                 <ControlTemplate TargetType="{x:Type controls:NavigationMenuButton}">
 
                     <Border CornerRadius="15"
+                            BorderThickness="1.5"
                             Background="#29292A"
-                            BorderBrush="#323233"
                             helpers:ClipHelper.Enable="True">
 
+                        <Border.BorderBrush>
+
+                            <LinearGradientBrush StartPoint="0.3, 0"
+                                                 EndPoint="0.7, 1">
+
+                                <GradientStop Color="#3C3C3C"
+                                              Offset="0"/>
+
+                                <GradientStop Color="#323233"
+                                              Offset="1"/>
+
+                            </LinearGradientBrush>
+                            
+                        </Border.BorderBrush>
+                        
                         <Grid>
 
                             <Path Data="{TemplateBinding Icon}"
@@ -58,7 +73,7 @@
                             <Grid x:Name="PART_VisualSelecting"
                                   Opacity="0">
 
-                                <Grid Opacity="0.4">
+                                <Grid>
 
                                     <Grid.Effect>
 
@@ -112,7 +127,7 @@
 
                                         <DoubleAnimation Storyboard.TargetName="PART_VisualSelecting"
                                                          Storyboard.TargetProperty="Opacity"
-                                                         To="1"
+                                                         To="0.4"
                                                          Duration="0:0:0.3"/>
 
                                     </Storyboard>

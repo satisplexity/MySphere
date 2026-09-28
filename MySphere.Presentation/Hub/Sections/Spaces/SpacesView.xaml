@@ -16,7 +16,7 @@
         <TextBlock Text="Spaces"
                    Style="{StaticResource PageHeader}"/>
 
-        <UniformGrid Columns="5"
+        <UniformGrid Columns="7"
                      Grid.Row="1"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center">

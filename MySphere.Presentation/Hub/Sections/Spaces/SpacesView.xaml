@@ -16,13 +16,64 @@
         <TextBlock Text="Spaces"
                    Style="{StaticResource PageHeader}"/>
 
-        <Grid Grid.Row="1">
+        <UniformGrid Columns="5"
+                     Grid.Row="1"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center">
 
-            <controls:SpaceShortcutButton Icon="{StaticResource InterfaceIcon.Account}"
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Semigraph}"
                                           Title="Semigraph"
                                           Foreground="#95A"/>
 
-        </Grid>
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.CodeScope}"
+                                          Title="CodeScope"
+                                          Foreground="#95A"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.PathLab}"
+                                          Title="PathLab"
+                                          Foreground="#95A"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.SortLab}"
+                                          Title="SortLab"
+                                          Foreground="#95A"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.FractalLab}"
+                                          Title="FactalLab"
+                                          Foreground="#95A"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.ChessSharp}"
+                                          Title="Chess#"
+                                          Foreground="#95A"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Weatherly}"
+                                          Title="Weatherly"
+                                          Foreground="#95A"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.KittyCatch}"
+                                          Title="KittyCatch"
+                                          Foreground="#95A"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Mergery}"
+                                          Title="Mergery"
+                                          Foreground="#95A"/>
+            
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Mergery3D}"
+                                          Title="Mergery3D"
+                                          Foreground="#95A"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Mazeform}"
+                                          Title="Mazeform"
+                                          Foreground="#95A"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.BoidLab}"
+                                          Title="BoidLab"
+                                          Foreground="#95A"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Align}"
+                                          Title="Align"
+                                          Foreground="#95A"/>
+
+        </UniformGrid>
         
     </Grid>
     

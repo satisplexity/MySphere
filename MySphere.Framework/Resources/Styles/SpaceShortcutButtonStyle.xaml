@@ -17,7 +17,10 @@
                 Value="300"/>
 
         <Setter Property="Padding"
-                Value="20"/>
+                Value="40"/>
+
+        <Setter Property="Margin"
+                Value="15"/>
 
         <Setter Property="Template">
 

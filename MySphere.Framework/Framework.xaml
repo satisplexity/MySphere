@@ -6,6 +6,8 @@
         <ResourceDictionary Source="/MySphere.Framework;component/Resources/Icons/InterfaceIcons.xaml"/>
         <ResourceDictionary Source="/MySphere.Framework;component/Resources/Icons/SpaceIcons.xaml"/>
 
+        <ResourceDictionary Source="/MySphere.Framework;component/Resources/Values/SpaceGradients.xaml"/>
+
         <ResourceDictionary Source="/MySphere.Framework;component/Resources/Styles/TextBlockStyles.xaml"/>
 
         <ResourceDictionary Source="/MySphere.Framework;component/Resources/Styles/NavigationMenuButtonStyle.xaml"/>

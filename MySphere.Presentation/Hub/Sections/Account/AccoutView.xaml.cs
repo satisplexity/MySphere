@@ -2,7 +2,7 @@
 
 namespace MySphere.Presentation.Hub.Sections.Account;
 
-public partial class AccoutView : UserControl
+public partial class AccountView : UserControl
 {
-    public AccoutView() => InitializeComponent();
+    public AccountView() => InitializeComponent();
 }

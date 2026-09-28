@@ -1,15 +1,15 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:xaml="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:MySphere.Framework.Controls.Navigation">
 
-    <BackEase xaml:Key="ScaleEase"
+    <BackEase x:Key="ScaleEase"
               Amplitude="1.2"
               EasingMode="EaseOut"/>
 
-    <ExponentialEase xaml:Key="HoverEase"
+    <ExponentialEase x:Key="HoverEase"
                EasingMode="EaseOut"/>
 
-    <Style TargetType="{xaml:Type controls:NavigationMenuButton}">
+    <Style TargetType="{x:Type controls:NavigationMenuButton}">
 
         <Setter Property="Width"
                 Value="70"/>
@@ -40,7 +40,7 @@
 
             <Setter.Value>
 
-                <ControlTemplate TargetType="{xaml:Type controls:NavigationMenuButton}">
+                <ControlTemplate TargetType="{x:Type controls:NavigationMenuButton}">
 
                     <Border CornerRadius="15"
                             Background="#29292A"
@@ -53,7 +53,7 @@
                                   Fill="#444"
                                   Margin="{TemplateBinding Padding}"/>
 
-                            <Grid xaml:Name="PART_VisualSelecting"
+                            <Grid x:Name="PART_VisualSelecting"
                                   Opacity="0">
 
                                 <Grid Opacity="0.4">

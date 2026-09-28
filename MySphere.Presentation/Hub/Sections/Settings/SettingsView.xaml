@@ -1,4 +1,20 @@
-﻿<UserControl xaml:Class="MySphere.Presentation.Hub.Sections.Settings.SettingsView"
+﻿<UserControl x:Class="MySphere.Presentation.Hub.Sections.Settings.SettingsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:xaml="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MySphere.Presentation.Hub.Sections.Settings"/>
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MySphere.Presentation.Hub.Sections.Settings">
+
+    <Grid Margin="20">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Settings"
+                   Style="{StaticResource PageHeader}"/>
+
+    </Grid>
+    
+</UserControl>

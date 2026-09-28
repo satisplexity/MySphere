@@ -86,8 +86,8 @@ public partial class App : Application
         services.AddSingleton<SpacesViewModel>();
         services.AddTransient<HomeView>();
 
-        services.AddSingleton<AccoutViewModel>();
-        services.AddTransient<AccoutView>();
+        services.AddSingleton<AccountViewModel>();
+        services.AddTransient<AccountView>();
 
         services.AddSingleton<SettingsViewModel>();
         services.AddTransient<SettingsView>();

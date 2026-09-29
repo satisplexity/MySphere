@@ -106,8 +106,8 @@
                                       Fill="{TemplateBinding Foreground}"/>
 
                                 <Ellipse Fill="{TemplateBinding Foreground}"
-                                         Width="150"
-                                         Height="100"
+                                         Width="160"
+                                         Height="80"
                                          Margin="0, 0, 0, -50"
                                          VerticalAlignment="Bottom"/>
 

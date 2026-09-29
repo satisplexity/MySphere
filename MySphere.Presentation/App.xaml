@@ -5,8 +5,18 @@
 
     <Application.Resources>
 
-        <ResourceDictionary Source="/MySphere.Framework;component/Framework.xaml"/>
+        <ResourceDictionary>
 
+            <ResourceDictionary.MergedDictionaries>
+                
+                <ResourceDictionary Source="/MySphere.Framework;component/Framework.xaml"/>
+
+                <ResourceDictionary Source="/Resources/Styles/SpaceSwitcherButtonStyle.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+            
+        </ResourceDictionary>
+        
     </Application.Resources>
     
 </Application>

@@ -1,7 +1,8 @@
 ﻿<UserControl x:Class="MySphere.Presentation.Main.MainView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MySphere.Presentation.Main">
+             xmlns:local="clr-namespace:MySphere.Presentation.Main"
+             xmlns:controls="clr-namespace:MySphere.Presentation.SpaceSwitcher.Controls">
 
     <UserControl.Resources>
 
@@ -11,7 +12,29 @@
 
     <Grid>
 
-        <ContentControl Content="{Binding Navigation.CurrentViewModel}"/>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <controls:SpaceSwitcherButton Grid.Column="1"/>
+
+        </Grid>
+        
+        <ContentControl Content="{Binding Navigation.CurrentViewModel}"
+                        Grid.Row="1"/>
 
     </Grid>
     

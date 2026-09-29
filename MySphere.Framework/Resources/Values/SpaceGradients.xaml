@@ -186,4 +186,16 @@
 
     </LinearGradientBrush>
 
+    <LinearGradientBrush x:Key="SpaceGradient.Magnify"
+                         StartPoint="0.9, 0"
+                         EndPoint="0.1, 1">
+
+        <GradientStop Color="#A5D9B7"
+                      Offset="0"/>
+
+        <GradientStop Color="#D7B466"
+                      Offset="1"/>
+
+    </LinearGradientBrush>
+
 </ResourceDictionary>

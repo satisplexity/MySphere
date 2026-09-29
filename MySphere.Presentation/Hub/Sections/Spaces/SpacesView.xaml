@@ -77,6 +77,10 @@
                                           Title="Prismify"
                                           Foreground="{StaticResource SpaceGradient.Prismify}"/>
 
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Magnify}"
+                                          Title="Magnify"
+                                          Foreground="{StaticResource SpaceGradient.Magnify}"/>
+
         </UniformGrid>
         
     </Grid>

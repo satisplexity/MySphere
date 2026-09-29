@@ -8,10 +8,13 @@
         <ResourceDictionary>
 
             <ResourceDictionary.MergedDictionaries>
-                
+
+                <ResourceDictionary Source="/Resources/Icons/WindowControlIcons.xaml"/>
+
                 <ResourceDictionary Source="/MySphere.Framework;component/Framework.xaml"/>
 
                 <ResourceDictionary Source="/Resources/Styles/SpaceSwitcherButtonStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/WindowControlButtonStyle.xaml"/>
 
             </ResourceDictionary.MergedDictionaries>
             

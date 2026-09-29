@@ -73,6 +73,10 @@
                                           Title="Align"
                                           Foreground="{StaticResource SpaceGradient.Align}"/>
 
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Prismify}"
+                                          Title="Prismify"
+                                          Foreground="{StaticResource SpaceGradient.Prismify}"/>
+
         </UniformGrid>
         
     </Grid>

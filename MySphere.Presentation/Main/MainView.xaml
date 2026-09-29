@@ -53,9 +53,11 @@
                 </Grid.ColumnDefinitions>
 
                 <windowControls:WindowControlButton Icon="{StaticResource InterfaceIcon.Minimize}"
+                                                    Command="{Binding MinimizeWindowCommand}"
                                                     Foreground="#58C"/>
 
                 <windowControls:WindowControlButton Icon="{StaticResource InterfaceIcon.Shutdown}"
+                                                    Command="{Binding ShutdownCommand}"
                                                     Grid.Column="1"
                                                     Foreground="#C58"/>
 

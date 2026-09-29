@@ -4,6 +4,7 @@ using MySphere.Presentation.Main;
 using System.Windows;
 using System.Windows.Threading;
 using MySphere.Framework.Foundation.Command;
+using MySphere.Framework.Utilities;
 
 namespace MySphere.Presentation.Shell;
 
@@ -60,17 +61,6 @@ public sealed class ShellViewModel : ViewModelBase
     {
         IsWindowCollapsed = true;
 
-        DispatcherTimer timer = new()
-        {
-            Interval = TimeSpan.FromMilliseconds(400)
-        };
-
-        timer.Tick += (_, _) =>
-        {
-            timer.Stop();
-            WindowState = WindowState.Minimized;
-        };
-
-        timer.Start();
+        TimerFactory.Run(() => WindowState = WindowState.Minimized, 0.4);
     }
 }

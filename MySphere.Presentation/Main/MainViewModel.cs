@@ -4,6 +4,7 @@ using MySphere.Presentation.Hub;
 using MySphere.Framework.Foundation.Command;
 using Microsoft.Extensions.DependencyInjection;
 using MySphere.Presentation.Shell;
+using MySphere.Framework.Utilities;
 
 namespace MySphere.Presentation.Main;
 
@@ -27,12 +28,12 @@ public sealed class MainViewModel : ViewModelBase
 
         MinimizeWindowCommand = new(_ =>
         {
-            _serviceProvider.GetRequiredService<ShellViewModel>().HideWindow();
+            TimerFactory.Run(() => _serviceProvider.GetRequiredService<ShellViewModel>().HideWindow(), 0.2);
         });
 
         ShutdownCommand = new(_ =>
         {
-            App.Current.Shutdown();
+            TimerFactory.Run(() => App.Current.Shutdown(), 0.2);
         });
     }
 }

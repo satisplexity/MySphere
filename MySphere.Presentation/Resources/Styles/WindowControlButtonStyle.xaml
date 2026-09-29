@@ -151,14 +151,14 @@
 
                                     <DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleX)"
                                                      From="1"
-                                                     To="0.9"
+                                                     To="0.7"
                                                      Duration="0:0:0.15"
                                                      EasingFunction="{StaticResource ClickEase}"
                                                      AutoReverse="True"/>
 
                                     <DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)"
                                                      From="1"
-                                                     To="0.9"
+                                                     To="0.7"
                                                      Duration="0:0:0.15"
                                                      EasingFunction="{StaticResource ClickEase}"
                                                      AutoReverse="True"/>

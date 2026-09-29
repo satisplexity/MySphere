@@ -1,212 +1,266 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Point x:Key="SpaceGradientStartPoint"
-           X="0.3"
-           Y="0"/>
+    <Point
+        x:Key="SpaceGradientStartPoint"
+        X="0.3"
+        Y="0"/>
 
-    <Point x:Key="SpaceGradientEndPoint"
-           X="0.7"
-           Y="1"/>
+    <Point
+        x:Key="SpaceGradientEndPoint"
+        X="0.7"
+        Y="1"/>
 
-    <LinearGradientBrush x:Key="SpaceGradient.Semigraph"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Semigraph"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
 
-        <GradientStop Color="#9D50BB"
-                      Offset="0"/>
+        <GradientStop
+            Color="#9D50BB"
+            Offset="0"/>
 
-        <GradientStop Color="#6E48AA"
-                      Offset="1"/>
-
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="SpaceGradient.CodeScope"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
-
-        <GradientStop Color="#00c6ff"
-                      Offset="0"/>
-
-        <GradientStop Color="#0072ff"
-                      Offset="1"/>
+        <GradientStop
+            Color="#6E48AA"
+            Offset="1"/>
 
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="SpaceGradient.PathLab"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
+    <LinearGradientBrush
+        x:Key="SpaceGradient.CodeScope"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
 
-        <GradientStop Color="#8451B5"
-                      Offset="0"/>
+        <GradientStop
+            Color="#00c6ff"
+            Offset="0"/>
 
-        <GradientStop Color="#6a38a5"
-                      Offset="1"/>
-
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="SpaceGradient.SortLab"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
-
-        <GradientStop Color="#b6fbff"
-                      Offset="0"/>
-
-        <GradientStop Color="#83a4d4"
-                      Offset="1"/>
+        <GradientStop
+            Color="#0072ff"
+            Offset="1"/>
 
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="SpaceGradient.FractalLab"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
+    <LinearGradientBrush
+        x:Key="SpaceGradient.PathLab"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
 
-        <GradientStop Color="#4BC0C8"
-                      Offset="0"/>
+        <GradientStop
+            Color="#8451B5"
+            Offset="0"/>
 
-        <GradientStop Color="#C779D0"
-                      Offset="1"/>
-
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="SpaceGradient.ChessSharp"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
-
-        <GradientStop Color="#83bF6B"
-                      Offset="0"/>
-
-        <GradientStop Color="#12aFa7"
-                      Offset="1"/>
+        <GradientStop
+            Color="#6a38a5"
+            Offset="1"/>
 
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="SpaceGradient.Weatherly"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
+    <LinearGradientBrush
+        x:Key="SpaceGradient.SortLab"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
 
-        <GradientStop Color="#43cea2"
-                      Offset="0"/>
+        <GradientStop
+            Color="#b6fbff"
+            Offset="0"/>
 
-        <GradientStop Color="#185a9d"
-                      Offset="1"/>
-
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="SpaceGradient.KittyCatch"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
-
-        <GradientStop Color="#FBD3E9"
-                      Offset="0"/>
-
-        <GradientStop Color="#BB377D"
-                      Offset="1"/>
+        <GradientStop
+            Color="#83a4d4"
+            Offset="1"/>
 
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="SpaceGradient.Mergery"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
+    <LinearGradientBrush
+        x:Key="SpaceGradient.FractalLab"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
 
-        <GradientStop Color="#cf9c33"
-                      Offset="0"/>
+        <GradientStop
+            Color="#4BC0C8"
+            Offset="0"/>
 
-        <GradientStop Color="#bf9327"
-                      Offset="1"/>
-
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="SpaceGradient.Mergery3D"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
-
-        <GradientStop Color="#8CA6DB"
-                      Offset="0"/>
-
-        <GradientStop Color="#B993D6"
-                      Offset="1"/>
+        <GradientStop
+            Color="#C779D0"
+            Offset="1"/>
 
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="SpaceGradient.Mazeform"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
+    <LinearGradientBrush
+        x:Key="SpaceGradient.ChessSharp"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
 
-        <GradientStop Color="#ff9472"
-                      Offset="0"/>
+        <GradientStop
+            Color="#83bF6B"
+            Offset="0"/>
 
-        <GradientStop Color="#f2709c"
-                      Offset="1"/>
-
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="SpaceGradient.BoidLab"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
-
-        <GradientStop Color="#fe8c00"
-                      Offset="0"/>
-
-        <GradientStop Color="#f83600"
-                      Offset="1"/>
+        <GradientStop
+            Color="#12aFa7"
+            Offset="1"/>
 
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="SpaceGradient.Align"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Weatherly"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
 
-        <GradientStop Color="#348AC7"
-                      Offset="0"/>
+        <GradientStop
+            Color="#43cea2"
+            Offset="0"/>
 
-        <GradientStop Color="#7474BF"
-                      Offset="1"/>
-
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="SpaceGradient.Prismify"
-                         StartPoint="0.5, 0"
-                         EndPoint="0.5, 1">
-
-        <GradientStop Color="#D79"
-                      Offset="0.2"/>
-
-        <GradientStop Color="#DA4"
-                      Offset="0.4"/>
-
-        <GradientStop Color="#7D7"
-              Offset="0.6"/>
-
-        <GradientStop Color="#37D"
-              Offset="0.8"/>
-
-        <GradientStop Color="#77D"
-              Offset="1"/>
+        <GradientStop
+            Color="#185a9d"
+            Offset="1"/>
 
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="SpaceGradient.Magnify"
-                         StartPoint="0.9, 0"
-                         EndPoint="0.1, 1">
+    <LinearGradientBrush
+        x:Key="SpaceGradient.KittyCatch"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
 
-        <GradientStop Color="#A5D9B7"
-                      Offset="0"/>
+        <GradientStop
+            Color="#FBD3E9"
+            Offset="0"/>
 
-        <GradientStop Color="#D7B466"
-                      Offset="1"/>
+        <GradientStop
+            Color="#BB377D"
+            Offset="1"/>
 
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="SpaceGradient.SlideForge"
-                         StartPoint="{StaticResource SpaceGradientStartPoint}"
-                         EndPoint="{StaticResource SpaceGradientEndPoint}">
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Mergery"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
 
-        <GradientStop Color="#B48cDb"
-                      Offset="0"/>
+        <GradientStop
+            Color="#cf9c33"
+            Offset="0"/>
 
-        <GradientStop Color="#A82fAe"
-                      Offset="1"/>
+        <GradientStop
+            Color="#bf9327"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Mergery3D"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#8CA6DB"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#B993D6"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Mazeform"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#ff9472"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#f2709c"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.BoidLab"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#fe8c00"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#f83600"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Align"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#348AC7"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#7474BF"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Prismify"
+        StartPoint="0.5, 0"
+        EndPoint="0.5, 1">
+
+        <GradientStop
+            Color="#D79"
+            Offset="0.2"/>
+
+        <GradientStop
+            Color="#DA4"
+            Offset="0.4"/>
+
+        <GradientStop
+            Color="#7D7"
+            Offset="0.6"/>
+
+        <GradientStop
+            Color="#37D"
+            Offset="0.8"/>
+
+        <GradientStop
+            Color="#77D"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Magnify"
+        StartPoint="0.9, 0"
+        EndPoint="0.1, 1">
+
+        <GradientStop
+            Color="#A5D9B7"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#D7B466"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.SlideForge"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#B48cDb"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#A82fAe"
+            Offset="1"/>
 
     </LinearGradientBrush>
 

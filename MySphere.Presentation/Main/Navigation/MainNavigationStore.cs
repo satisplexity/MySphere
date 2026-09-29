@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.Main.Navigation;
 
-public sealed class MainNavigationStore : NavigationStore { }
+public sealed class MainNavigationStore
+    : NavigationStore { }

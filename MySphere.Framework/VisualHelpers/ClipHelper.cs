@@ -32,9 +32,9 @@ public static class ClipHelper
     public static CornerRadius GetRadius(DependencyObject element)
         => (CornerRadius)element.GetValue(RadiusProperty);
 
-    private static void OnEnableChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs args)
+    private static void OnEnableChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
     {
-        if (dependencyObject is not FrameworkElement element)
+        if (sender is not FrameworkElement element)
             return;
 
         if ((bool)args.NewValue)
@@ -53,25 +53,17 @@ public static class ClipHelper
         }
     }
 
-    private static void OnRadiusChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs args)
+    private static void OnRadiusChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
     {
-        if (dependencyObject is FrameworkElement element && GetEnable(element))
+        if (sender is FrameworkElement element && GetEnable(element))
             UpdateClip(element);
     }
 
-    private static void Element_Loaded(
-        object sender,
-        RoutedEventArgs e)
-    {
-        UpdateClip((FrameworkElement)sender);
-    }
+    private static void Element_Loaded(object sender, RoutedEventArgs args)
+        => UpdateClip((FrameworkElement)sender);
 
-    private static void Element_SizeChanged(
-        object sender,
-        SizeChangedEventArgs e)
-    {
-        UpdateClip((FrameworkElement)sender);
-    }
+    private static void Element_SizeChanged(object sender, SizeChangedEventArgs args) 
+        => UpdateClip((FrameworkElement)sender);
 
     private static void UpdateClip(FrameworkElement element)
     {
@@ -81,6 +73,7 @@ public static class ClipHelper
         if (width <= 0 || height <= 0)
         {
             element.Clip = null;
+
             return;
         }
 
@@ -90,8 +83,8 @@ public static class ClipHelper
 
         radius.TopLeft = Math.Min(radius.TopLeft, maxRadius);
         radius.TopRight = Math.Min(radius.TopRight, maxRadius);
-        radius.BottomRight = Math.Min(radius.BottomRight, maxRadius);
         radius.BottomLeft = Math.Min(radius.BottomLeft, maxRadius);
+        radius.BottomRight = Math.Min(radius.BottomRight, maxRadius);
 
         element.Clip = CreateGeometry(width, height, radius);
     }

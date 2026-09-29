@@ -1,8 +1,10 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:hub="clr-namespace:MySphere.Presentation.Hub">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:hub="clr-namespace:MySphere.Presentation.Hub">
 
-    <DataTemplate DataType="{x:Type hub:HubViewModel}">
+    <DataTemplate
+        DataType="{x:Type hub:HubViewModel}">
 
         <hub:HubView/>
 

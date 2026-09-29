@@ -2,7 +2,9 @@
 
 namespace MySphere.Presentation.Hub.Sections.Spaces;
 
-public partial class SpacesView : UserControl
+public partial class SpacesView 
+    : UserControl
 {
-    public SpacesView() => InitializeComponent();
+    public SpacesView()
+        => InitializeComponent();
 }

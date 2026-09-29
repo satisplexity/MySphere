@@ -4,7 +4,8 @@ using System.Windows.Media;
 
 namespace MySphere.Framework.Controls.Navigation;
 
-public abstract class NavigationButtonBase : RadioButton
+public abstract class NavigationButtonBase 
+    : RadioButton
 {
     public static readonly DependencyProperty IconProperty =
         DependencyProperty.Register(

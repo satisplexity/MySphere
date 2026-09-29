@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.Hub.Navigation;
 
-public interface IHubNavigationService : INavigationService { }
+public interface IHubNavigationService 
+    : INavigationService { }

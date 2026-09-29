@@ -16,7 +16,9 @@ public class AsyncRelayCommand : CommandBase
 
         _execute = _ => execute();
 
-        _canExecute = canExecute is null ? null : _ => canExecute();
+        _canExecute = canExecute is null
+            ? null 
+            : _ => canExecute();
     }
 
     public AsyncRelayCommand(Func<object?, Task> execute, Predicate<object?>? canExecute = null)
@@ -27,8 +29,8 @@ public class AsyncRelayCommand : CommandBase
         _canExecute = canExecute;
     }
 
-    public override bool CanExecute(object? parameter) => 
-        !_isExecuting && (_canExecute?.Invoke(parameter) ?? true);
+    public override bool CanExecute(object? parameter)
+        => !_isExecuting && (_canExecute?.Invoke(parameter) ?? true);
 
     public override async void Execute(object? parameter)
     {

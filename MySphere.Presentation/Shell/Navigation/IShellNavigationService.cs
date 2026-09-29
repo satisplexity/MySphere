@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.Shell.Navigation;
 
-public interface IShellNavigationService : INavigationService { }
+public interface IShellNavigationService 
+    : INavigationService { }

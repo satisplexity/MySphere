@@ -1,19 +1,24 @@
-﻿<UserControl x:Class="MySphere.Presentation.Hub.Sections.Home.HomeView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MySphere.Presentation.Hub.Sections.Home">
+﻿<UserControl
+    x:Class="MySphere.Presentation.Hub.Sections.Home.HomeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:MySphere.Presentation.Hub.Sections.Home">
 
-    <Grid Margin="20">
+    <Grid
+        Margin="20">
 
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="Auto"/>
+            <RowDefinition
+                Height="Auto"/>
+            
             <RowDefinition/>
 
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Home"
-                   Style="{StaticResource PageHeader}"/>
+        <TextBlock
+            Text="Home"
+            Style="{StaticResource PageHeader}"/>
 
     </Grid>
     

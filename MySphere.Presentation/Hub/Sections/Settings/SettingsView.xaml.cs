@@ -2,7 +2,9 @@
 
 namespace MySphere.Presentation.Hub.Sections.Settings;
 
-public partial class SettingsView : UserControl
+public partial class SettingsView 
+    : UserControl
 {
-    public SettingsView() => InitializeComponent();
+    public SettingsView()
+        => InitializeComponent();
 }

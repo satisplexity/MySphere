@@ -2,7 +2,9 @@
 
 namespace MySphere.Presentation.Main;
 
-public partial class MainView : UserControl
+public partial class MainView
+    : UserControl
 {
-    public MainView() => InitializeComponent();
+    public MainView() 
+        => InitializeComponent();
 }

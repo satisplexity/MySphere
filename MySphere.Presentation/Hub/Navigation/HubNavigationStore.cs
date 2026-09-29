@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.Hub.Navigation;
 
-public sealed class HubNavigationStore : NavigationStore { }
+public sealed class HubNavigationStore 
+    : NavigationStore { }

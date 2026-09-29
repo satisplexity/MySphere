@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.Hub.Sections.Account;
 
-public sealed class AccountViewModel : ViewModelBase { }
+public sealed class AccountViewModel
+    : ViewModelBase { }

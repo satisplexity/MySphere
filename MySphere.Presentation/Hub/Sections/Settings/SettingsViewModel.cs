@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.Hub.Sections.Settings;
 
-public sealed class SettingsViewModel : ViewModelBase { }
+public sealed class SettingsViewModel 
+    : ViewModelBase { }

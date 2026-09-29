@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.Shell.Navigation;
 
-public sealed class ShellNavigationStore : NavigationStore { }
+public sealed class ShellNavigationStore 
+    : NavigationStore { }

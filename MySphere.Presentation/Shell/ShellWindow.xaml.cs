@@ -2,7 +2,9 @@
 
 namespace MySphere.Presentation.Shell;
 
-public partial class ShellWindow : Window
+public partial class ShellWindow
+    : Window
 {
-    public ShellWindow() => InitializeComponent();
+    public ShellWindow() 
+        => InitializeComponent();
 }

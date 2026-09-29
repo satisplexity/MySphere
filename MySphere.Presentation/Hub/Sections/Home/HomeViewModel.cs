@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.Hub.Sections.Home;
 
-public sealed class HomeViewModel : ViewModelBase { }
+public sealed class HomeViewModel 
+    : ViewModelBase { }

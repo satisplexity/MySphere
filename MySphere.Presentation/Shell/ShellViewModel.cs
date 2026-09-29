@@ -1,14 +1,14 @@
 ﻿using MySphere.Framework.Foundation.ViewModel;
 using MySphere.Presentation.Shell.Navigation;
-using MySphere.Presentation.Main;
-using System.Windows;
-using System.Windows.Threading;
 using MySphere.Framework.Foundation.Command;
 using MySphere.Framework.Utilities;
+using MySphere.Presentation.Main;
+using System.Windows;
 
 namespace MySphere.Presentation.Shell;
 
-public sealed class ShellViewModel : ViewModelBase
+public sealed class ShellViewModel 
+    : ViewModelBase
 {
     public IShellNavigationService Navigation { get; }
 
@@ -61,6 +61,8 @@ public sealed class ShellViewModel : ViewModelBase
     {
         IsWindowCollapsed = true;
 
-        TimerFactory.Run(() => WindowState = WindowState.Minimized, 0.4);
+        TimerFactory.Run(
+            () => WindowState = WindowState.Minimized,
+            0.4);
     }
 }

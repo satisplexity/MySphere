@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.Hub.Sections.Spaces;
 
-public sealed class SpacesViewModel : ViewModelBase { }
+public sealed class SpacesViewModel
+    : ViewModelBase { }

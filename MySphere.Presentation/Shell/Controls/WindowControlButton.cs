@@ -4,7 +4,8 @@ using System.Windows;
 
 namespace MySphere.Presentation.Shell.Controls;
 
-public sealed class WindowControlButton : Button
+public sealed class WindowControlButton 
+    : Button
 {
     public static readonly DependencyProperty IconProperty =
         DependencyProperty.Register(

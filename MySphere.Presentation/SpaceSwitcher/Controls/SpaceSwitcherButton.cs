@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.SpaceSwitcher.Controls;
 
-public sealed class SpaceSwitcherButton : Button { }
+public sealed class SpaceSwitcherButton
+    : Button { }

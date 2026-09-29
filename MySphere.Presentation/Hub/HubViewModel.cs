@@ -23,10 +23,14 @@ public sealed class HubViewModel : ViewModelBase
 
     private HubSection _selectedSection;
 
-    public bool IsHomeSelected => _selectedSection == HubSection.Home;
-    public bool IsSpacesSelected => _selectedSection == HubSection.Spaces;
-    public bool IsAccountSelected => _selectedSection == HubSection.Account;
-    public bool IsSettingsSelected => _selectedSection == HubSection.Settings;
+    public bool IsHomeSelected 
+        => _selectedSection == HubSection.Home;
+    public bool IsSpacesSelected 
+        => _selectedSection == HubSection.Spaces;
+    public bool IsAccountSelected 
+        => _selectedSection == HubSection.Account;
+    public bool IsSettingsSelected 
+        => _selectedSection == HubSection.Settings;
 
     public RelayCommand NavigateToHomeCommand { get; }
     public RelayCommand NavigateToSpacesCommand { get; }

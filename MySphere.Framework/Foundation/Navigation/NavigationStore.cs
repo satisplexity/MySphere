@@ -2,7 +2,8 @@
 
 namespace MySphere.Framework.Foundation.Navigation;
 
-public class NavigationStore : ObservableObject
+public class NavigationStore 
+    : ObservableObject
 {
     private ViewModelBase _currentViewModel = null!;
 

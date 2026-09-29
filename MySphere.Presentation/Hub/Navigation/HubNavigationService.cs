@@ -2,7 +2,9 @@
 
 namespace MySphere.Presentation.Hub.Navigation;
 
-public sealed class HubNavigationService : NavigationService, IHubNavigationService
+public sealed class HubNavigationService 
+    : NavigationService, IHubNavigationService
 {
-    public HubNavigationService(HubNavigationStore store, IServiceProvider serviceProvider) : base(store, serviceProvider) { }
+    public HubNavigationService(HubNavigationStore store, IServiceProvider serviceProvider) 
+        : base(store, serviceProvider) { }
 }

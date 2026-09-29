@@ -1,9 +1,10 @@
-﻿<UserControl x:Class="MySphere.Presentation.Main.MainView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MySphere.Presentation.Main"
-             xmlns:switcherControls="clr-namespace:MySphere.Presentation.SpaceSwitcher.Controls"
-             xmlns:windowControls="clr-namespace:MySphere.Presentation.Shell.Controls">
+﻿<UserControl
+    x:Class="MySphere.Presentation.Main.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:MySphere.Presentation.Main"
+    xmlns:switcherControls="clr-namespace:MySphere.Presentation.SpaceSwitcher.Controls"
+    xmlns:windowControls="clr-namespace:MySphere.Presentation.Shell.Controls">
 
     <UserControl.Resources>
 
@@ -11,8 +12,11 @@
 
             <ResourceDictionary.MergedDictionaries>
 
-                <ResourceDictionary Source="/Main/DataTemplates.xaml"/>
-                <ResourceDictionary Source="/Resources/Styles/WindowControlButtonStyle.xaml"/>
+                <ResourceDictionary
+                    Source="/Main/DataTemplates.xaml"/>
+                
+                <ResourceDictionary
+                    Source="/Resources/Styles/WindowControlButtonStyle.xaml"/>
 
             </ResourceDictionary.MergedDictionaries>
 
@@ -24,7 +28,9 @@
 
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="50"/>
+            <RowDefinition
+                Height="50"/>
+            
             <RowDefinition/>
 
         </Grid.RowDefinitions>
@@ -33,40 +39,51 @@
 
             <Grid.ColumnDefinitions>
 
-                <ColumnDefinition Width="4*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition
+                    Width="4*"/>
+                
+                <ColumnDefinition
+                    Width="1*"/>
+                
+                <ColumnDefinition
+                    Width="4*"/>
 
             </Grid.ColumnDefinitions>
 
-            <switcherControls:SpaceSwitcherButton Grid.Column="1"/>
+            <switcherControls:SpaceSwitcherButton
+                Grid.Column="1"/>
 
-            <Grid HorizontalAlignment="Right"
-                  Grid.Column="2"
-                  Margin="0, 7, 5, 7">
+            <Grid
+                HorizontalAlignment="Right"
+                Grid.Column="2"
+                Margin="0, 7, 5, 7">
 
                 <Grid.ColumnDefinitions>
 
                     <ColumnDefinition/>
+                    
                     <ColumnDefinition/>
 
                 </Grid.ColumnDefinitions>
 
-                <windowControls:WindowControlButton Icon="{StaticResource InterfaceIcon.Minimize}"
-                                                    Command="{Binding MinimizeWindowCommand}"
-                                                    Foreground="#58C"/>
+                <windowControls:WindowControlButton
+                    Icon="{StaticResource InterfaceIcon.Minimize}"
+                    Command="{Binding MinimizeWindowCommand}"
+                    Foreground="#58C"/>
 
-                <windowControls:WindowControlButton Icon="{StaticResource InterfaceIcon.Shutdown}"
-                                                    Command="{Binding ShutdownCommand}"
-                                                    Grid.Column="1"
-                                                    Foreground="#C58"/>
+                <windowControls:WindowControlButton
+                    Icon="{StaticResource InterfaceIcon.Shutdown}"
+                    Command="{Binding ShutdownCommand}"
+                    Grid.Column="1"
+                    Foreground="#C58"/>
 
             </Grid>
 
         </Grid>
         
-        <ContentControl Content="{Binding Navigation.CurrentViewModel}"
-                        Grid.Row="1"/>
+        <ContentControl
+            Content="{Binding Navigation.CurrentViewModel}"
+            Grid.Row="1"/>
 
     </Grid>
     

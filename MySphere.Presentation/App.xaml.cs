@@ -15,7 +15,8 @@ using MySphere.Presentation.Hub.Sections.Settings;
 
 namespace MySphere.Presentation;
 
-public partial class App : Application
+public partial class App 
+    : Application
 {
     private IServiceProvider _serviceProvider = null!;
 

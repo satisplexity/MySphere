@@ -1,29 +1,34 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:home="clr-namespace:MySphere.Presentation.Hub.Sections.Home"
-                    xmlns:spaces="clr-namespace:MySphere.Presentation.Hub.Sections.Spaces"
-                    xmlns:account="clr-namespace:MySphere.Presentation.Hub.Sections.Account"
-                    xmlns:settings="clr-namespace:MySphere.Presentation.Hub.Sections.Settings">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:home="clr-namespace:MySphere.Presentation.Hub.Sections.Home"
+    xmlns:spaces="clr-namespace:MySphere.Presentation.Hub.Sections.Spaces"
+    xmlns:account="clr-namespace:MySphere.Presentation.Hub.Sections.Account"
+    xmlns:settings="clr-namespace:MySphere.Presentation.Hub.Sections.Settings">
 
-    <DataTemplate DataType="{x:Type home:HomeViewModel}">
+    <DataTemplate
+        DataType="{x:Type home:HomeViewModel}">
 
         <home:HomeView/>
 
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type spaces:SpacesViewModel}">
+    <DataTemplate
+        DataType="{x:Type spaces:SpacesViewModel}">
 
         <spaces:SpacesView/>
 
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type account:AccountViewModel}">
+    <DataTemplate
+        DataType="{x:Type account:AccountViewModel}">
 
         <account:AccountView/>
 
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type settings:SettingsViewModel}">
+    <DataTemplate
+        DataType="{x:Type settings:SettingsViewModel}">
 
         <settings:SettingsView/>
 

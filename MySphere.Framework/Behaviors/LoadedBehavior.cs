@@ -18,9 +18,9 @@ public static class LoadedBehavior
     public static ICommand GetCommand(DependencyObject element)
         => (ICommand)element.GetValue(CommandProperty);
 
-    private static void OnCommandChanged(DependencyObject dependecyObject, DependencyPropertyChangedEventArgs args)
+    private static void OnCommandChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
     {
-        if (dependecyObject is not FrameworkElement element)
+        if (sender is not FrameworkElement element)
             return;
 
         element.Loaded += (_, _) =>

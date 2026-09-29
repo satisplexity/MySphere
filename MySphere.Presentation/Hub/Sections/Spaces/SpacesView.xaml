@@ -1,89 +1,111 @@
-﻿<UserControl x:Class="MySphere.Presentation.Hub.Sections.Spaces.SpacesView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MySphere.Presentation.Hub.Sections.Spaces"
-             xmlns:controls="clr-namespace:MySphere.Framework.Controls.Navigation;assembly=MySphere.Framework">
+﻿<UserControl
+    x:Class="MySphere.Presentation.Hub.Sections.Spaces.SpacesView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:MySphere.Presentation.Hub.Sections.Spaces"
+    xmlns:controls="clr-namespace:MySphere.Framework.Controls.Navigation;assembly=MySphere.Framework">
 
-    <Grid Margin="20">
+    <Grid
+        Margin="20">
 
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="Auto"/>
+            <RowDefinition
+                Height="Auto"/>
+            
             <RowDefinition/>
 
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Spaces"
-                   Style="{StaticResource PageHeader}"/>
+        <TextBlock
+            Text="Spaces"
+            Style="{StaticResource PageHeader}"/>
 
-        <UniformGrid Columns="6"
-                     Grid.Row="1"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Center">
+        <UniformGrid
+            Columns="6"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center">
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Semigraph}"
-                                          Title="Semigraph"
-                                          Foreground="{StaticResource SpaceGradient.Semigraph}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.Semigraph}"
+                Title="Semigraph"
+                Foreground="{StaticResource SpaceGradient.Semigraph}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.CodeScope}"
-                                          Title="CodeScope"
-                                          Foreground="{StaticResource SpaceGradient.CodeScope}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.CodeScope}"
+                Title="CodeScope"
+                Foreground="{StaticResource SpaceGradient.CodeScope}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.PathLab}"
-                                          Title="PathLab"
-                                          Foreground="{StaticResource SpaceGradient.PathLab}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.PathLab}"
+                Title="PathLab"
+                Foreground="{StaticResource SpaceGradient.PathLab}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.SortLab}"
-                                          Title="SortLab"
-                                          Foreground="{StaticResource SpaceGradient.SortLab}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.SortLab}"
+                Title="SortLab"
+                Foreground="{StaticResource SpaceGradient.SortLab}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.FractalLab}"
-                                          Title="FactalLab"
-                                          Foreground="{StaticResource SpaceGradient.FractalLab}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.FractalLab}"
+                Title="FactalLab"
+                Foreground="{StaticResource SpaceGradient.FractalLab}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.ChessSharp}"
-                                          Title="Chess#"
-                                          Foreground="{StaticResource SpaceGradient.ChessSharp}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.ChessSharp}"
+                Title="Chess#"
+                Foreground="{StaticResource SpaceGradient.ChessSharp}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Weatherly}"
-                                          Title="Weatherly"
-                                          Foreground="{StaticResource SpaceGradient.Weatherly}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.Weatherly}"
+                Title="Weatherly"
+                Foreground="{StaticResource SpaceGradient.Weatherly}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.KittyCatch}"
-                                          Title="KittyCatch"
-                                          Foreground="{StaticResource SpaceGradient.KittyCatch}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.KittyCatch}"
+                Title="KittyCatch"
+                Foreground="{StaticResource SpaceGradient.KittyCatch}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Mergery}"
-                                          Title="Mergery"
-                                          Foreground="{StaticResource SpaceGradient.Mergery}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.Mergery}"
+                Title="Mergery"
+                Foreground="{StaticResource SpaceGradient.Mergery}"/>
             
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Mergery3D}"
-                                          Title="Mergery3D"
-                                          Foreground="{StaticResource SpaceGradient.Mergery3D}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.Mergery3D}"
+                Title="Mergery3D"
+                Foreground="{StaticResource SpaceGradient.Mergery3D}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Mazeform}"
-                                          Title="Mazeform"
-                                          Foreground="{StaticResource SpaceGradient.Mazeform}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.Mazeform}"
+                Title="Mazeform"
+                Foreground="{StaticResource SpaceGradient.Mazeform}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.BoidLab}"
-                                          Title="BoidLab"
-                                          Foreground="{StaticResource SpaceGradient.BoidLab}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.BoidLab}"
+                Title="BoidLab"
+                Foreground="{StaticResource SpaceGradient.BoidLab}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Align}"
-                                          Title="Align"
-                                          Foreground="{StaticResource SpaceGradient.Align}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.Align}"
+                Title="Align"
+                Foreground="{StaticResource SpaceGradient.Align}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Prismify}"
-                                          Title="Prismify"
-                                          Foreground="{StaticResource SpaceGradient.Prismify}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.Prismify}"
+                Title="Prismify"
+                Foreground="{StaticResource SpaceGradient.Prismify}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Magnify}"
-                                          Title="Magnify"
-                                          Foreground="{StaticResource SpaceGradient.Magnify}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.Magnify}"
+                Title="Magnify"
+                Foreground="{StaticResource SpaceGradient.Magnify}"/>
 
-            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.SlideForge}"
-                                          Title="SlideForge"
-                                          Foreground="{StaticResource SpaceGradient.SlideForge}"/>
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.SlideForge}"
+                Title="SlideForge"
+                Foreground="{StaticResource SpaceGradient.SlideForge}"/>
 
         </UniformGrid>
         

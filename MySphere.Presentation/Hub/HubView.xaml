@@ -1,12 +1,14 @@
-﻿<UserControl x:Class="MySphere.Presentation.Hub.HubView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MySphere.Presentation.Hub"
-             xmlns:controls="clr-namespace:MySphere.Framework.Controls.Navigation;assembly=MySphere.Framework">
+﻿<UserControl 
+    x:Class="MySphere.Presentation.Hub.HubView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:MySphere.Presentation.Hub"
+    xmlns:controls="clr-namespace:MySphere.Framework.Controls.Navigation;assembly=MySphere.Framework">
 
     <UserControl.Resources>
 
-        <ResourceDictionary Source="/Hub/DataTemplates.xaml"/>
+        <ResourceDictionary
+            Source="/Hub/DataTemplates.xaml"/>
 
     </UserControl.Resources>
 
@@ -14,37 +16,45 @@
 
         <Grid.ColumnDefinitions>
 
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition
+                Width="Auto"/>
+            
             <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
 
-        <StackPanel VerticalAlignment="Center">
+        <StackPanel
+            VerticalAlignment="Center">
 
-            <controls:NavigationMenuButton Icon="{StaticResource InterfaceIcon.Home}"
-                                           Command="{Binding NavigateToHomeCommand}"
-                                           IsChecked="{Binding IsHomeSelected, Mode=OneWay}"
-                                           Foreground="#C8C"/>
+            <controls:NavigationMenuButton
+                Icon="{StaticResource InterfaceIcon.Home}"
+                Command="{Binding NavigateToHomeCommand}"
+                IsChecked="{Binding IsHomeSelected, Mode=OneWay}"
+                Foreground="#C8C"/>
 
-            <controls:NavigationMenuButton Icon="{StaticResource InterfaceIcon.Spaces}"
-                                           Command="{Binding NavigateToSpacesCommand}"
-                                           IsChecked="{Binding IsSpacesSelected, Mode=OneWay}"
-                                           Foreground="#88C"/>
+            <controls:NavigationMenuButton
+                Icon="{StaticResource InterfaceIcon.Spaces}"
+                Command="{Binding NavigateToSpacesCommand}"
+                IsChecked="{Binding IsSpacesSelected, Mode=OneWay}"
+                Foreground="#88C"/>
 
-            <controls:NavigationMenuButton Icon="{StaticResource InterfaceIcon.Account}"
-                                           Command="{Binding NavigateToAccountCommand}"
-                                           IsChecked="{Binding IsAccountSelected, Mode=OneWay}"
-                                           Foreground="#8C8"/>
+            <controls:NavigationMenuButton
+                Icon="{StaticResource InterfaceIcon.Account}"
+                Command="{Binding NavigateToAccountCommand}"
+                IsChecked="{Binding IsAccountSelected, Mode=OneWay}"
+                Foreground="#8C8"/>
 
-            <controls:NavigationMenuButton Icon="{StaticResource InterfaceIcon.Settings}" 
-                                           Command="{Binding NavigateToSettingsCommand}"
-                                           IsChecked="{Binding IsSettingsSelected, Mode=OneWay}"
-                                           Foreground="#C88"/>
+            <controls:NavigationMenuButton
+                Icon="{StaticResource InterfaceIcon.Settings}" 
+                Command="{Binding NavigateToSettingsCommand}"
+                IsChecked="{Binding IsSettingsSelected, Mode=OneWay}"
+                Foreground="#C88"/>
             
         </StackPanel>
 
-        <ContentControl Content="{Binding Navigation.CurrentViewModel}"
-                        Grid.Column="1"/>
+        <ContentControl
+            Content="{Binding Navigation.CurrentViewModel}"
+            Grid.Column="1"/>
 
     </Grid>
     

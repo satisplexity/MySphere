@@ -2,7 +2,9 @@
 
 namespace MySphere.Presentation.Hub;
 
-public partial class HubView : UserControl
+public partial class HubView 
+    : UserControl
 {
-    public HubView() => InitializeComponent();
+    public HubView() 
+        => InitializeComponent();
 }

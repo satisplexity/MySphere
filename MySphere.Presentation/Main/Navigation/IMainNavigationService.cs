@@ -2,4 +2,5 @@
 
 namespace MySphere.Presentation.Main.Navigation;
 
-public interface IMainNavigationService : INavigationService { }
+public interface IMainNavigationService 
+    : INavigationService { }

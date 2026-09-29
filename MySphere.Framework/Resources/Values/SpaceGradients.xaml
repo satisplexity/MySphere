@@ -198,4 +198,16 @@
 
     </LinearGradientBrush>
 
+    <LinearGradientBrush x:Key="SpaceGradient.SlideForge"
+                         StartPoint="{StaticResource SpaceGradientStartPoint}"
+                         EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop Color="#B48cDb"
+                      Offset="0"/>
+
+        <GradientStop Color="#A82fAe"
+                      Offset="1"/>
+
+    </LinearGradientBrush>
+
 </ResourceDictionary>

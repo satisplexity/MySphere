@@ -16,7 +16,7 @@
         <TextBlock Text="Spaces"
                    Style="{StaticResource PageHeader}"/>
 
-        <UniformGrid Columns="7"
+        <UniformGrid Columns="6"
                      Grid.Row="1"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center">
@@ -80,6 +80,10 @@
             <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.Magnify}"
                                           Title="Magnify"
                                           Foreground="{StaticResource SpaceGradient.Magnify}"/>
+
+            <controls:SpaceShortcutButton Icon="{StaticResource SpaceIcon.SlideForge}"
+                                          Title="SlideForge"
+                                          Foreground="{StaticResource SpaceGradient.SlideForge}"/>
 
         </UniformGrid>
         

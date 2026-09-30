@@ -8,7 +8,8 @@
     AllowsTransparency="True"
     WindowStyle="None"
     WindowState="{Binding WindowState}"
-    behaviors:LoadedBehavior.Command="{Binding LoadedCommand}">
+    behaviors:LoadedBehavior.Command="{Binding LoadedCommand}"
+    xmlns:effects="clr-namespace:MySphere.Framework.Effects;assembly=MySphere.Framework">
 
     <Window.Resources>
 
@@ -26,15 +27,11 @@
                 ScaleY="0.1"/>
 
         </Grid.RenderTransform>
-        
+
         <Grid.Style>
 
             <Style
                 TargetType="{x:Type Grid}">
-
-                <Setter 
-                    Property="Background"
-                    Value="#191919"/>
 
                 <Setter 
                     Property="Opacity"
@@ -118,6 +115,17 @@
 
         </Grid.Style>
 
+    <Rectangle Fill="#191919">
+
+        <Rectangle.Effect>
+
+            <effects:NoiseEffect Scale="400"
+                                 Intensity="0.002"/>
+
+        </Rectangle.Effect>
+        
+    </Rectangle>
+        
         <ContentControl 
             Content="{Binding Navigation.CurrentViewModel}"
             Margin="8"/>

@@ -211,16 +211,16 @@
 
                                             <EasingDoubleKeyFrame
                                                 KeyTime="0:0:0"
-                                                Value="0.8"/>
+                                                Value="0.7"/>
 
                                             <EasingDoubleKeyFrame
                                                 KeyTime="{StaticResource StepTwo}"
-                                                Value="0.8"/>
+                                                Value="0.7"/>
 
                                             <EasingDoubleKeyFrame
                                                 KeyTime="{StaticResource Step3}"
                                                 Value="1"
-                                                EasingFunction="{StaticResource MEasing}"/>
+                                                EasingFunction="{StaticResource KEasing}"/>
 
                                         </DoubleAnimationUsingKeyFrames>
 
@@ -230,16 +230,16 @@
 
                                             <EasingDoubleKeyFrame
                                                 KeyTime="0:0:0"
-                                                Value="0.8"/>
+                                                Value="0.7"/>
 
                                             <EasingDoubleKeyFrame
                                                 KeyTime="{StaticResource StepTwo}"
-                                                Value="0.8"/>
+                                                Value="0.7"/>
 
                                             <EasingDoubleKeyFrame
                                                 KeyTime="{StaticResource Step3}"
                                                 Value="1"
-                                                EasingFunction="{StaticResource MEasing}"/>
+                                                EasingFunction="{StaticResource KEasing}"/>
 
                                         </DoubleAnimationUsingKeyFrames>
 

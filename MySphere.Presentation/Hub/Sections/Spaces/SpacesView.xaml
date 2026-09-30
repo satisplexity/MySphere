@@ -30,7 +30,8 @@
             <controls:SpaceShortcutButton
                 Icon="{StaticResource SpaceIcon.Semigraph}"
                 Title="Semigraph"
-                Foreground="{StaticResource SpaceGradient.Semigraph}"/>
+                Foreground="{StaticResource SpaceGradient.Semigraph}"
+                Command="{Binding OpenSemigraphCommand}"/>
 
             <controls:SpaceShortcutButton
                 Icon="{StaticResource SpaceIcon.CodeScope}"

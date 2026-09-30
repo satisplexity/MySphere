@@ -12,8 +12,8 @@
 
     </UserControl.Resources>
 
-    <Grid>
-
+    <Grid Background="#1A1A1B">
+        
         <Grid.ColumnDefinitions>
 
             <ColumnDefinition

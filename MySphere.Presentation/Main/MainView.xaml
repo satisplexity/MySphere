@@ -4,7 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:MySphere.Presentation.Main"
     xmlns:switcherControls="clr-namespace:MySphere.Presentation.SpaceSwitcher.Controls"
-    xmlns:windowControls="clr-namespace:MySphere.Presentation.Shell.Controls">
+    xmlns:windowControls="clr-namespace:MySphere.Presentation.Shell.Controls"
+    xmlns:mainControls="clr-namespace:MySphere.Presentation.Main.Controls">
 
     <UserControl.Resources>
 
@@ -80,10 +81,18 @@
             </Grid>
 
         </Grid>
+
+        <Grid
+            Grid.Row="1"
+            Margin="7">
+            
+            <mainControls:SpaceHost
+                SpaceManager="{Binding SpaceManager}"
+                Content="{Binding Navigation.CurrentViewModel}"/>
+            
+        </Grid>
         
-        <ContentControl
-            Content="{Binding Navigation.CurrentViewModel}"
-            Grid.Row="1"/>
+        
 
     </Grid>
     

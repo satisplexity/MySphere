@@ -12,6 +12,7 @@ using MySphere.Presentation.Hub.Sections.Home;
 using MySphere.Presentation.Hub.Sections.Spaces;
 using MySphere.Presentation.Hub.Sections.Account;
 using MySphere.Presentation.Hub.Sections.Settings;
+using MySphere.Semigraph.Presentation;
 
 namespace MySphere.Presentation;
 
@@ -43,9 +44,14 @@ public partial class App
 
     private void Configure(ServiceCollection services)
     {
+        services.AddSingleton<SpaceHostManager>();
+
         ConfigureShell(services);
         ConfigureMain(services);
         ConfigureHub(services);
+
+        services.AddTransient<SemigraphViewModel>();
+        services.AddTransient<SemigraphView>();
     }
 
     private void ConfigureShell(ServiceCollection services)

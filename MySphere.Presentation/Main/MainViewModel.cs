@@ -12,6 +12,8 @@ public sealed class MainViewModel : ViewModelBase
 {
     private readonly IServiceProvider _serviceProvider;
 
+    public SpaceHostManager SpaceManager { get; }
+
     public IMainNavigationService Navigation { get; }
 
     public RelayCommand MinimizeWindowCommand { get; }
@@ -23,6 +25,8 @@ public sealed class MainViewModel : ViewModelBase
         IServiceProvider serviceProvider)
     {
         _serviceProvider = serviceProvider;
+
+        SpaceManager = _serviceProvider.GetRequiredService<SpaceHostManager>();
 
         Navigation = navigation;
 

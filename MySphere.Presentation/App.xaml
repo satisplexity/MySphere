@@ -16,6 +16,9 @@
                 <ResourceDictionary 
                     Source="/MySphere.Framework;component/Framework.xaml"/>
 
+                <ResourceDictionary
+                    Source="/Resources/Styles/SpaceHostStyle.xaml"/>
+
                 <ResourceDictionary 
                     Source="/Resources/Styles/SpaceSwitcherButtonStyle.xaml"/>
                 <ResourceDictionary 

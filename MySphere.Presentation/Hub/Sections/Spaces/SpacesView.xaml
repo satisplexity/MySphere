@@ -22,7 +22,7 @@
             Style="{StaticResource PageHeader}"/>
 
         <UniformGrid
-            Columns="6"
+            Columns="7"
             Grid.Row="1"
             VerticalAlignment="Center"
             HorizontalAlignment="Center">
@@ -107,6 +107,31 @@
                 Icon="{StaticResource SpaceIcon.SlideForge}"
                 Title="SlideForge"
                 Foreground="{StaticResource SpaceGradient.SlideForge}"/>
+
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.CellautoLab}"
+                Title="CellautoLab"
+                Foreground="{StaticResource SpaceGradient.CellautoLab}"/>
+
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.HexaCards}"
+                Title="HexaCards"
+                Foreground="{StaticResource SpaceGradient.HexaCards}"/>
+
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.Kanso}"
+                Title="Kanso"
+                Foreground="{StaticResource SpaceGradient.Kanso}"/>
+
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.SnakePlusPlus}"
+                Title="Kanso"
+                Foreground="{StaticResource SpaceGradient.SnakePlusPlus}"/>
+
+            <controls:SpaceShortcutButton
+                Icon="{StaticResource SpaceIcon.Sonum}"
+                Title="Sonum"
+                Foreground="{StaticResource SpaceGradient.Sonum}"/>
 
         </UniformGrid>
         

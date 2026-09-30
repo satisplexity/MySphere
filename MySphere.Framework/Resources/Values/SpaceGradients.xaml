@@ -264,4 +264,79 @@
 
     </LinearGradientBrush>
 
+    <LinearGradientBrush
+        x:Key="SpaceGradient.CellautoLab"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#ADD100"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#7B920A"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.HexaCards"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#B993D6"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#8CA6DB"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Kanso"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#00A2CC"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#3a7bd5"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Sonum"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#4b6cb7"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#182848"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.SnakePlusPlus"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#Cf4848"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#A83786"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
 </ResourceDictionary>

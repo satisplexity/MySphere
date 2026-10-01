@@ -20,6 +20,8 @@
                     Source="/Resources/Styles/SpaceHostStyle.xaml"/>
 
                 <ResourceDictionary 
+                    Source="/Resources/Styles/SpacePreviewCard.xaml"/>
+                <ResourceDictionary 
                     Source="/Resources/Styles/SpaceSwitcherButtonStyle.xaml"/>
                 <ResourceDictionary 
                     Source="/Resources/Styles/WindowControlButtonStyle.xaml"/>

@@ -23,6 +23,8 @@ public sealed class MainViewModel : ViewModelBase
 
     public RelayCommand NavigateToSpaceSwitcherCommand { get; }
 
+    private bool _isSwitcherVisible = false;
+
     public MainViewModel(
         IMainNavigationService navigation, 
         IServiceProvider serviceProvider)
@@ -47,10 +49,22 @@ public sealed class MainViewModel : ViewModelBase
         NavigateToSpaceSwitcherCommand = new(_ =>
         {
             SpaceSwitcherViewModel spaceSwitcher = _serviceProvider.GetRequiredService<SpaceSwitcherViewModel>();
-            
-            spaceSwitcher.SetPreview(SpaceManager.GetPreview(), Navigation.CurrentViewModel);
 
-            Navigation.ReplaceWith<SpaceSwitcherViewModel>();
+            if(!_isSwitcherVisible)
+            {
+                spaceSwitcher.AnimateTransitionIn(SpaceManager.GetPreview(), Navigation.CurrentViewModel);
+
+                Navigation.ReplaceWith<SpaceSwitcherViewModel>();
+
+                _isSwitcherVisible = true;
+            }
+
+            else
+            {
+                _isSwitcherVisible = false;
+
+                spaceSwitcher.AnimateTransitionOut();
+            }
         });
     }
 

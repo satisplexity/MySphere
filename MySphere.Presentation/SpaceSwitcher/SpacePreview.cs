@@ -9,7 +9,20 @@ public class SpacePreview : ObservableObject
 
     public ViewModelBase ViewModel { get; set; }
 
-    public int Index { get; set; }
+    private int _index;
+
+    public int Index
+    {
+        get => _index;
+        set
+        {
+            if (_index != value)
+            {
+                _index = value;
+                OnPropertyChanged(nameof(Index));
+            }
+        }
+    }
 
     public double Width { get; set; }
     public double Height { get; set; }
@@ -19,7 +32,7 @@ public class SpacePreview : ObservableObject
         Preview = preview;
         ViewModel = viewModel;
         Index = index;
-        Width = preview.PixelWidth / 2.0;
-        Height = preview.PixelHeight / 2.0;
+        Width = preview.PixelWidth / 3.0;
+        Height = preview.PixelHeight / 3.0;
     }
 }

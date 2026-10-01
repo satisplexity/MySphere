@@ -5,6 +5,7 @@ using MySphere.Framework.Foundation.Command;
 using MySphere.Framework.Utilities;
 using MySphere.Presentation.Shell;
 using MySphere.Presentation.Hub;
+using MySphere.Presentation.SpaceSwitcher;
 
 namespace MySphere.Presentation.Main;
 
@@ -19,6 +20,8 @@ public sealed class MainViewModel : ViewModelBase
     public RelayCommand MinimizeWindowCommand { get; }
 
     public RelayCommand ShutdownCommand { get; }
+
+    public RelayCommand NavigateToSpaceSwitcherCommand { get; }
 
     public MainViewModel(
         IMainNavigationService navigation, 
@@ -39,6 +42,15 @@ public sealed class MainViewModel : ViewModelBase
             TimerFactory.Run(
                 () => App.Current.Shutdown(), 
                 0.2);
+        });
+
+        NavigateToSpaceSwitcherCommand = new(_ =>
+        {
+            SpaceSwitcherViewModel spaceSwitcher = _serviceProvider.GetRequiredService<SpaceSwitcherViewModel>();
+            
+            spaceSwitcher.SetPreview(SpaceManager.GetPreview(), Navigation.CurrentViewModel);
+
+            Navigation.ReplaceWith<SpaceSwitcherViewModel>();
         });
     }
 

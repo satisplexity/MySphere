@@ -1,6 +1,8 @@
 ﻿using MySphere.Framework.Foundation.ViewModel;
+using MySphere.Framework.Utilities;
 using MySphere.Presentation.Main.Controls;
 using MySphere.Presentation.Main.Navigation;
+using System.Windows.Media.Imaging;
 
 namespace MySphere.Presentation.Main;
 
@@ -25,6 +27,9 @@ public sealed class SpaceHostManager
         if (_host == host)
             host = null!;
     }
+
+    public BitmapSource GetPreview()
+        => BitmapRenderer.Render(_host);
 
     public async Task Open<T>()
         where T : ViewModelBase

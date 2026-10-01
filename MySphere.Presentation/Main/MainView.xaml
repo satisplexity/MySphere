@@ -52,7 +52,8 @@
             </Grid.ColumnDefinitions>
 
             <switcherControls:SpaceSwitcherButton
-                Grid.Column="1"/>
+                Grid.Column="1"
+                Command="{Binding NavigateToSpaceSwitcherCommand}"/>
 
             <Grid
                 HorizontalAlignment="Right"

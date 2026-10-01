@@ -13,6 +13,7 @@ using MySphere.Presentation.Hub.Sections.Spaces;
 using MySphere.Presentation.Hub.Sections.Account;
 using MySphere.Presentation.Hub.Sections.Settings;
 using MySphere.Semigraph.Presentation;
+using MySphere.Presentation.SpaceSwitcher;
 
 namespace MySphere.Presentation;
 
@@ -45,6 +46,8 @@ public partial class App
     private void Configure(ServiceCollection services)
     {
         services.AddSingleton<SpaceHostManager>();
+        services.AddSingleton<SpaceSwitcherViewModel>();
+        services.AddSingleton<SpaceSwitcherView>();
 
         ConfigureShell(services);
         ConfigureMain(services);

@@ -2,6 +2,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:hub="clr-namespace:MySphere.Presentation.Hub"
+    xmlns:switcher="clr-namespace:MySphere.Presentation.SpaceSwitcher"
     xmlns:semigraph="clr-namespace:MySphere.Semigraph.Presentation;assembly=MySphere.Semigraph.Presentation">
 
     <DataTemplate
@@ -15,6 +16,13 @@
         DataType="{x:Type semigraph:SemigraphViewModel}">
 
         <semigraph:SemigraphView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type switcher:SpaceSwitcherViewModel}">
+
+        <switcher:SpaceSwitcherView/>
 
     </DataTemplate>
     

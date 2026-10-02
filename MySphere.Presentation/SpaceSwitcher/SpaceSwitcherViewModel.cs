@@ -6,7 +6,6 @@ using MySphere.Presentation.Main;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace MySphere.Presentation.SpaceSwitcher;
@@ -27,14 +26,6 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
         set
         {
             _currentPreview = value;
-            PlayOpenAnimation = true;
-            OnPropertyChanged(nameof(PlayOpenAnimation));
-
-            TimerFactory.Run(() =>
-            {
-                PreviewVisibility = Visibility.Collapsed;
-                OnPropertyChanged(nameof(PreviewVisibility));
-            }, 0.5);
         }
     }
 
@@ -47,8 +38,6 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
 
         NextCommand = new(_ =>
         {
-            Debug.WriteLine($"NextCommand executed. CurrentIndex: {_currentIndex}, Previews count: {Previews.Count}");
-
             if (_currentIndex >= Previews.Count - 1)
                     return;
 
@@ -62,8 +51,6 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
 
         PreviousCommand = new(_ =>
         {
-            Debug.WriteLine($"PreviousCommand executed. CurrentIndex: {_currentIndex}, Previews count: {Previews.Count}");
-
             if (_currentIndex <= 0)
                     return;
 
@@ -77,24 +64,70 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
         });
     }
 
-    public void SetPreview(BitmapSource preview, ViewModelBase viewModel)
+    public void SetPreview(BitmapSource fullSizePreview, BitmapSource smallPreview, ViewModelBase viewModel)
     {
-        CurrentPreview = preview;
+        CurrentPreview = fullSizePreview;
+
+        SpacePreview preview = Contain(viewModel);
+
+        if (preview is null)
+        {
+            preview = new SpacePreview(smallPreview, viewModel);
+            Previews.Insert(0, preview);
+            RecalculateIndexes();
+        }
+        else
+        {
+            preview.Preview = smallPreview;
+
+            Previews.Remove(preview);
+            Previews.Insert(0, preview);
+            RecalculateIndexes();
+        }
     }
 
-    public void AnimateTransitionIn(BitmapSource preview, ViewModelBase viewModel)
+    private void RecalculateIndexes()
     {
-        CurrentPreview = preview;
+        for(int index = 0; index < Previews.Count; index++)
+        {
+            Previews[index].Index = index * -1;
+        }
+    }
 
-        Previews.Add(new SpacePreview(preview, viewModel, Previews.Count * -1));
+    private SpacePreview Contain(ViewModelBase viewModel)
+    {
+        Debug.WriteLine($"Search ViewModel {viewModel.Id}");
+
+        foreach(var preview in Previews)
+        {
+            if(preview.ViewModel.Id  == viewModel.Id)
+            {
+                return preview;
+            }
+        }
+
+        return null!;
+    }
+
+    public void AnimateTransitionIn()
+    {
+        PlayOpenAnimation = true;
+        OnPropertyChanged(nameof(PlayOpenAnimation));
+
+        TimerFactory.Run(() =>
+        {
+            PreviewVisibility = Visibility.Collapsed;
+            OnPropertyChanged(nameof(PreviewVisibility));
+        }, 0.5);
 
         OnPropertyChanged(nameof(Previews));
-
-
     }
 
     public void AnimateTransitionOut()
     {
+        CurrentPreview = Previews[_currentIndex].Preview;
+        OnPropertyChanged(nameof(CurrentPreview));
+
         PreviewVisibility = Visibility.Visible;
         OnPropertyChanged(nameof(PreviewVisibility));
 
@@ -102,6 +135,9 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
         OnPropertyChanged(nameof(PlayOpenAnimation));
 
         ViewModelBase vm = Previews[_currentIndex].ViewModel;
+
+        _currentIndex = 0;
+        RecalculateIndexes();
 
         TimerFactory.Run(() =>
         {

@@ -32,7 +32,7 @@ public class SpacePreview : ObservableObject
         Preview = preview;
         ViewModel = viewModel;
         Index = index;
-        Width = preview.PixelWidth / 3.0;
-        Height = preview.PixelHeight / 3.0;
+        Width = preview.PixelWidth;
+        Height = preview.PixelHeight;
     }
 }

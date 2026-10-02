@@ -8,7 +8,7 @@
     xmlns:behaviors="clr-namespace:MySphere.Presentation.Behaviors">
 
     <Grid Background="#191919"
-              behaviors:MouseWheel.NextCommand="{Binding NextCommand}"
+          behaviors:MouseWheel.NextCommand="{Binding NextCommand}"
           behaviors:MouseWheel.PreviousCommand="{Binding PreviousCommand}">
 
         <ItemsControl
@@ -35,7 +35,6 @@
                         PositionIndex="{Binding Index}"/>
 
                 </DataTemplate>
-
 
             </ItemsControl.ItemTemplate>
             

@@ -39,6 +39,8 @@ public sealed class HubViewModel : ViewModelBase
 
     public HubViewModel(IHubNavigationService navigation)
     {
+        Name = "Hub";
+
         Navigation = navigation;
 
         NavigateToHomeCommand = new(_ =>

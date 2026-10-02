@@ -1,5 +1,4 @@
 ﻿using MySphere.Framework.Effects;
-using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -14,7 +13,8 @@ internal struct CardPosition
     public Point TopLeft { get; set; }
     public Point TopRight { get; set; }
     public Point BottomLeft { get; set; }
-    public Point BottomRight { get; set; }
+    public Point BottomRight { get; set; } 
+    public Color MaskColor { get; set; }
 }
 
 public sealed class SpacePreviewCard : Button
@@ -29,7 +29,8 @@ public sealed class SpacePreviewCard : Button
                 TopLeft = new(0, 0),
                 TopRight = new(1, 0.2),
                 BottomLeft = new(0, 1),
-                BottomRight = new(1, 0.8)
+                BottomRight = new(1, 0.8),
+                MaskColor = Color.FromArgb(0, 255, 255, 255)
             }
         },
         {
@@ -40,7 +41,8 @@ public sealed class SpacePreviewCard : Button
                 TopLeft = new(0, 0),
                 TopRight = new(1, 0.1),
                 BottomLeft = new(0, 1),
-                BottomRight = new(1, 0.9)
+                BottomRight = new(1, 0.9),
+                MaskColor = Color.FromArgb(0, 255, 255, 255)
             }
         },
         {
@@ -51,7 +53,8 @@ public sealed class SpacePreviewCard : Button
                 TopLeft = new(0, 0),
                 TopRight = new(1, 0),
                 BottomLeft = new(0, 1),
-                BottomRight = new(1, 1)
+                BottomRight = new(1, 1),
+                MaskColor = Color.FromArgb(255, 255, 255, 255)
             }
         },
         {
@@ -62,7 +65,8 @@ public sealed class SpacePreviewCard : Button
                 TopLeft = new(0, 0.1),
                 TopRight = new(1, 0),
                 BottomLeft = new(0, 0.9),
-                BottomRight = new(1, 1)
+                BottomRight = new(1, 1),
+                MaskColor = Color.FromArgb(255, 255, 255, 255)
             }
         },
         {
@@ -73,7 +77,8 @@ public sealed class SpacePreviewCard : Button
                 TopLeft = new(0, 0.2),
                 TopRight = new(1, 0),
                 BottomLeft = new(0, 0.8),
-                BottomRight = new(1, 1)
+                BottomRight = new(1, 1),
+                MaskColor = Color.FromArgb(255, 255, 255, 255)
             }
         }
     };
@@ -90,10 +95,19 @@ public sealed class SpacePreviewCard : Button
         set
         {
             SetValue(PreviewImageProperty, value);
-
-            SetValue(WidthProperty, value.Width / 2.0);
-            SetValue(HeightProperty, value.Height / 2.0);
         }
+    }
+
+    public static readonly DependencyProperty IsIndexSmallerZeroProperty =
+        DependencyProperty.Register(
+            nameof(IsIndexSmallerZero),
+            typeof(bool),
+            typeof(SpacePreviewCard));
+
+    public bool IsIndexSmallerZero
+    {
+        get => (bool)GetValue(IsIndexSmallerZeroProperty);
+        set => SetValue(IsIndexSmallerZeroProperty, value);
     }
 
     public static readonly DependencyProperty PositionIndexProperty =
@@ -113,15 +127,24 @@ public sealed class SpacePreviewCard : Button
         DependencyObject d,
         DependencyPropertyChangedEventArgs e)
     {
-        Debug.WriteLine($"PositionIndex changed to {e.NewValue}");
-
         var card = (SpacePreviewCard)d;
         var index = (int)e.NewValue;
 
-        Panel.SetZIndex(card, 100 + index);
+        card.SetValue(Panel.ZIndexProperty, 100 + index);
 
         SetCardOffset(card, index);
         SetCardPerspective(card, index);
+
+        card.IsIndexSmallerZero = index < 0;
+
+        CardPosition cardPosition = GetCardPosition(index);
+
+        card.BeginAnimation(MaskColorProperty, new ColorAnimation()
+        {
+            To = cardPosition.MaskColor,
+            Duration = TimeSpan.FromMilliseconds(300),
+            EasingFunction = new CubicEase() { EasingMode = EasingMode.EaseOut }
+        });
     }
 
     private static void SetCardOffset(SpacePreviewCard card, int index)
@@ -133,8 +156,6 @@ public sealed class SpacePreviewCard : Button
         TranslateTransform? translateTransform = card.RenderTransform as TranslateTransform;
 
         ArgumentNullException.ThrowIfNull(translateTransform, nameof(translateTransform));
-
-        translateTransform.X = offset;
 
         translateTransform.BeginAnimation(TranslateTransform.XProperty, new DoubleAnimation()
         {
@@ -205,6 +226,30 @@ public sealed class SpacePreviewCard : Button
     {
         get => (double)GetValue(XOffsetProperty);
         set => SetValue(XOffsetProperty, value);
+    }
+
+    public static readonly DependencyProperty MaskOpacityProperty
+        = DependencyProperty.Register(
+            nameof(MaskOpacity),
+            typeof(double),
+            typeof(SpacePreviewCard));
+
+    public double MaskOpacity
+    {
+        get => (double)GetValue(MaskOpacityProperty);
+        set => SetValue(MaskOpacityProperty, value);
+    }
+
+    public static readonly DependencyProperty MaskColorProperty
+        = DependencyProperty.Register(
+            nameof(MaskColor),
+            typeof(Color),
+            typeof(SpacePreviewCard));
+
+    public Color MaskColor
+    {
+        get => (Color)GetValue(MaskColorProperty);
+        set => SetValue(MaskColorProperty, value);
     }
 
     public static readonly DependencyProperty PerspectiveTopRightProperty = DependencyProperty.Register(

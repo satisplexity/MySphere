@@ -31,6 +31,9 @@ public sealed class SpaceHostManager
     public BitmapSource GetPreview()
         => BitmapRenderer.Render(_host);
 
+    public BitmapSource GetPreview(RenderSize size)
+        => BitmapRenderer.Render(_host, size);
+
     public async Task Open<T>()
         where T : ViewModelBase
     {

@@ -86,14 +86,12 @@
         <Grid
             Grid.Row="1"
             Margin="7">
-            
+
             <mainControls:SpaceHost
                 SpaceManager="{Binding SpaceManager}"
                 Content="{Binding Navigation.CurrentViewModel}"/>
-            
+
         </Grid>
-        
-        
 
     </Grid>
     

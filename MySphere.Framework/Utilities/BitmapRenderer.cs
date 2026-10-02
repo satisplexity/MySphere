@@ -4,16 +4,16 @@ using System.Windows;
 
 namespace MySphere.Framework.Utilities;
 
-public enum RenderQuality
+public enum RenderSize
 {
-    Low = 48,
-    Medium = 64,
-    High = 96
+    Full = 1,
+    Half = 2,
+    Third = 3
 }
 
 public static class BitmapRenderer
 {
-    public static BitmapSource Render(FrameworkElement element, RenderQuality quality = RenderQuality.High)
+    public static BitmapSource Render(FrameworkElement element, RenderSize renderSize = RenderSize.Full)
     {
         if (element is null)
             throw new ArgumentNullException(nameof(element));
@@ -24,7 +24,7 @@ public static class BitmapRenderer
         if (width <= 0 || height <= 0)
             throw new InvalidOperationException("Element has invalid size.");
 
-        RenderTargetBitmap bitmap = new RenderTargetBitmap(width, height, 96, 96, PixelFormats.Pbgra32);
+        RenderTargetBitmap bitmap = new RenderTargetBitmap(width / (int)renderSize, height / (int)renderSize, 96 / (int)renderSize, 96 / (int)renderSize, PixelFormats.Pbgra32);
 
         bitmap.Render(element);
         bitmap.Freeze();

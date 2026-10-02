@@ -52,7 +52,9 @@ public sealed class MainViewModel : ViewModelBase
 
             if(!_isSwitcherVisible)
             {
-                spaceSwitcher.AnimateTransitionIn(SpaceManager.GetPreview(), Navigation.CurrentViewModel);
+                spaceSwitcher.SetPreview(SpaceManager.GetPreview(), SpaceManager.GetPreview(RenderSize.Third), Navigation.CurrentViewModel);
+
+                spaceSwitcher.AnimateTransitionIn();
 
                 Navigation.ReplaceWith<SpaceSwitcherViewModel>();
 
@@ -73,5 +75,11 @@ public sealed class MainViewModel : ViewModelBase
         TimerFactory.Run(
             () => _serviceProvider.GetRequiredService<ShellViewModel>().HideWindow(),
             0.2);
+    }
+
+    public void CaptureCurrentSpace()
+    {
+        SpaceSwitcherViewModel spaceSwitcher = _serviceProvider.GetRequiredService<SpaceSwitcherViewModel>();
+        spaceSwitcher.SetPreview(SpaceManager.GetPreview(), SpaceManager.GetPreview(RenderSize.Third), Navigation.CurrentViewModel);
     }
 }

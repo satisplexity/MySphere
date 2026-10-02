@@ -12,8 +12,43 @@
 	
 	<ItemGroup>
 		
+		<ProjectReference Include="..\MySphere.Align.Presentation\MySphere.Align.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.BoidLab.Presentation\MySphere.BoidLab.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.CellautoLab.Presentation\MySphere.CellautoLab.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.ChessSharp.Presentation\MySphere.ChessSharp.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.CodeScope.Presentation\MySphere.CodeScope.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.FractalLab.Presentation\MySphere.FractalLab.Presentation.csproj" />
+		
 		<ProjectReference Include="..\MySphere.Framework\MySphere.Framework.csproj" />
+		
+		<ProjectReference Include="..\MySphere.HexaCards.Presentation\MySphere.HexaCards.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.Kanso.Presentation\MySphere.Kanso.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.KittyCatch.Presentation\MySphere.KittyCatch.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.Magnify.Presentation\MySphere.Magnify.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.Mazeform.Presentation\MySphere.Mazeform.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.Mergery.Presentation\MySphere.Mergery.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.Mergery3d.Presentation\MySphere.Mergery3d.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.PathLab.Presentation\MySphere.PathLab.Presentation.csproj" />
+		
+		<ProjectReference Include="..\MySphere.Prismify.Presentation\MySphere.Prismify.Presentation.csproj" />
 		<ProjectReference Include="..\MySphere.Semigraph.Presentation\MySphere.Semigraph.Presentation.csproj" />
+		<ProjectReference Include="..\MySphere.SlideForge.Presentation\MySphere.SlideForge.Presentation.csproj" />
+		<ProjectReference Include="..\MySphere.SnakePlusPlus.Presentation\MySphere.SnakePlusPlus.Presentation.csproj" />
+		<ProjectReference Include="..\MySphere.Sonum.Presentation\MySphere.Sonum.Presentation.csproj" />
+		<ProjectReference Include="..\MySphere.SortLab.Presentation\MySphere.SortLab.Presentation.csproj" />
+		<ProjectReference Include="..\MySphere.Weatherly.Presentation\MySphere.Weatherly.Presentation.csproj" />
 	
 	</ItemGroup>
 

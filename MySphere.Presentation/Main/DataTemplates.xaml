@@ -3,7 +3,28 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:hub="clr-namespace:MySphere.Presentation.Hub"
     xmlns:switcher="clr-namespace:MySphere.Presentation.SpaceSwitcher"
-    xmlns:semigraph="clr-namespace:MySphere.Semigraph.Presentation;assembly=MySphere.Semigraph.Presentation">
+    
+    xmlns:snakePlusPlus="clr-namespace:MySphere.SnakePlusPlus.Presentation;assembly=MySphere.SnakePlusPlus.Presentation"
+    xmlns:cellautoLab="clr-namespace:MySphere.CellautoLab.Presentation;assembly=MySphere.CellautoLab.Presentation"
+    xmlns:slideForge="clr-namespace:MySphere.SlideForge.Presentation;assembly=MySphere.SlideForge.Presentation"
+    xmlns:chessSharp="clr-namespace:MySphere.ChessSharp.Presentation;assembly=MySphere.ChessSharp.Presentation"
+    xmlns:fractalLab="clr-namespace:MySphere.FractalLab.Presentation;assembly=MySphere.FractalLab.Presentation"
+    xmlns:kittyCatch="clr-namespace:MySphere.KittyCatch.Presentation;assembly=MySphere.KittyCatch.Presentation"
+    xmlns:semigraph="clr-namespace:MySphere.Semigraph.Presentation;assembly=MySphere.Semigraph.Presentation"
+    xmlns:codeScope="clr-namespace:MySphere.CodeScope.Presentation;assembly=MySphere.CodeScope.Presentation"
+    xmlns:mergery3d="clr-namespace:MySphere.Mergery3d.Presentation;assembly=MySphere.Mergery3d.Presentation"
+    xmlns:weatherly="clr-namespace:MySphere.Weatherly.Presentation;assembly=MySphere.Weatherly.Presentation"
+    xmlns:hexaCards="clr-namespace:MySphere.HexaCards.Presentation;assembly=MySphere.HexaCards.Presentation"
+    xmlns:prismify="clr-namespace:MySphere.Prismify.Presentation;assembly=MySphere.Prismify.Presentation"
+    xmlns:mazeform="clr-namespace:MySphere.Mazeform.Presentation;assembly=MySphere.Mazeform.Presentation"
+    xmlns:magnify="clr-namespace:MySphere.Magnify.Presentation;assembly=MySphere.Magnify.Presentation"
+    xmlns:mergery="clr-namespace:MySphere.Mergery.Presentation;assembly=MySphere.Mergery.Presentation"
+    xmlns:pathLab="clr-namespace:MySphere.PathLab.Presentation;assembly=MySphere.PathLab.Presentation"
+    xmlns:boidLab="clr-namespace:MySphere.BoidLab.Presentation;assembly=MySphere.BoidLab.Presentation"
+    xmlns:sortLab="clr-namespace:MySphere.SortLab.Presentation;assembly=MySphere.SortLab.Presentation"
+    xmlns:sonum="clr-namespace:MySphere.Sonum.Presentation;assembly=MySphere.Sonum.Presentation"
+    xmlns:align="clr-namespace:MySphere.Align.Presentation;assembly=MySphere.Align.Presentation"
+    xmlns:kanso="clr-namespace:MySphere.Kanso.Presentation;assembly=MySphere.Kanso.Presentation">
 
     <DataTemplate
         DataType="{x:Type hub:HubViewModel}">
@@ -13,17 +34,157 @@
     </DataTemplate>
 
     <DataTemplate
-        DataType="{x:Type semigraph:SemigraphViewModel}">
-
-        <semigraph:SemigraphView/>
-
-    </DataTemplate>
-
-    <DataTemplate
         DataType="{x:Type switcher:SpaceSwitcherViewModel}">
 
         <switcher:SpaceSwitcherView/>
 
     </DataTemplate>
-    
+
+    <DataTemplate
+        DataType="{x:Type snakePlusPlus:RootViewModel}">
+
+        <snakePlusPlus:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type cellautoLab:RootViewModel}">
+
+        <cellautoLab:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type slideForge:RootViewModel}">
+
+        <slideForge:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type chessSharp:RootViewModel}">
+
+        <chessSharp:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type fractalLab:RootViewModel}">
+
+        <fractalLab:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type kittyCatch:RootViewModel}">
+
+        <kittyCatch:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type semigraph:RootViewModel}">
+
+        <semigraph:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type codeScope:RootViewModel}">
+
+        <codeScope:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type mergery3d:RootViewModel}">
+
+        <mergery3d:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type weatherly:RootViewModel}">
+
+        <weatherly:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type hexaCards:RootViewModel}">
+
+        <hexaCards:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type prismify:RootViewModel}">
+
+        <prismify:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type mazeform:RootViewModel}">
+
+        <mazeform:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type magnify:RootViewModel}">
+
+        <magnify:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type mergery:RootViewModel}">
+
+        <mergery:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type pathLab:RootViewModel}">
+
+        <pathLab:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type boidLab:RootViewModel}">
+
+        <boidLab:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type sortLab:RootViewModel}">
+
+        <sortLab:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type sonum:RootViewModel}">
+
+        <sonum:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type align:RootViewModel}">
+
+        <align:RootView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type kanso:RootViewModel}">
+
+        <kanso:RootView/>
+
+    </DataTemplate>
+
 </ResourceDictionary>

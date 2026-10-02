@@ -2,7 +2,6 @@
 using MySphere.Framework.Foundation.Command;
 using MySphere.Framework.Foundation.ViewModel;
 using MySphere.Presentation.Main;
-using MySphere.Semigraph.Presentation;
 
 namespace MySphere.Presentation.Hub.Sections.Spaces;
 
@@ -19,7 +18,7 @@ public sealed class SpacesViewModel : ViewModelBase
         OpenSemigraphCommand = new(() =>
         {
             serviceProvider.GetRequiredService<MainViewModel>().CaptureCurrentSpace();
-            _spaceManager.Open<SemigraphViewModel>();
+            _spaceManager.Open<Semigraph.Presentation.RootViewModel>();
         });
     }
 }

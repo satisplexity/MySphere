@@ -1,5 +1,27 @@
 <Solution>
+  <Folder Name="/Spaces/">
+    <Project Path="MySphere.Align.Presentation/MySphere.Align.Presentation.csproj" Id="e7115839-cf6a-4718-8b98-d13a5d18fad7" />
+    <Project Path="MySphere.BoidLab.Presentation/MySphere.BoidLab.Presentation.csproj" Id="f601e5e8-81a5-4375-874e-48742354b222" />
+    <Project Path="MySphere.CellautoLab.Presentation/MySphere.CellautoLab.Presentation.csproj" Id="0ae42661-7a58-48aa-a78d-276c86b7f748" />
+    <Project Path="MySphere.ChessSharp.Presentation/MySphere.ChessSharp.Presentation.csproj" Id="400fd5d3-f212-4e14-84dc-24fe75c93a1f" />
+    <Project Path="MySphere.CodeScope.Presentation/MySphere.CodeScope.Presentation.csproj" Id="7cdb27aa-1ece-42dd-959a-9be37eea17c1" />
+    <Project Path="MySphere.FractalLab.Presentation/MySphere.FractalLab.Presentation.csproj" Id="2caf7e49-0a3c-4da4-839e-9b18121cd98b" />
+    <Project Path="MySphere.HexaCards.Presentation/MySphere.HexaCards.Presentation.csproj" Id="ed9eb140-085f-4bf5-b613-4d20c62be2e3" />
+    <Project Path="MySphere.Kanso.Presentation/MySphere.Kanso.Presentation.csproj" Id="ede31704-49ea-4f45-80ea-cef673aa2b9a" />
+    <Project Path="MySphere.KittyCatch.Presentation/MySphere.KittyCatch.Presentation.csproj" Id="6c172fa6-021c-4c9a-8c94-7b7b89b7f1f5" />
+    <Project Path="MySphere.Magnify.Presentation/MySphere.Magnify.Presentation.csproj" Id="61ca0808-1ff1-4c69-b927-9e642ccd08cf" />
+    <Project Path="MySphere.Mazeform.Presentation/MySphere.Mazeform.Presentation.csproj" Id="b1095429-5891-445c-a54c-4d199456d398" />
+    <Project Path="MySphere.Mergery.Presentation/MySphere.Mergery.Presentation.csproj" Id="0383f1e5-1d82-49bf-b28a-ac25beafe284" />
+    <Project Path="MySphere.Mergery3d.Presentation/MySphere.Mergery3d.Presentation.csproj" Id="ac602e6d-dd34-4288-aaf2-969b412fc3ea" />
+    <Project Path="MySphere.PathLab.Presentation/MySphere.PathLab.Presentation.csproj" Id="13ce1d1d-8f80-441d-8682-286cdd14a1d3" />
+    <Project Path="MySphere.Prismify.Presentation/MySphere.Prismify.Presentation.csproj" Id="000a044b-f3c6-42e2-9f3f-f9b77310cc30" />
+    <Project Path="MySphere.Semigraph.Presentation/MySphere.Semigraph.Presentation.csproj" Id="2d3eb84b-a337-4e4d-aa8a-7333b4a584eb" />
+    <Project Path="MySphere.SlideForge.Presentation/MySphere.SlideForge.Presentation.csproj" Id="1fd89a2d-7965-4647-b266-bd30a8617484" />
+    <Project Path="MySphere.SnakePlusPlus.Presentation/MySphere.SnakePlusPlus.Presentation.csproj" Id="02618046-609a-4508-ba6a-0a9079936721" />
+    <Project Path="MySphere.Sonum.Presentation/MySphere.Sonum.Presentation.csproj" Id="b08d36d3-a07d-4829-bf1d-da933b2851db" />
+    <Project Path="MySphere.SortLab.Presentation/MySphere.SortLab.Presentation.csproj" Id="e9c5c681-6ba2-4771-b294-f217d1301774" />
+    <Project Path="MySphere.Weatherly.Presentation/MySphere.Weatherly.Presentation.csproj" Id="6854def0-2ed8-4177-883f-91d7ee75a592" />
+  </Folder>
   <Project Path="MySphere.Framework/MySphere.Framework.csproj" />
   <Project Path="MySphere.Presentation/MySphere.Presentation.csproj" />
-  <Project Path="MySphere.Semigraph.Presentation/MySphere.Semigraph.Presentation.csproj" Id="2d3eb84b-a337-4e4d-aa8a-7333b4a584eb" />
 </Solution>

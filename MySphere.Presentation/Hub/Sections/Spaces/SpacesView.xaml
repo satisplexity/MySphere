@@ -125,7 +125,7 @@
 
             <controls:SpaceShortcutButton
                 Icon="{StaticResource SpaceIcon.SnakePlusPlus}"
-                Title="Kanso"
+                Title="Snake++"
                 Foreground="{StaticResource SpaceGradient.SnakePlusPlus}"/>
 
             <controls:SpaceShortcutButton

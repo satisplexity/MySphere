@@ -2,10 +2,8 @@
 
 namespace MySphere.Semigraph.Presentation;
 
-public class SemigraphViewModel : ViewModelBase
+public sealed class RootViewModel : ViewModelBase
 {
-    public SemigraphViewModel()
-    {
+    public RootViewModel() =>
         Name = "Semigraph";
-    }
 }

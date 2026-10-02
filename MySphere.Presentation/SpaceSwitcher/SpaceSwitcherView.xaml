@@ -32,7 +32,8 @@
                         PreviewImage="{Binding Preview}"
                         Width="{Binding Width}"
                         Height="{Binding Height}"
-                        PositionIndex="{Binding Index}"/>
+                        PositionIndex="{Binding Index}"
+                        Title="{Binding Title}"/>
 
                 </DataTemplate>
 

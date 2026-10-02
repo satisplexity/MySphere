@@ -57,13 +57,14 @@
                             <Image
                                 Source="{TemplateBinding PreviewImage}"/>
 
-                            <TextBlock VerticalAlignment="Top"
-                                   HorizontalAlignment="Left"
-                                   Margin="0, -100, 0, 0"
-                                   Foreground="#555"
-                                   Text="SPACE NAME"
-                                   FontSize="40"
-                                   FontFamily="{StaticResource Comfortaa}"/>
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
+                                Margin="0, -40, 0, 0"
+                                Foreground="#CCE"
+                                Text="{TemplateBinding Title}"
+                                FontSize="30"
+                                FontFamily="{StaticResource Comfortaa}"/>
                         </Grid>
 
                     </Border>

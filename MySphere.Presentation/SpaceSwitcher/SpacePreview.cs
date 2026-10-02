@@ -9,6 +9,8 @@ public class SpacePreview : ObservableObject
 
     public ViewModelBase ViewModel { get; set; }
 
+    public string Title { get; set; }
+
     private int _index;
 
     public int Index
@@ -34,5 +36,6 @@ public class SpacePreview : ObservableObject
         Index = index;
         Width = preview.PixelWidth;
         Height = preview.PixelHeight;
+        Title = viewModel.Name;
     }
 }

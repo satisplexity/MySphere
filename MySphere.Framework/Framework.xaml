@@ -21,6 +21,9 @@
         <ResourceDictionary 
             Source="/MySphere.Framework;component/Resources/Styles/SpaceShortcutButtonStyle.xaml"/>
 
+        <ResourceDictionary
+            Source="/MySphere.Framework;component/Resources/Styles/CategorySection.xaml"/>
+
     </ResourceDictionary.MergedDictionaries>
     
 </ResourceDictionary>

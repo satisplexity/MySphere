@@ -131,7 +131,7 @@ public partial class App
         services.AddTransient<HubView>();
 
         services.AddSingleton<HomeViewModel>();
-        services.AddTransient<HomeView>();
+        services.AddSingleton<HomeView>();
 
         services.AddSingleton<SpacesViewModel>();
         services.AddTransient<HomeView>();

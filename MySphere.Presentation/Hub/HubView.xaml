@@ -60,6 +60,18 @@
                     Foreground="#8C8"/>
 
                 <controls:NavigationMenuButton
+                    Icon="{StaticResource InterfaceIcon.Message}"
+                    Command="{Binding NavigateToMessagesCommand}"
+                    IsChecked="{Binding IsMessagesSelected, Mode=OneWay}"
+                    Foreground="#C58"/>
+
+                <controls:NavigationMenuButton
+                    Icon="{StaticResource InterfaceIcon.Community}"
+                    Command="{Binding NavigateToCommunityCommand}"
+                    IsChecked="{Binding IsCommunitySelected, Mode=OneWay}"
+                    Foreground="#4CC"/>
+
+                <controls:NavigationMenuButton
                     Icon="{StaticResource InterfaceIcon.Settings}" 
                     Command="{Binding NavigateToSettingsCommand}"
                     IsChecked="{Binding IsSettingsSelected, Mode=OneWay}"

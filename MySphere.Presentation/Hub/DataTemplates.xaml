@@ -4,7 +4,9 @@
     xmlns:home="clr-namespace:MySphere.Presentation.Hub.Sections.Home"
     xmlns:spaces="clr-namespace:MySphere.Presentation.Hub.Sections.Spaces"
     xmlns:account="clr-namespace:MySphere.Presentation.Hub.Sections.Account"
-    xmlns:settings="clr-namespace:MySphere.Presentation.Hub.Sections.Settings">
+    xmlns:settings="clr-namespace:MySphere.Presentation.Hub.Sections.Settings"
+    xmlns:messages="clr-namespace:MySphere.Presentation.Hub.Sections.Messages"
+    xmlns:community="clr-namespace:MySphere.Presentation.Hub.Sections.Community">
 
     <DataTemplate
         DataType="{x:Type home:HomeViewModel}">
@@ -31,6 +33,20 @@
         DataType="{x:Type settings:SettingsViewModel}">
 
         <settings:SettingsView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type messages:MessagesViewModel}">
+
+        <messages:MessagesView/>
+
+    </DataTemplate>
+
+    <DataTemplate
+        DataType="{x:Type community:CommunityViewModel}">
+
+        <community:CommunityView/>
 
     </DataTemplate>
     

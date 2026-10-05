@@ -3,7 +3,6 @@ using System.Windows;
 
 using MySphere.Presentation.Shell;
 using MySphere.Presentation.Main;
-using MySphere.Presentation.Hub;
 
 using MySphere.Presentation.Shell.Navigation;
 using MySphere.Presentation.Main.Navigation;
@@ -13,6 +12,9 @@ using MySphere.Presentation.Hub.Sections.Spaces;
 using MySphere.Presentation.Hub.Sections.Account;
 using MySphere.Presentation.Hub.Sections.Settings;
 using MySphere.Presentation.SpaceSwitcher;
+using MySphere.Presentation.Hub.Sections.Messages;
+using MySphere.Presentation.Hub.Sections.Community;
+using MySphere.Presentation.Hub;
 
 namespace MySphere.Presentation;
 
@@ -127,8 +129,7 @@ public partial class App
         services.AddSingleton<IHubNavigationService, HubNavigationService>();
 
         services.AddSingleton<HubViewModel>();
-
-        services.AddTransient<HubView>();
+        services.AddSingleton<HubView>();
 
         services.AddSingleton<HomeViewModel>();
         services.AddSingleton<HomeView>();
@@ -141,5 +142,11 @@ public partial class App
 
         services.AddSingleton<SettingsViewModel>();
         services.AddTransient<SettingsView>();
+
+        services.AddSingleton<MessagesViewModel>();
+        services.AddTransient<MessagesView>();
+
+        services.AddSingleton<CommunityViewModel>();
+        services.AddTransient<CommunityView>();
     }
 }

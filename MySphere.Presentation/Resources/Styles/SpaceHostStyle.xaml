@@ -255,13 +255,23 @@
 
                                         </PointAnimationUsingKeyFrames>
 
-                                        <DoubleAnimation
+                                        <DoubleAnimationUsingKeyFrames
                                             Storyboard.TargetName="PART_Image"
-                                            Storyboard.TargetProperty="Opacity"
-                                            From="1"
-                                            To="0.2"
-                                            BeginTime="0:0:1.1"
-                                            Duration="0:0:0.5"/>
+                                            Storyboard.TargetProperty="Opacity">
+
+                                            <DiscreteDoubleKeyFrame
+                                                KeyTime="0"
+                                                Value="1"/>
+
+                                            <DiscreteDoubleKeyFrame
+                                                KeyTime="0:0:1.1"
+                                                Value="1"/>
+
+                                            <EasingDoubleKeyFrame
+                                                KeyTime="0:0:1.6"
+                                                Value="0.5"/>
+
+                                        </DoubleAnimationUsingKeyFrames>
 
                                         <!--#endregion-->
                                         

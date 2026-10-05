@@ -69,6 +69,6 @@ public class SpaceHost
 
         IsNewSpaceOpened = true;
 
-        TimerFactory.Run(() => IsNewSpaceOpened = false, 10);
+        TimerFactory.Run(() => IsNewSpaceOpened = false, 2);
     }
 }

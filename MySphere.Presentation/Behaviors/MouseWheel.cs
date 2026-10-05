@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Windows.Input;
 using System.Windows;
-using System.Windows.Input;
 
 namespace MySphere.Presentation.Behaviors;
 
-public class MouseWheel
+public static class MouseWheel
 {
+    #region PreviousCommand
+
     public static readonly DependencyProperty PreviousCommandProperty =
     DependencyProperty.RegisterAttached(
         "PreviousCommand",
@@ -15,15 +14,15 @@ public class MouseWheel
         typeof(MouseWheel),
         new PropertyMetadata(null, OnCommandChanged));
 
-    public static void SetPreviousCommand(
-        DependencyObject element,
-        ICommand value)
-        => element.SetValue(PreviousCommandProperty, value);
+    public static void SetPreviousCommand(DependencyObject element, ICommand? value) => 
+        element.SetValue(PreviousCommandProperty, value);
 
-    public static ICommand GetPreviousCommand(
-        DependencyObject element)
-        => (ICommand)element.GetValue(PreviousCommandProperty);
+    public static ICommand? GetPreviousCommand(DependencyObject element) => 
+        (ICommand?)element.GetValue(PreviousCommandProperty);
 
+    #endregion
+
+    #region NextCommand
 
     public static readonly DependencyProperty NextCommandProperty =
         DependencyProperty.RegisterAttached(
@@ -32,41 +31,39 @@ public class MouseWheel
             typeof(MouseWheel),
             new PropertyMetadata(null, OnCommandChanged));
 
-    public static void SetNextCommand(
-        DependencyObject element,
-        ICommand value)
-        => element.SetValue(NextCommandProperty, value);
+    public static void SetNextCommand(DependencyObject element, ICommand? value) => 
+        element.SetValue(NextCommandProperty, value);
 
-    public static ICommand GetNextCommand(
-        DependencyObject element)
-        => (ICommand)element.GetValue(NextCommandProperty);
+    public static ICommand? GetNextCommand(DependencyObject element) =>
+        (ICommand?)element.GetValue(NextCommandProperty);
 
+    #endregion
 
-    private static void OnCommandChanged(
-        DependencyObject sender,
-        DependencyPropertyChangedEventArgs args)
+    private static void OnCommandChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
     {
         if (sender is not UIElement element)
             return;
 
-        element.PreviewMouseWheel += OnMouseWheel;
+        // Removing the handler to avoid double subscription
+        element.PreviewMouseWheel -= OnMouseWheel;
+
+        if (GetPreviousCommand(element) is not null || GetNextCommand(element) is not null)
+            element.PreviewMouseWheel += OnMouseWheel;
     }
 
-    private static void OnMouseWheel(
-        object sender,
-        MouseWheelEventArgs args)
+    private static void OnMouseWheel(object sender, MouseWheelEventArgs wheel)
     {
         if (sender is not UIElement element)
             return;
 
-        var command = args.Delta > 0
+        ICommand? command = wheel.Delta > 0
             ? GetPreviousCommand(element)
             : GetNextCommand(element);
 
-        if (command?.CanExecute(null) == true)
-            command.Execute(null);
+        if (command?.CanExecute(null) != true)
+            return;
 
-        args.Handled = true;
+        command.Execute(null);
+        wheel.Handled = true;
     }
-
 }

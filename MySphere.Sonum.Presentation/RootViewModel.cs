@@ -4,6 +4,10 @@ namespace MySphere.Sonum.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
-        Name = "Somun";
+    public RootViewModel()
+    {
+        Name = "Sonum";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

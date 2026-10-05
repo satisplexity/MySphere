@@ -4,6 +4,10 @@ namespace MySphere.FractalLab.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "FractalLab";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

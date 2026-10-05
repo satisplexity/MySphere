@@ -34,14 +34,13 @@ public sealed class SpaceHostManager
     public BitmapSource GetPreview(RenderSize size)
         => BitmapRenderer.Render(_host, size);
 
-    public async Task Open<T>()
-        where T : ViewModelBase
+    public void Open<T>() where T : ViewModelBase
     {
         if (_host is null)
             throw new InvalidOperationException();
-        
-        await _host.AnimateNewSpaceOpening();
 
-        await _mainViewModel.NavigateTo<T>();
+        _host.AnimateNewSpaceOpening();
+
+        _mainViewModel.ReplaceWith<T>();
     }
 }

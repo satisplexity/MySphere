@@ -4,6 +4,10 @@ namespace MySphere.Semigraph.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "Semigraph";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

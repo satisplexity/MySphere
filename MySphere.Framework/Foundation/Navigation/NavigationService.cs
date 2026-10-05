@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MySphere.Framework.Foundation.ViewModel;
+using System.Windows.Media;
 
 namespace MySphere.Framework.Foundation.Navigation;
 
@@ -18,6 +19,11 @@ public abstract class NavigationService
     public bool CanGoBack 
         => _history.Count > 0;
 
+    public string CurrentTitle => _store.CurrentTitle;
+    public Geometry CurrentIcon => _store.CurrentIcon;
+    public LinearGradientBrush CurrentColor => _store.CurrentColor;
+
+
     public NavigationService(NavigationStore store, IServiceProvider serviceProvider)
     {
         _store = store;
@@ -27,6 +33,15 @@ public abstract class NavigationService
         {
             if (args.PropertyName == nameof(NavigationStore.CurrentViewModel))
                 OnPropertyChanged(nameof(CurrentViewModel));
+
+            if (args.PropertyName == nameof(NavigationStore.CurrentTitle))
+                OnPropertyChanged(nameof(CurrentTitle));
+
+            if (args.PropertyName == nameof(NavigationStore.CurrentIcon))
+                OnPropertyChanged(nameof(CurrentIcon));
+
+            if (args.PropertyName == nameof(NavigationStore.CurrentColor))
+                OnPropertyChanged(nameof(CurrentColor));
         };
     }
 

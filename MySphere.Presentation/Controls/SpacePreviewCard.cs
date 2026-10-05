@@ -154,8 +154,8 @@ public sealed class SpacePreviewCard : Button
         card.BeginAnimation(MaskColorProperty, new ColorAnimation()
         {
             To = cardPosition.MaskColor,
-            Duration = TimeSpan.FromMilliseconds(300),
-            EasingFunction = new CubicEase() { EasingMode = EasingMode.EaseOut }
+            Duration = TimeSpan.FromMilliseconds(400),
+            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseOut }
         });
     }
 
@@ -172,8 +172,8 @@ public sealed class SpacePreviewCard : Button
         translateTransform.BeginAnimation(TranslateTransform.XProperty, new DoubleAnimation()
         {
             To = offset,
-            Duration = TimeSpan.FromMilliseconds(300),
-            EasingFunction = new CubicEase() { EasingMode = EasingMode.EaseInOut }
+            Duration = TimeSpan.FromMilliseconds(400),
+            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseInOut }
         });
     }
 
@@ -202,29 +202,29 @@ public sealed class SpacePreviewCard : Button
         effect.BeginAnimation(PerspectiveEffect.TopRightProperty, new PointAnimation()
         {
             To = cardPosition.TopRight,
-            Duration = TimeSpan.FromMilliseconds(300),
-            EasingFunction = new CubicEase() { EasingMode = EasingMode.EaseInOut }
+            Duration = TimeSpan.FromMilliseconds(400),
+            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseInOut }
         });
 
         effect.BeginAnimation(PerspectiveEffect.BottomRightProperty, new PointAnimation()
         {
             To = cardPosition.BottomRight,
-            Duration = TimeSpan.FromMilliseconds(300),
-            EasingFunction = new CubicEase() { EasingMode = EasingMode.EaseInOut }
+            Duration = TimeSpan.FromMilliseconds(400),
+            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseInOut }
         });
 
         effect.BeginAnimation(PerspectiveEffect.TopLeftProperty, new PointAnimation()
         {
             To = cardPosition.TopLeft,
-            Duration = TimeSpan.FromMilliseconds(300),
-            EasingFunction = new CubicEase() { EasingMode = EasingMode.EaseInOut }
+            Duration = TimeSpan.FromMilliseconds(400),
+            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseInOut }
         });
 
         effect.BeginAnimation(PerspectiveEffect.BottomLeftProperty, new PointAnimation()
         {
             To = cardPosition.BottomLeft,
-            Duration = TimeSpan.FromMilliseconds(300),
-            EasingFunction = new CubicEase() { EasingMode = EasingMode.EaseInOut }
+            Duration = TimeSpan.FromMilliseconds(400),
+            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseInOut }
         });
     }
 

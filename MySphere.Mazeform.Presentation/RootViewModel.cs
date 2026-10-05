@@ -4,6 +4,10 @@ namespace MySphere.Mazeform.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "Mazeform";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

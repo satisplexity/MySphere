@@ -1,4 +1,5 @@
-﻿using System.Windows.Media;
+﻿using System.Windows;
+using System.Windows.Media;
 
 namespace MySphere.Framework.Foundation.ViewModel;
 
@@ -29,4 +30,25 @@ public abstract class ViewModelBase : ObservableObject
             OnPropertyChanged(nameof(Icon));
         }
     }
+
+    private LinearGradientBrush _color = null!;
+
+    public LinearGradientBrush Color
+    {
+        get => _color;
+        set => _color = value;
+    }
+
+    protected Geometry GetIcon() =>
+        (Geometry)Application.Current.Resources[$"SpaceIcon.{Name}"];
+
+    protected LinearGradientBrush GetColor() =>
+        (LinearGradientBrush)Application.Current.Resources[$"SpaceGradient.{Name}"];
+
+    protected Geometry GetIcon(string name)=>
+        (Geometry)Application.Current.Resources[$"SpaceIcon.{name}"];
+
+    protected LinearGradientBrush GetColor(string name)=>
+        (LinearGradientBrush)Application.Current.Resources[$"SpaceGradient.{name}"];
+
 }

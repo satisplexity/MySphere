@@ -4,6 +4,10 @@ namespace MySphere.ChessSharp.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "Chess#";
+        Icon = GetIcon("ChessSharp");
+        Color = GetColor("ChessSharp");
+    }
 }

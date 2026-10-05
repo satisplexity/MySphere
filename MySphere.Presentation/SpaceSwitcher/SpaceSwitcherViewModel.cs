@@ -31,15 +31,27 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
 
     public Visibility PreviewVisibility { get; private set; } = Visibility.Visible;
     public bool PlayOpenAnimation { get; set; }
+    
     private int _currentIndex = 0;
+
+    private bool _canScroll = true;
+
+
     public SpaceSwitcherViewModel(IServiceProvider serviceProvider)
     {
+        Name = "Active spaces";
+        Icon = GetIcon("SpaceSwitcher");
+        Color = GetColor("SpaceSwitcher");
+
         _serviceProvider = serviceProvider;
 
         NextCommand = new(_ =>
-        {
+        {   if (!_canScroll)
+                return;
             if (_currentIndex >= Previews.Count - 1)
                     return;
+
+            
 
                 _currentIndex++;
                 
@@ -47,10 +59,17 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
                 {
                 preview.Index = preview.Index + 1;
                 }
+
+
+            LockWheel();
+
         });
 
         PreviousCommand = new(_ =>
         {
+            if (!_canScroll)
+                return;
+
             if (_currentIndex <= 0)
                     return;
 
@@ -61,7 +80,16 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
                 preview.Index = preview.Index - 1;
                 }
 
+            LockWheel();
+
         });
+    }
+
+    private void LockWheel()
+    {
+        _canScroll = false;
+
+        TimerFactory.Run(() => _canScroll = true, 0.4);
     }
 
     public void SetPreview(BitmapSource fullSizePreview, BitmapSource smallPreview, ViewModelBase viewModel)

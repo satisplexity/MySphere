@@ -26,6 +26,9 @@
                 <ResourceDictionary 
                     Source="/Resources/Styles/WindowControlButtonStyle.xaml"/>
 
+                <ResourceDictionary
+                    Source="/Resources/Styles/CurrentSpaceHeader.xaml"/>
+
             </ResourceDictionary.MergedDictionaries>
             
         </ResourceDictionary>

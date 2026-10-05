@@ -4,6 +4,10 @@ namespace MySphere.CodeScope.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "CodeScope";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

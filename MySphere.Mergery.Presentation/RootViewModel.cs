@@ -4,6 +4,10 @@ namespace MySphere.Mergery.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "Mergery";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

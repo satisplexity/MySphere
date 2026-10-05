@@ -4,6 +4,10 @@ namespace MySphere.SlideForge.Presentation;
 
 public class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "SlideForge";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

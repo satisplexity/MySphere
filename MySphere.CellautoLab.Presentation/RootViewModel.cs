@@ -4,6 +4,10 @@ namespace MySphere.CellautoLab.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "CellautoLab";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

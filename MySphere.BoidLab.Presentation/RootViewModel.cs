@@ -4,6 +4,10 @@ namespace MySphere.BoidLab.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "BoidLab";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

@@ -59,13 +59,10 @@ public class SpaceHost
         set => SetValue(PreviousSpaceImageProperty, value);
     }
 
-    public async Task AnimateNewSpaceOpening()
+    public void AnimateNewSpaceOpening()
     {
         this.UpdateLayout();
         PreviousSpaceImage = BitmapRenderer.Render(this);
-        await Dispatcher.InvokeAsync(
-        () => UpdateLayout(),
-        DispatcherPriority.Render);
 
         IsNewSpaceOpened = true;
 

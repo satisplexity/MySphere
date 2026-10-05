@@ -5,7 +5,8 @@
     xmlns:local="clr-namespace:MySphere.Presentation.Main"
     xmlns:switcherControls="clr-namespace:MySphere.Presentation.SpaceSwitcher.Controls"
     xmlns:windowControls="clr-namespace:MySphere.Presentation.Shell.Controls"
-    xmlns:mainControls="clr-namespace:MySphere.Presentation.Main.Controls">
+    xmlns:mainControls="clr-namespace:MySphere.Presentation.Main.Controls"
+    xmlns:controls="clr-namespace:MySphere.Presentation.Controls">
 
     <UserControl.Resources>
 
@@ -50,6 +51,11 @@
                     Width="4*"/>
 
             </Grid.ColumnDefinitions>
+
+            <controls:CurrentSpaceHeader
+                Text="{Binding Navigation.CurrentTitle, Mode=OneWay}"
+                SpaceColor="{Binding Navigation.CurrentColor, Mode=OneWay}"
+                Icon="{Binding Navigation.CurrentIcon, Mode=OneWay}"/>
 
             <switcherControls:SpaceSwitcherButton
                 Grid.Column="1"

@@ -4,6 +4,10 @@ namespace MySphere.Kanso.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "Kanso";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

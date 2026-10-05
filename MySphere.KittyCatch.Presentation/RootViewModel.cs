@@ -4,6 +4,10 @@ namespace MySphere.KittyCatch.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "KittyCatch";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

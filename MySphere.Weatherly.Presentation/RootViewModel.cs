@@ -4,6 +4,10 @@ namespace MySphere.Weatherly.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "Weatherly";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

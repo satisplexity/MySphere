@@ -4,6 +4,10 @@ namespace MySphere.SnakePlusPlus.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "Snake++";
+        Icon = GetIcon("SnakePlusPlus");
+        Color = GetColor("SnakePlusPlus");
+    }
 }

@@ -339,4 +339,34 @@
 
     </LinearGradientBrush>
 
+    <LinearGradientBrush
+        x:Key="SpaceGradient.SpaceSwitcher"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#B650DE"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#7D3288"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="SpaceGradient.Hub"
+        StartPoint="{StaticResource SpaceGradientStartPoint}"
+        EndPoint="{StaticResource SpaceGradientEndPoint}">
+
+        <GradientStop
+            Color="#B571E9"
+            Offset="0"/>
+
+        <GradientStop
+            Color="#572F8E"
+            Offset="1"/>
+
+    </LinearGradientBrush>
+
 </ResourceDictionary>

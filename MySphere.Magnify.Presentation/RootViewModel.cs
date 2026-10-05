@@ -4,6 +4,10 @@ namespace MySphere.Magnify.Presentation;
 
 public sealed class RootViewModel : ViewModelBase
 {
-    public RootViewModel() =>
+    public RootViewModel()
+    {
         Name = "Magnify";
+        Icon = GetIcon();
+        Color = GetColor();
+    }
 }

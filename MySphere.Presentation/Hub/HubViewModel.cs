@@ -41,6 +41,9 @@ public sealed class HubViewModel : ViewModelBase
     {
         Name = "Hub";
 
+        Icon = GetIcon();
+        Color = GetColor();
+
         Navigation = navigation;
 
         NavigateToHomeCommand = new(_ =>

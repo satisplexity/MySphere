@@ -1,0 +1,19 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color
+        x:Key="SpaceDefaultBackground">
+        
+        #191919
+        
+    </Color>
+
+    <SolidColorBrush
+        x:Key="SpaceBackground">
+        
+        #19191A
+        
+    </SolidColorBrush>
+    
+</ResourceDictionary>

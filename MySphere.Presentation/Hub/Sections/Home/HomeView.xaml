@@ -2,8 +2,7 @@
     x:Class="MySphere.Presentation.Hub.Sections.Home.HomeView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:MySphere.Presentation.Hub.Sections.Home"
-    xmlns:controls="clr-namespace:MySphere.Framework.Controls.Navigation;assembly=MySphere.Framework">
+    xmlns:controls="clr-namespace:MySphere.Framework.Controls;assembly=MySphere.Framework">
 
     <Grid
         Margin="20">
@@ -21,7 +20,9 @@
             Text="Home"
             Style="{StaticResource PageHeader}"/>
 
-        <controls:WIPAnimation Grid.Row="1"/>
+        <controls:WorkInProgressBanner
+            Grid.Row="1"
+            Info="Here you can acces to quick navigation in your Sphere"/>
 
     </Grid>
     

@@ -9,6 +9,9 @@
         <ResourceDictionary 
             Source="/MySphere.Framework;component/Resources/Icons/SpaceIcons.xaml"/>
 
+        <ResourceDictionary
+            Source="/MySphere.Framework;component/Resources/Values/Colors.xaml"/>
+
         <ResourceDictionary 
             Source="/MySphere.Framework;component/Resources/Values/SpaceGradients.xaml"/>
 

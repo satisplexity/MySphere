@@ -99,5 +99,24 @@
             Value="Black"/>
 
     </Style>
+
+    <Style
+        x:Key="WIP_Text"
+        TargetType="{x:Type TextBlock}"
+        BasedOn="{StaticResource TextBlockBase}">
+
+        <Setter
+            Property="FontSize"
+            Value="100"/>
+
+        <Setter
+            Property="Foreground"
+            Value="#AAF"/>
+
+        <Setter
+            Property="FontWeight"
+            Value="Black"/>
+
+    </Style>
     
 </ResourceDictionary>

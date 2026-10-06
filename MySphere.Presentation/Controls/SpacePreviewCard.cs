@@ -1,4 +1,5 @@
 ﻿using MySphere.Framework.Effects;
+using MySphere.Framework.Utilities;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -142,21 +143,16 @@ public sealed class SpacePreviewCard : Button
         var card = (SpacePreviewCard)d;
         var index = (int)e.NewValue;
 
-        card.SetValue(Panel.ZIndexProperty, 100 + index);
+        TimerFactory.Run(() => card.SetValue(Panel.ZIndexProperty, GetLayerDepth(index)), 1);
 
         SetCardOffset(card, index);
-        SetCardPerspective(card, index);
 
         card.IsIndexSmallerZero = index < 0;
+    }
 
-        CardPosition cardPosition = GetCardPosition(index);
-
-        card.BeginAnimation(MaskColorProperty, new ColorAnimation()
-        {
-            To = cardPosition.MaskColor,
-            Duration = TimeSpan.FromMilliseconds(400),
-            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseOut }
-        });
+    private static int GetLayerDepth(int index)
+    {
+        return Math.Max(0, 100 - Math.Abs(index));
     }
 
     private static void SetCardOffset(SpacePreviewCard card, int index)
@@ -192,41 +188,7 @@ public sealed class SpacePreviewCard : Button
         return _cardPositions[index];
     }
 
-    private static void SetCardPerspective(SpacePreviewCard card, int index)
-    {
-        CardPosition cardPosition = GetCardPosition(index);
-
-        PerspectiveEffect? effect = card.Effect as PerspectiveEffect;
-        ArgumentNullException.ThrowIfNull(effect, nameof(effect));
-
-        effect.BeginAnimation(PerspectiveEffect.TopRightProperty, new PointAnimation()
-        {
-            To = cardPosition.TopRight,
-            Duration = TimeSpan.FromMilliseconds(400),
-            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseInOut }
-        });
-
-        effect.BeginAnimation(PerspectiveEffect.BottomRightProperty, new PointAnimation()
-        {
-            To = cardPosition.BottomRight,
-            Duration = TimeSpan.FromMilliseconds(400),
-            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseInOut }
-        });
-
-        effect.BeginAnimation(PerspectiveEffect.TopLeftProperty, new PointAnimation()
-        {
-            To = cardPosition.TopLeft,
-            Duration = TimeSpan.FromMilliseconds(400),
-            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseInOut }
-        });
-
-        effect.BeginAnimation(PerspectiveEffect.BottomLeftProperty, new PointAnimation()
-        {
-            To = cardPosition.BottomLeft,
-            Duration = TimeSpan.FromMilliseconds(400),
-            EasingFunction = new SineEase() { EasingMode = EasingMode.EaseInOut }
-        });
-    }
+   
 
     public static readonly DependencyProperty XOffsetProperty = DependencyProperty.Register(
         nameof(XOffset),
@@ -291,6 +253,5 @@ public sealed class SpacePreviewCard : Button
     public SpacePreviewCard()
     {
         this.RenderTransform = new TranslateTransform();
-        this.Effect = new PerspectiveEffect();
     }
 }

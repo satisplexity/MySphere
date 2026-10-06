@@ -57,7 +57,7 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
                 
                 foreach (var preview in Previews)
                 {
-                preview.Index = preview.Index + 1;
+                preview.PositionIndex = preview.PositionIndex + 1;
                 }
 
 
@@ -77,7 +77,7 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
 
                 foreach (var preview in Previews)
                 {
-                preview.Index = preview.Index - 1;
+                preview.PositionIndex = preview.PositionIndex - 1;
                 }
 
             LockWheel();
@@ -118,7 +118,7 @@ public sealed class SpaceSwitcherViewModel : ViewModelBase
     {
         for(int index = 0; index < Previews.Count; index++)
         {
-            Previews[index].Index = index * -1;
+            Previews[index].PositionIndex = index * -1;
         }
     }
 

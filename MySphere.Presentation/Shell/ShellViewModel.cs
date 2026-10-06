@@ -40,9 +40,14 @@ public sealed class ShellViewModel
                 return;
 
             _isWindowCollapsed = value;
+
+
+
             OnPropertyChanged();
         }
     }
+
+  
 
     public RelayCommand LoadedCommand { get; }
 

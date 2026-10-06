@@ -117,12 +117,6 @@
 
     <Rectangle Fill="#191919">
 
-        <Rectangle.Effect>
-
-            <effects:NoiseEffect Scale="400"
-                                 Intensity="0.002"/>
-
-        </Rectangle.Effect>
         
     </Rectangle>
         

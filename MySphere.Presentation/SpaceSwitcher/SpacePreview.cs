@@ -11,20 +11,21 @@ public class SpacePreview : ObservableObject
 
     public string Title { get; set; }
 
-    private int _index;
+    private int _positionIndex;
 
-    public int Index
+    public int PositionIndex
     {
-        get => _index;
+        get => _positionIndex;
         set
         {
-            if (_index != value)
+            if (SetProperty(ref _positionIndex, value))
             {
-                _index = value;
-                OnPropertyChanged(nameof(Index));
+                OnPropertyChanged(nameof(ZIndex));
             }
         }
     }
+
+    public int ZIndex => Math.Max(0, 100 - Math.Abs(PositionIndex));
 
     public double Width { get; set; }
     public double Height { get; set; }
@@ -33,7 +34,7 @@ public class SpacePreview : ObservableObject
     {
         Preview = preview;
         ViewModel = viewModel;
-        Index = index;
+        PositionIndex = index;
         Width = preview.PixelWidth;
         Height = preview.PixelHeight;
         Title = viewModel.Name;

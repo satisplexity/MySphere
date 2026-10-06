@@ -16,10 +16,9 @@
         x:Key="HoverInEasing"
         EasingMode="EaseOut"/>
 
-    <BackEase
+    <QuarticEase
         x:Key="HoverOutEasing"
-        EasingMode="EaseOut"
-        Amplitude="1.1"/>
+        EasingMode="EaseOut"/>
 
     <SineEase
         x:Key="ClickEase"
@@ -74,20 +73,6 @@
                         helpers:ClipHelper.Enable="True"
                         RenderTransformOrigin="0.5, 0.7">
 
-                        <Border.Effect>
-
-                            <effects:PerspectiveEffect
-                                x:Name="PART_Perspective"/>
-
-                        </Border.Effect>
-                        
-                        <Border.RenderTransform>
-
-                            <ScaleTransform
-                                x:Name="PART_Scale"/>
-
-                        </Border.RenderTransform>
-                        
                         <Border.BorderBrush>
 
                             <LinearGradientBrush
@@ -125,6 +110,12 @@
                             <Grid
                                 Grid.Row="1"
                                 Opacity="0.3">
+
+                                <Grid.CacheMode>
+
+                                    <BitmapCache RenderAtScale="0.25"/>
+
+                                </Grid.CacheMode>
 
                                 <Grid.Effect>
 
@@ -183,24 +174,10 @@
                                             Duration="0:0:0.3"
                                             EasingFunction="{StaticResource HoverOutEasing}"/>
 
-                                        <PointAnimation
-                                            Storyboard.TargetName="PART_Perspective"
-                                            Storyboard.TargetProperty="TopLeft"
-                                            To="0.05, 0.05"
-                                            Duration="0:0:0.3"
-                                            EasingFunction="{StaticResource HoverOutEasing}"/>
-
-                                        <PointAnimation
-                                            Storyboard.TargetName="PART_Perspective"
-                                            Storyboard.TargetProperty="TopRight"
-                                            To="0.95, 0.05"
-                                            Duration="0:0:0.3"
-                                            EasingFunction="{StaticResource HoverOutEasing}"/>
-
                                     </Storyboard>
-                                    
+
                                 </BeginStoryboard>
-                                
+
                             </Trigger.EnterActions>
 
                             <Trigger.ExitActions>
@@ -221,59 +198,14 @@
                                             Duration="0:0:0.4"
                                             EasingFunction="{StaticResource HoverInEasing}"/>
 
-                                        <PointAnimation
-                                            Storyboard.TargetName="PART_Perspective"
-                                            Storyboard.TargetProperty="TopLeft"
-                                            To="0, 0"
-                                            Duration="0:0:0.4"
-                                            EasingFunction="{StaticResource HoverInEasing}"/>
-
-                                        <PointAnimation
-                                            Storyboard.TargetName="PART_Perspective"
-                                            Storyboard.TargetProperty="TopRight"
-                                            To="1, 0"
-                                            Duration="0:0:0.4"
-                                            EasingFunction="{StaticResource HoverInEasing}"/>
-
                                     </Storyboard>
-                                    
+
                                 </BeginStoryboard>
-                                
+
                             </Trigger.ExitActions>
-                            
+
                         </Trigger>
 
-                        <EventTrigger
-                            RoutedEvent="Click">
-
-                            <BeginStoryboard>
-
-                                <Storyboard>
-
-                                    <DoubleAnimation
-                                        Storyboard.TargetName="PART_Scale"
-                                        Storyboard.TargetProperty="ScaleX"
-                                        To="0.9"
-                                        From="1"
-                                        Duration="0:0:0.15"
-                                        EasingFunction="{StaticResource ClickEase}"
-                                        AutoReverse="True"/>
-
-                                    <DoubleAnimation
-                                        Storyboard.TargetName="PART_Scale"
-                                        Storyboard.TargetProperty="ScaleY"
-                                        To="0.9"
-                                        From="1"
-                                        Duration="0:0:0.15"
-                                        EasingFunction="{StaticResource ClickEase}"
-                                        AutoReverse="True"/>
-
-                                </Storyboard>
-                                
-                            </BeginStoryboard>
-                            
-                        </EventTrigger>
-                        
                     </ControlTemplate.Triggers>
                     
                 </ControlTemplate>

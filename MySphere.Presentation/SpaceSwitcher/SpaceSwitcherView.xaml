@@ -23,6 +23,19 @@
                 </ItemsPanelTemplate>
                 
             </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemContainerStyle>
+
+                <Style
+                    TargetType="{x:Type ContentPresenter}">
+
+                    <Setter
+                        Property="Panel.ZIndex"
+                        Value="{Binding ZIndex}"/>
+
+                </Style>
+
+            </ItemsControl.ItemContainerStyle>
             
             <ItemsControl.ItemTemplate>
 
@@ -32,7 +45,7 @@
                         PreviewImage="{Binding Preview}"
                         Width="{Binding Width}"
                         Height="{Binding Height}"
-                        PositionIndex="{Binding Index}"
+                        PositionIndex="{Binding PositionIndex}"
                         Title="{Binding Title}"/>
 
                 </DataTemplate>
